@@ -1,0 +1,21 @@
+<fsm addto='vedic97_slp1.xml'>
+<edges>
+<e n='160'> <in>\u00A0</in> <out>tt</out> <map>full_form.tt</map> </e>
+<e n='128'> <in>\u0080</in> <out>[\ua8e1]</out> <key>superscript.1</key> <cl>accent</cl> </e>  <!-- superscript 1 -->
+<e n='129'> <in>\u0081</in> <out>[\ua8e2]</out> <key>superscript.2</key> <cl>accent</cl> </e>  <!-- superscript 2 -->
+<e n='133'> <in>\u0085</in> <out>[\u0028]</out> <cl>atom</cl> </e>  <!-- left paren -->
+<e n='135'> <in>\u0087</in> <out>[\u002c]</out> <cl>atom</cl> </e>  <!-- comma -->
+<e n='139'> <in>\u008B</in> <out>[\u0029]</out> <cl>atom</cl> </e>  <!-- right paren -->
+<e n='143'> <in>\u008F</in> <out>[\ua8e3]</out> <cl>superscript.3</cl> </e>  <!-- superscript 3 -->
+<e n='150'> <in>\u0096</in> <out>[\ua8e2\ua8ef]</out> <key>superscript.2r</key> <cl>accent</cl> </e> <!-- superscript 2r -->
+<e n='153'> <in>\u0099</in> <out>[\ua8e2\ua8eb]</out> <key>superscript.2u</key> <cl>accent</cl></e>  <!-- superscript 2u -->
+<e n='154'> <in>\u009A</in> <out>[\ua8ec]</out> <key>superscript.k</key> <cl>accent</cl> </e>				<!-- superscript k -->
+<e n='158'> <in>\u009E</in> <out>[\ua8ef]</out> <key>superscript.r</key> <cl>accent</cl> </e>		<!-- superscript r -->
+<e n='193'> <in>\u00C1</in> <out>[\ua8e3\ua8ec]</out> <key>superscript.3k</key> <cl>accent</cl> </e> <!-- superscript 3k -->
+<e n='204'> <in>\u00CC</in> <out>[\ua8e1\ua8ef]</out> <key>superscript.1r</key> <cl>accent</cl> </e>  <!-- superscript 1r -->
+<e n='211'> <in>\u00D3</in> <out>[\ua8e1\ua8ec]</out> <key>superscript.1k</key> <cl>accent</cl> </e>  <!-- superscript 1k -->
+<e n='216'> <in>\u00D8</in> <out>[\ua8e2\ua8ec]</out> <key>superscript.2k</key> <cl>accent</cl> </e>  <!-- superscript 2k -->
+<e n='224'> <in>\u00E0</in> <out>[\ua8eB]</out> <key>superscript.u</key> <cl>accent</cl> </e>         <!-- superscript.u-->
+<e n='253'> <in>\u00FD</in> <out>[\ua8f3]</out> <key>candrabindu.virama</key> <cl>accent</cl> </e>	<!-- devanagari sign candrabindu virama --> <!-- is accent correct class? -->
+</edges>
+</fsm>

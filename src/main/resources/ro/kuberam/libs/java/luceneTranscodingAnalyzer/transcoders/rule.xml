@@ -1,0 +1,3 @@
+<transcodingRules>
+ <transcodingRule startTag='*' endTag='' removeTag='n' sourceEncoding='as' targetEncoding='slp1' unknown='flag'/>
+</transcodingRules>

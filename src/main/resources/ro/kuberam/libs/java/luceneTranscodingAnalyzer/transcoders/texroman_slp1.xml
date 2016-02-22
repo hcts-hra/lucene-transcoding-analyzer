@@ -1,0 +1,183 @@
+<fsm inputType='tex-roman' outputType='SLP1' capitalsSupported='y' version='2' testBlanks='n'>
+<edges>
+<e n='0'> <in>a</in> <out>a</out> <cl>atom</cl></e>
+<e n='0cap'> <in>A</in> <out>{a}</out> <cl>atom</cl></e>
+
+<e n='16'> <in>\=a</in> <out>A</out> <cl>atom</cl></e>
+<e n='16cap'> <in>\=A</in> <out>{A}</out> <cl>atom</cl></e>
+
+<e n='37'> <in>i</in> <out>i</out> <cl>atom</cl></e>
+<e n='37cap'> <in>I</in> <out>{i}</out> <cl>atom</cl></e>
+
+<e n='53'> <in>\={\i}</in> <out>I</out> <cl>atom</cl></e>
+<e n='53cap'> <in>\={\I}</in> <out>{I}</out> <cl>atom</cl></e>
+
+<e n='74'> <in>u</in> <out>u</out> <cl>atom</cl></e>
+<e n='74cap'> <in>U</in> <out>{u}</out> <cl>atom</cl></e>
+
+<e n='90'> <in>\=u</in> <out>U</out> <cl>atom</cl></e>
+<e n='90cap'> <in>\=U</in> <out>{U}</out> <cl>atom</cl></e>
+
+<e n='111'> <in>\textsubring{r}</in> <out>f</out> <cl>atom</cl></e>
+<e n='111cap'> <in>\textsubring{R}</in> <out>{f}</out> <cl>atom</cl></e>
+
+<e n='127'> <in>\textsubring{\=r}</in> <out>F</out> <cl>atom</cl></e>
+<e n='127cap'> <in>\textsubring{\=R}</in> <out>{F}</out> <cl>atom</cl></e>
+
+<e n='148'> <in>\textsubring{l}</in> <out>x</out> <cl>atom</cl></e>
+<e n='148cap'> <in>\textsubring{l}</in> <out>{x}</out> <cl>atom</cl></e>
+
+<e n='164'> <in>\textsubring{\=l}</in> <out>X</out> <cl>atom</cl></e>
+<e n='164cap'> <in>\textsubring{\=L}</in> <out>{X}</out> <cl>atom</cl></e>
+
+<e n='193'> <in>e</in> <out>e</out> <cl>atom</cl></e>
+<e n='193cap'> <in>E</in> <out>{e}</out> <cl>atom</cl></e>
+
+<e n='214'> <in>ai</in> <out>E</out> <cl>atom</cl></e>
+<e n='214cap'> <in>Ai</in> <out>{E}</out> <cl>atom</cl></e>
+
+<e n='242'> <in>o</in> <out>o</out> <cl>atom</cl></e>
+<e n='242cap'> <in>O</in> <out>{o}</out> <cl>atom</cl></e>
+
+<e n='262'> <in>au</in> <out>O</out> <cl>atom</cl></e>
+<e n='262cap'> <in>Au</in> <out>{O}</out> <cl>atom</cl></e>
+
+<e n='282'> <in>k</in> <out>k</out> <cl>atom</cl></e>
+<e n='282cap'> <in>K</in> <out>{k}</out> <cl>atom</cl></e>
+
+<e n='285'> <in>kh</in> <out>K</out> <cl>atom</cl></e>
+<e n='285cap'> <in>Kh</in> <out>{K}</out> <cl>atom</cl></e>
+
+<e n='288'> <in>g</in> <out>g</out> <cl>atom</cl></e>
+<e n='288cap'> <in>G</in> <out>{g}</out> <cl>atom</cl></e>
+
+<e n='291'> <in>gh</in> <out>G</out> <cl>atom</cl></e>
+<e n='291cap'> <in>Gh</in> <out>{G}</out> <cl>atom</cl></e>
+
+<e n='294'> <in>\.n</in> <out>N</out> <cl>atom</cl></e>
+<e n='294cap'> <in>\.N</in> <out>{N}</out> <cl>atom</cl></e>
+
+<e n='296'> <in>c</in> <out>c</out> <cl>atom</cl></e>
+<e n='296cap'> <in>C</in> <out>{c}</out> <cl>atom</cl></e>
+
+<e n='299'> <in>ch</in> <out>C</out> <cl>atom</cl></e>
+<e n='299cap'> <in>Ch</in> <out>{C}</out> <cl>atom</cl></e>
+
+<e n='302'> <in>j</in> <out>j</out> <cl>atom</cl></e>
+<e n='302cap'> <in>J</in> <out>{j}</out> <cl>atom</cl></e>
+
+<e n='305'> <in>jh</in> <out>J</out> <cl>atom</cl></e>
+<e n='305cap'> <in>Jh</in> <out>{J}</out> <cl>atom</cl></e>
+
+<e n='308'> <in>\~n</in> <out>Y</out> <cl>atom</cl></e>
+<e n='308cap'> <in>\~N</in> <out>{Y}</out> <cl>atom</cl></e>
+
+<e n='310'> <in>\d{t}</in> <out>w</out> <cl>atom</cl></e>
+<e n='310cap'> <in>\d{T}</in> <out>{w}</out> <cl>atom</cl></e>
+
+<e n='313'> <in>\d{t}h</in> <out>W</out> <cl>atom</cl></e>
+<e n='313cap'> <in>\d{T}h</in> <out>{W}</out> <cl>atom</cl></e>
+
+<e n='316'> <in>\d{d}</in> <out>q</out> <cl>atom</cl></e>
+<e n='316cap'> <in>\d{D}</in> <out>{q}</out> <cl>atom</cl></e>
+
+<e n='319'> <in>\d{l}</in> <out>L</out> <cl>atom</cl></e>
+<e n='319cap'> <in>\d{L}</in> <out>{L}</out> <cl>atom</cl></e>
+
+<e n='320'> <in>\d{d}h</in> <out>Q</out> <cl>atom</cl></e>
+<e n='320cap'> <in>\d{D}h</in> <out>{Q}</out> <cl>atom</cl></e>
+
+<e n='323'> <in>\d{l}h</in> <out>|</out> <cl>atom</cl></e>
+<e n='323cap'> <in>\d{L}h</in> <out>{|}</out> <cl>atom</cl></e>
+
+<e n='324'> <in>\d{n}</in> <out>R</out> <cl>atom</cl></e>
+<e n='324cap'> <in>\d{N}</in> <out>{R}</out> <cl>atom</cl></e>
+
+<e n='326'> <in>t</in> <out>t</out> <cl>atom</cl></e>
+<e n='326cap'> <in>T</in> <out>{t}</out> <cl>atom</cl></e>
+
+<e n='329'> <in>th</in> <out>T</out> <cl>atom</cl></e>
+<e n='329cap'> <in>Th</in> <out>{T}</out> <cl>atom</cl></e>
+
+<e n='332'> <in>d</in> <out>d</out> <cl>atom</cl></e>
+<e n='332cap'> <in>D</in> <out>{d}</out> <cl>atom</cl></e>
+
+<e n='335'> <in>dh</in> <out>D</out> <cl>atom</cl></e>
+<e n='335cap'> <in>Dh</in> <out>{D}</out> <cl>atom</cl></e>
+
+<e n='338'> <in>n</in> <out>n</out> <cl>atom</cl></e>
+<e n='338cap'> <in>N</in> <out>{n}</out> <cl>atom</cl></e>
+
+<e n='340a'> <in>p</in> <out>p</out> <cl>atom</cl></e>
+<e n='340acap'> <in>P</in> <out>{p}</out> <cl>atom</cl></e>
+
+<e n='343'> <in>ph</in> <out>P</out> <cl>atom</cl></e>
+<e n='343cap'> <in>Ph</in> <out>{P}</out> <cl>atom</cl></e>
+
+<e n='346'> <in>b</in> <out>b</out> <cl>atom</cl></e>
+<e n='346cap'> <in>B</in> <out>{b}</out> <cl>atom</cl></e>
+
+<e n='349'> <in>bh</in> <out>B</out> <cl>atom</cl></e>
+<e n='349cap'> <in>Bh</in> <out>{B}</out> <cl>atom</cl></e>
+
+<e n='352'> <in>m</in> <out>m</out> <cl>atom</cl></e>
+<e n='352cap'> <in>M</in> <out>{m}</out> <cl>atom</cl></e>
+
+<e n='354'> <out>y</out> <in>y</in> <cl>atom</cl></e>
+<e n='354cap'> <out>Y</out> <in>{y}</in> <cl>atom</cl></e>
+
+<e n='359'> <out>r</out> <in>r</in> <cl>atom</cl></e>
+<e n='359cap'> <out>R</out> <in>{r}</in> <cl>atom</cl></e>
+
+<e n='360'> <out>l</out> <in>l</in> <cl>atom</cl></e>
+<e n='360cap'> <out>L</out> <in>{l}</in> <cl>atom</cl></e>
+
+<e n='363'> <out>v</out> <in>v</in> <cl>atom</cl></e>
+<e n='363cap'> <out>V</out> <in>{v}</in> <cl>atom</cl></e>
+
+<e n='368'> <in>\'s</in> <out>S</out> <cl>atom</cl></e>
+<e n='368cap'> <in>\'S</in> <out>{S}</out> <cl>atom</cl></e>
+
+<e n='369'> <in>\d{s}</in> <out>z</out> <cl>atom</cl></e>
+<e n='369cap'> <in>\d{S}</in> <out>{z}</out> <cl>atom</cl></e>
+
+<e n='370'> <in>s</in> <out>s</out> <cl>atom</cl></e>
+<e n='370cap'> <in>S</in> <out>{s}</out> <cl>atom</cl></e>
+
+<e n='371'> <in>h</in> <out>h</out> <cl>atom</cl></e>
+<e n='371cap'> <in>H</in> <out>{h}</out> <cl>atom</cl></e>
+
+<e n='373'> <in>\d{h}</in> <out>H</out> <cl>atom</cl></e>
+<e n='373cap'> <in>\d{h}</in> <out>H</out> <cl>atom</cl></e>
+
+<e n='374'> <in>\textsubbar{h}</in> <out>Z</out> <cl>atom</cl></e>
+<e n='374cap'> <in>\textsubbar{H}</in> <out>{Z}</out> <cl>atom</cl></e>
+
+<e n='375'> <in>\textsubwedge{h}</in> <out>V</out> <cl>atom</cl></e>
+<e n='375cap'> <in>\textsubwedge{H}</in> <out>{V}</out> <cl>atom</cl></e>
+
+<e n='376'> <in>\.m</in> <out>M</out> <cl>atom</cl></e>
+<e n='376cap'> <in>\.M</in> <out>{M}</out> <cl>atom</cl></e>
+
+<e n='377'> <in>'</in> <out>'</out> <cl>atom</cl></e>	#apostrophe
+<e n='377cap'> <in>'</in> <out>'</out> <cl>atom</cl></e>	#apostrophe
+
+<e n='378'> <in>\u0009</in> <out>\u0009</out> <cl>atom</cl> </e>
+<e n='378cap'> <in>\u0009</in> <out>\u0009</out> <cl>atom</cl> </e>
+
+<e n='379'> <in>\u000a</in> <out>\u000a</out> <cl>atom</cl> </e>
+<e n='379cap'> <in>\u000a</in> <out>\u000a</out> <cl>atom</cl> </e>
+
+<e n='380'> <in>\u000d</in> <out>\u000d</out> <cl>atom</cl> </e>
+<e n='380cap'> <in>\u000d</in> <out>\u000d</out> <cl>atom</cl> </e>
+
+<e n='381'> <in>\u0020</in> <out>\u0020</out> <cl>atom</cl> </e>
+<e n='381cap'> <in>\u0020</in> <out>\u0020</out> <cl>atom</cl> </e>
+</edges>
+<buffers>
+	<buffer name='atoms' action='!!'>
+		<member id='atom'/>
+	</buffer>
+</buffers>
+
+</fsm>

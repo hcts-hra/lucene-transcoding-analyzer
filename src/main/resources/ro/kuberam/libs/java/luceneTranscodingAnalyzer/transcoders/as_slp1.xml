@@ -1,0 +1,10 @@
+<fsm inputType='UTF-8' outputType='slp1' version='2'>
+<edges>
+<e n='1'> <in>a</in> <out>a</out> <cl>char</cl> </e>
+</edges>
+<buffers>
+	<buffer name='chars' action='!!'>
+		<member id='char'/>
+	</buffer>
+</buffers>
+</fsm>
