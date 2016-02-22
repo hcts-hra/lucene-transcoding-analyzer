@@ -1,0 +1,332 @@
+<fsm inputType='8bit' outputType='slp1' version='2' testBlanks='y' sharedState='cardona'>
+<edges>
+<e n=  '0'> <in>\u0000</in> <cl>flag</cl> </e>
+<e n=  '1'> <in>\u0001</in> <cl>flag</cl> </e>
+<e n=  '2'> <in>\u0002</in> <cl>flag</cl> </e>
+<e n=  '3'> <in>\u0003</in> <cl>flag</cl> </e>
+<e n=  '4'> <in>\u0004</in> <cl>flag</cl> </e>
+<e n=  '5'> <in>\u0005</in> <cl>flag</cl> </e>
+<e n=  '6'> <in>\u0006</in> <cl>flag</cl> </e>
+<e n=  '7'> <in>\u0007</in> <cl>flag</cl> </e>
+<e n=  '8'> <in>\u0008</in> <cl>flag</cl> </e>
+<e n=  '9'> <in>\u0009</in> <cl>flag</cl> </e>
+<e n= '10'> <in>\u000A</in> <cl>flag</cl> </e>
+<e n= '11'> <in>\u000B</in> <cl>flag</cl> </e>
+<e n= '12'> <in>\u000C</in> <cl>flag</cl> </e>
+<e n= '13'> <in>\u000D</in> <cl>flag</cl> </e>
+<e n= '14'> <in>\u000E</in> <cl>flag</cl> </e>
+<e n= '15'> <in>\u000F</in> <cl>flag</cl> </e>
+<e n= '16'> <in>\u0010</in> <cl>flag</cl> </e>
+<e n= '17'> <in>\u0011</in> <cl>flag</cl> </e>
+<e n= '18'> <in>\u0012</in> <cl>flag</cl> </e>
+<e n= '19'> <in>\u0013</in> <cl>flag</cl> </e>
+<e n= '20'> <in>\u0014</in> <cl>flag</cl> </e>
+<e n= '21'> <in>\u0015</in> <cl>flag</cl> </e>
+<e n= '22'> <in>\u0016</in> <cl>flag</cl> </e>
+<e n= '23'> <in>\u0017</in> <cl>flag</cl> </e>
+<e n= '24'> <in>\u0018</in> <cl>flag</cl> </e>
+<e n= '25'> <in>\u0019</in> <cl>flag</cl> </e>
+<e n= '26'> <in>\u001A</in> <cl>flag</cl> </e>
+<e n= '27'> <in>\u001B</in> <cl>flag</cl> </e>
+<e n= '28'> <in>\u001C</in> <cl>flag</cl> </e>
+<e n= '29'> <in>\u001D</in> <cl>flag</cl> </e>
+<e n= '30'> <in>\u001E</in> <cl>flag</cl> </e>
+<e n= '31'> <in>\u001F</in> <out></out> <cl>atom</cl> <key>cardona.mystery.1F</key> <ignore/> </e>
+<e n= '32'> <in>\u0020</in> <cl>atom</cl> </e> <!-- if dependant character follows whitespace, the white space is ignored -->
+<e n='!33'> <in>\u0021</in> <out>1</out> <key>cardona.digit.1</key> <cl>digit</cl> </e> 
+<e n='"34'> <in>\u0022</in> <out>H</out> <cl>visarga</cl> </e>
+<e n='#35'> <in>\u0023</in> <out>3</out> <key>cardona.digit.3</key> <cl>digit</cl> </e>  <!-- ** -->
+<e n='$36'> <in>\u0024</in> <out>4</out> <key>cardona.digit.2</key> <cl>digit</cl> </e>
+<e n='%37'> <in>\u0025</in> <out>5</out> <key>cardona.digit.5</key> <cl>digit</cl> </e>			<!-- Matthias -->
+<e n='&amp;38'> <in>\u0026</in> <out>7</out> <key>cardona.digit.7</key> <cl>digit</cl> </e>
+<e n="'39"> <in>\u0027</in> <out>M</out> <cl>anusvara</cl> </e>
+<e n='(40'> <in>\u0028</in> <out>9</out> <key>cardona.digit.9</key> <cl>digit</cl> </e>			<!-- Matthias -->
+<e n=')41'> <in>\u0029</in> <out>0</out> <key>cardona.digit.0</key> <cl>digit</cl> </e>			<!-- Matthias -->
+<e n='*42'> <in>\u002A</in> <out>8</out> <key>cardona.digit.8</key> <cl>digit</cl>  </e> 		<!-- Matthias -->
+<e n='+43'> <in>\u002B</in> <out>tr</out> <cl>full_form</cl> </e>
+<e n=',44'> <in>\u002C</in> <out>K</out> <cl>full_form</cl> </e>
+<e n='-45'> <in>\u002D</in> <out>[+][+][2][D]</out> <cl>atom</cl> </e>
+<e n='.46'> <in>\u002E</in> <out>B</out> <cl>full_form</cl> </e>
+<e n='/47'> <in>\u002F</in> <out>D</out> <cl>full_form</cl> </e>
+<e n='0.48'> <in>\u0030</in> <out>.</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='1.49'> <in>\u0031</in> <out>Q</out> <key>cardona.Q</key><cl>full_form</cl> </e> 	<!-- Matthias -->
+<e n='2.50'> <in>\u0032</in> <out>q</out> <key>cardona.q</key><cl>full_form</cl> </e>		<!-- Matthias -->
+<e n='3.51'> <in>\u0033</in> <out>[+][+][3][3]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='4.52'> <in>\u0034</in> <out>w</out> <cl>full_form</cl> </e>	<!-- ** -->
+<e n='5.53'> <in>\u0035</in> <out>R</out> <cl>full_form</cl> </e>	<!-- ** -->
+<e n='6.54'> <in>\u0036</in> <out>[+][+][3][6]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='7.55'> <in>\u0037</in> <out>I</out> <cl>vowel_sign</cl> </e>	<!-- ** -->
+<e n='8.56'> <in>\u0038</in> <out>[+][+][3][8]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='9.57'> <in>\u0039</in> <out></out> <cl>virama</cl> <key>virama.1</key> <dependant/> <zerowidth/> </e>	<!-- ** -->
+<e n=':58'> <in>\u003A</in> <out>dr</out> <cl>full_form</cl> </e>	<!-- ** -->
+<e n=';59'> <in>\u003B</in> <out>A</out> <cl>vowel_sign</cl>  </e>
+<e n='&lt;60'> <in>\u003C</in> <out>K</out> <cl>half_form</cl> </e>
+<e n='=61'> <in>\u003D</in> <out>kz</out> <cl>full_form</cl> </e>
+<e n='>62'> <in>\u003E</in> <out>B</out> <cl>half_form</cl> </e>
+<e n='?63'> <in>\u003F</in> <out>D</out> <cl>half_form</cl> </e>
+<e n='@64'> <in>\u0040</in> <out>2</out> <cl>digit</cl> </e>				<!-- PLM-N-v3-b.rtf -->
+<e n='A65'> <in>\u0041</in> <out>f</out> <key>cardona.f</key> <cl>vowel_letter</cl> </e>			 	<!-- PLM-N-v3-b.rtf -->
+<e n='B66'> <in>\u0042</in> <out>b</out> <cl>half_form</cl> </e>
+<e n='C67'> <in>\u0043</in> <out>c</out> <key>cardona.half_form.c</key> <cl>half_form</cl> </e>	<!-- Matthias -->
+<e n='D68'> <in>\u0044</in> <out>jY</out> <cl>full_form</cl> </e>
+<e n='E69'> <in>\u0045</in> <out>e</out> <cl>vowel_letter</cl> </e>
+<e n='F70'> <in>\u0046</in> <out>[+][+][4][6]</out> <cl>atom</cl> </e>
+<e n='G71'> <in>\u0047</in> <out>g</out> <key>cardona.half_form.g</key> <cl>half_form</cl> </e>			 	<!-- PLM-N-v3-b.rtf -->
+<e n='H72'> <in>\u0048</in> <out>[+][+][4][8]</out> <cl>atom</cl> </e>
+<e n='I73'> <in>\u0049</in> <out>i</out> <cl>vowel_letter</cl>  </e>
+<e n='J74'> <in>\u004A</in> <out>j</out> <cl>half_form</cl> </e>
+<e n='K75'> <in>\u004B</in> <out>k</out> <cl>half_form</cl> </e>
+<e n='L76'> <in>\u004C</in> <out>l</out> <cl>half_form</cl> </e>
+<e n='M77'> <in>\u004D</in> <out>m</out> <cl>half_form</cl> </e>
+<e n='N78'> <in>\u004E</in> <out>n</out> <cl>half_form</cl> </e>
+<e n='O79'> <in>\u004F</in> <out>f</out> <cl>vowel_sign</cl>   </e>
+<e n='P80'> <in>\u0050</in> <out>p</out> <cl>half_form</cl> </e>
+<e n='Q81'> <in>\u0051</in> <out>T</out> <key>cardona.half_form.T</key><cl>half_form</cl> </e>		<!-- Matthias -->
+<e n='R82'> <in>\u0052</in> <out>r</out> <cl>prefix</cl> <dependant/> <zerowidth/> </e>
+<e n='S83'> <in>\u0053</in> <out>s</out> <cl>half_form</cl> </e>
+<e n='T84'> <in>\u0054</in> <out>t</out> <cl>half_form</cl> </e>
+<e n='U85'> <in>\u0055</in> <out>U</out> <cl>vowel_sign</cl>   </e>
+<e n='V86'> <in>\u0056</in> <out>v</out> <cl>half_form</cl> </e>
+<e n='W87'> <in>\u0057</in> <out>z</out> <cl>full_form</cl> </e>
+<e n='X88'> <in>\u0058</in> <out>[+][+][5][8]</out> <cl>atom</cl> </e>
+<e n='Y89'> <in>\u0059</in> <out>y</out> <key>cardona.half_form.y</key><cl>half_form</cl> </e>		<!-- Matthias -->
+<e n='Z90'> <in>\u005A</in> <out>[+][+][5][A]</out> <cl>atom</cl> </e>
+<e n='[91'> <in>\u005B</in> <out>r</out> <cl>half_form_end</cl> <swap/> </e>  
+<e n='\92'> <in>\u005C</in> <out>[+][+][5][C]</out> <cl>atom</cl> </e> 
+<e n=']93'> <in>\u005D</in> <lig>rM</lig> <key>cardona.ligature.rM</key> <zerowidth/> </e>    <!-- cardona.ligature.rM -->
+<e n='^94'> <in>\u005E</in> <out>6</out> <cl>digit</cl> </e>  		<!-- PLM-N-v3-b.rtf --> 
+<e n='_95'> <in>\u005F</in> <out>tt</out> <cl>half_form</cl> </e>
+<e n='`96'> <in>\u0060</in> <out>G</out> <cl>full_form</cl> </e>
+<e n='a97'> <in>\u0061</in> <out>a</out> <cl>vowel_letter</cl> </e>
+<e n='a97+'> <in>\u0061\u003B</in> <out>A</out> <cl>vowel_letter</cl> </e>
+<e n='b98'> <in>\u0062</in> <out>b</out> <cl>full_form</cl> </e>
+<e n='c99'> <in>\u0063</in> <out>c</out> <cl>full_form</cl> </e>
+<e n='d100'> <in>\u0064</in> <out>d</out> <cl>full_form</cl> </e>
+<e n='e101'> <in>\u0065</in> <out>e</out> <cl>vowel_sign</cl> </e>
+<e n='f102'> <in>\u0066</in> <out>P</out> <cl>full_form</cl> </e> 
+<e n='g103'> <in>\u0067</in> <out>g</out> <cl>full_form</cl> </e>
+<e n='h104'> <in>\u0068</in> <out>h</out> <cl>full_form</cl> </e>
+<e n='i105'> <in>\u0069</in> <out>i</out> <cl>vowel_sign</cl> </e>
+<e n='j106'> <in>\u006A</in> <out>j</out> <cl>full_form</cl> </e>
+<e n='k107'> <in>\u006B</in> <out>k</out> <cl>full_form</cl> </e>
+<e n='l108'> <in>\u006C</in> <out>l</out> <cl>full_form</cl> </e>
+<e n='m109'> <in>\u006D</in> <out>m</out> <cl>full_form</cl> </e>
+<e n='n110'> <in>\u006E</in> <out>n</out> <cl>full_form</cl> </e>
+<e n='o111'> <in>\u006F</in> <out>o</out> <cl>vowel_sign</cl>  </e>
+<e n='p112'> <in>\u0070</in> <out>p</out> <cl>full_form</cl> </e>
+<e n='q113'> <in>\u0071</in> <out>T</out> <cl>full_form</cl> </e>
+<e n='r114'> <in>\u0072</in> <out>r</out> <cl>full_form</cl> </e>
+<e n='s115'> <in>\u0073</in> <out>s</out> <cl>full_form</cl> </e>
+<e n='t116'> <in>\u0074</in> <out>t</out> <cl>full_form</cl> </e>
+<e n='u117'> <in>\u0075</in> <out>u</out> <cl>vowel_sign</cl>   </e>
+<e n='v118'> <in>\u0076</in> <out>v</out> <cl>full_form</cl> </e>
+<e n='w119'> <in>\u0077</in> <out>E</out> <cl>vowel_sign</cl>   </e>
+<e n='x120'> <in>\u0078</in> <out>S</out> <cl>full_form</cl> </e>
+<e n='y121'> <in>\u0079</in> <out>y</out> <cl>full_form</cl> </e>
+<e n='z122'> <in>\u007A</in> <out>C</out> <key>cardona.C</key> <cl>full_form</cl> </e>			 <!-- PLM-N-v3-b.rtf -->
+<e n='{123'> <in>\u007B</in> <out>[+][+][7][B]</out> <cl>atom</cl> </e>
+<e n='|124'> <in>\u007C</in> <out>[+][+][7][C]</out> <cl>atom</cl>  </e>
+<e n='}125'> <in>\u007D</in> <out>[+][+][7][D]</out> <cl>atom</cl> </e>
+<e n='~126'> <in>\u007E</in> <out>[+][+][7][E]</out> <cl>atom</cl> </e>  <!-- ** -->
+<e n='127'> <in>\u007F</in> <out>[+][+][7][F]</out> <cl>atom</cl> </e>
+<e n='128'> <in>\u0080</in> <out>[+][+][8][0]</out> <cl>atom</cl>  </e>
+<e n='129'> <in>\u0081</in> <out>[+][+][8][1]</out> <cl>atom</cl> </e>
+<e n='130'> <in>\u0082</in> <out>[+][+][8][2]</out> <cl>atom</cl> </e>
+<e n='131'> <in>\u0083</in> <out>[+][+][8][3]</out> <cl>atom</cl>  </e>
+<e n='132'> <in>\u0084</in> <out>Y</out> <key>cardona.Y</key> <cl>full_form</cl> </e>			 <!-- PLM-N-v3-b.rtf -->
+<e n='133'> <in>\u0085</in> <out>[+][+][8][5]</out> <cl>atom</cl>  </e>
+<e n='134'> <in>\u0086</in> <out>[+][+][8][6]</out> <cl>atom</cl>  </e>
+<e n='135'> <in>\u0087</in> <out>[+][+][8][7]</out> <cl>atom</cl>  </e>
+<e n='136'> <in>\u0088</in> <out>[+][+][8][8]</out> <cl>atom</cl> </e>
+<e n='137'> <in>\u0089</in> <out>[+][+][8][9]</out> <cl>atom</cl>  </e>
+<e n='138'> <in>\u008A</in> <out>[+][+][8][A]</out> <cl>atom</cl> </e>
+<e n='139'> <in>\u008B</in> <out>[+][+][8][B]</out> <cl>atom</cl> </e>
+<e n='140'> <in>\u008C</in> <out>'</out> <cl>atom</cl> </e>
+<e n='141'> <in>\u008D</in> <out>Yc</out> <key>cardona.Yc</key> <cl>full_form</cl> </e>		 <!-- PLM-N-v3-b.rtf -->
+<e n='142'> <in>\u008E</in> <out>[+][+][8][E]</out> <cl>atom</cl>  </e>  <!-- ** -->
+<e n='143'> <in>\u008F</in> <out>[+][+][8][F]</out> <cl>atom</cl> </e>
+<e n='144'> <in>\u0090</in> <out>[+][+][9][0]</out> <cl>atom</cl> </e>
+<e n='145'> <in>\u0091</in> <out>[+][+][9][1]</out> <cl>atom</cl>  </e>
+<e n='146'> <in>\u0092</in> <out>[+][+][9][2]</out> <cl>atom</cl> </e>
+<e n='147'> <in>\u0093</in>  <out>[+][+][9][3]</out> <cl>atom</cl>  </e>
+<e n='148'> <in>\u0094</in> <out>[+][+][9][4]</out> <cl>atom</cl> </e>
+<e n='149'> <in>\u0095</in>  <out>[+][+][9][5]</out> <cl>atom</cl> </e>
+<e n='150'> <in>\u0096</in>  <out>[+][+][9][6]</out> <cl>atom</cl> </e> <!-- ** -->
+<e n='151'> <in>\u0097</in> <out>[+][+][9][7]</out> <cl>atom</cl> </e>
+<e n='152'> <in>\u0098</in> <out>[+][+][9][8]</out> <cl>atom</cl> </e>
+<e n='153'> <in>\u0099</in>  <out>[+][+][9][9]</out> <cl>atom</cl>  </e>  <!-- ** -->
+<e n='154'> <in>\u009A</in> <out>[+][+][9][A]</out> <cl>atom</cl> </e>
+<e n='155'> <in>\u009B</in> <out>[+][+][9][B]</out> <cl>atom</cl> </e>
+<e n='156'> <in>\u009C</in> <out>[+][+][9][C]</out> <cl>atom</cl>  </e>
+<e n='157'> <in>\u009D</in> <out>[+][+][9][D]</out> <cl>atom</cl>  </e>
+<e n='158'> <in>\u009E</in> <out>[+][+][9][E]</out> <cl>atom</cl>  </e>
+<e n='159'> <in>\u009F</in> <out>u</out> <cl>vowel_letter</cl> </e>
+<e n='160'> <in>\u00A0</in> <out>kt</out> <cl>full_form</cl> </e>
+<e n='161'> <in>\u00A1</in> <out>[+][+][A][1]</out> <cl>atom</cl>  </e>
+<e n='162'> <in>\u00A2</in> <out>zw</out> <cl>full_form</cl> </e>
+<e n='163'> <in>\u00A3</in> <out>zW</out> <key>cardona.zW</key><cl>full_form</cl> </e>		<!-- Matthias -->
+<e n='164'> <in>\u00A4</in> <out>Sr</out> <cl>full_form</cl> </e>
+<e n='165'> <in>\u00A5</in> <out>[+][+][A][5]</out> <cl>atom</cl> </e>
+<e n='166'> <in>\u00A6</in> <out>[+][+][A][6]</out> <cl>atom</cl> </e>
+<e n='167'> <in>\u00A7</in> <out>sn</out> <cl>full_form</cl> </e>
+<e n='168'> <in>\u00A8</in> <lig>ru</lig> <key>ligature.ru</key> </e>  <!-- ** -->
+<e n='169'> <in>\u00A9</in> <out>Ng</out> <cl>full_form</cl> </e>
+<e n='170'> <in>\u00AA</in> <out>N</out> <cl>full_form</cl> </e>  <!-- ** -->
+<e n='171'> <in>\u00AB</in> <out>[+][+][A][B]</out> <cl>atom</cl> </e>  <!-- ** -->
+<e n='172'> <in>\u00AC</in> <out>[+][+][A][C]</out> <cl>atom</cl> </e>  <!-- ** -->
+<e n='173'> <in>\u00AD</in> <out>kz</out> <cl>half_form</cl> </e>
+<e n='174'> <in>\u00AE</in> <out>[+][+][A][E]</out> <cl>atom</cl> </e>
+<e n='175'> <in>\u00AF</in> <out>[\u0950]</out> <cl>atom</cl> </e>			<!-- om -->
+<e n='176'> <in>\u00B0</in> <out>R</out> <key>cardona.half_form.R</key> <cl>half_form</cl> </e>		 	<!-- PLM-N-v3-b.rtf -->
+<e n='177'> <in>\u00B1</in> <out>[+][+][B][1]</out> <cl>atom</cl> </e>
+<e n='178'> <in>\u00B2</in> <out>NK</out> <key>cardona.NK</key> <cl>full_form</cl> </e>			 <!-- PLM-N-v3-b.rtf -->
+<e n='179'> <in>\u00B3</in> <out>[+][+][B][3]</out> <cl>atom</cl> </e>
+<e n='180'> <in>\u00B4</in> <out>dy</out> <cl>full_form</cl> </e>	<!-- ** -->
+<e n='181'> <in>\u00B5</in> <out>n</out> <key>cardona.half_form.n</key><cl>half_form</cl> </e>			<!-- Matthias -->
+<e n='182'> <in>\u00B6</in> <out>dd</out> <key>cardona.dd</key><cl>full_form</cl> </e>							<!-- Matthias -->
+<e n='183'> <in>\u00B7</in> <out>[+][+][B][7]</out> <cl>atom</cl> </e>
+<e n='184'> <in>\u00B8</in> <out>[+][+][B][8]</out> <cl>atom</cl> </e>
+<e n='185'> <in>\u00B9</in> <out>pt</out> <key>cardona.pt</key> <cl>full_form</cl> </e>			 <!-- PLM-N-v3-b.rtf -->
+<e n='186'> <in>\u00BA</in> <out>[+][+][B][A]</out> <cl>atom</cl> </e>
+<e n='187'> <in>\u00BB</in> <out>Nkz</out> <cl>full_form</cl> </e>
+<e n='188'> <in>\u00BC</in> <out>[+][+][B][C]</out> <cl>atom</cl>  </e>	<!-- ** -->
+<e n='189'> <in>\u00BD</in> <out>[+][+][B][D]</out> <cl>atom</cl> </e>
+<e n='190'> <in>\u00BE</in> <out>[+][+][B][E]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='191'> <in>\u00BF</in> <out>O</out> <cl>vowel_sign</cl> </e>
+<e n='192'> <in>\u00C0</in> <out>[+][+][C][0]</out> <cl>atom</cl> </e>
+<e n='193'> <in>\u00C1</in> <out>Sc</out> <cl>full_form</cl>  </e>
+<e n='194'> <in>\u00C2</in> <out>[+][+][C][2]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='195'> <in>\u00C3</in> <out>dv</out> <cl>full_form</cl> </e>
+<e n='196'> <in>\u00C4</in> <out>[+][+][C][4]</out> <cl>atom</cl> </e>
+<e n='197'> <in>\u00C5</in> <out>S</out> <key>cardona.half_form.S</key> <cl>half_form</cl> </e>
+<e n='198'> <in>\u00C6</in> <out>[+][+][C][6]</out> <cl>atom</cl></e>	<!-- ** -->
+<e n='199'> <in>\u00C7</in> <out>[+][+][C][7]</out> <cl>atom</cl> </e>
+<e n='200'> <in>\u00C8</in> <out>[+][+][C][8]</out> <cl>atom</cl> </e>
+<e n='201'> <in>\u00C9</in> <out>[+][+][C][9]</out> <cl>atom</cl> </e>
+<e n='202'> <in>\u00CA</in> <out>[+][+][C][A]</out> <cl>atom</cl> </e>
+<e n='203'> <in>\u00CB</in> <out>[+][+][C][B]</out> <cl>atom</cl>  </e>	<!-- ** -->
+<e n='204'> <in>\u00CC</in> <out>[+][+][C][C]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='205'> <in>\u00CD</in> <out>f</out> <key>cardona.vowel_sign.f.2</key> <cl>vowel_sign</cl> </e>
+<e n='206'> <in>\u00CE</in> <out>Sv</out> <key>cardona.Sv</key> <cl>full_form</cl> </e>		 <!-- PLM-N-v3-b.rtf -->
+<e n='207'> <in>\u00CF</in> <out>y</out> <cl>half_form_end</cl> </e>
+<e n='208'> <in>\u00D0</in> <out>[+][+][D][0]</out> <cl>atom</cl> </e>
+<e n='209'> <in>\u00D1</in> <out>[.]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='210'> <in>\u00D2</in> <out>[+][+][D][2]</out> <cl>atom</cl> </e>
+<e n='211'> <in>\u00D3</in> <out>[+][+][D][3]</out> <cl>atom</cl> </e>
+<e n='212'> <in>\u00D4</in> <out>[+][+][D][4]</out> <cl>atom</cl> </e>
+<e n='213'> <in>\u00D5</in> <out>[+][+][D][5]</out> <cl>atom</cl> </e>
+<e n='214'> <in>\u00D6</in> <out>dD</out> <cl>full_form</cl> </e>
+<e n='215'> <in>\u00D7</in> <out>[+][+][D][7]</out> <cl>atom</cl> </e>
+<e n='216'> <in>\u00D8</in> <out>[+][+][D][8]</out> <cl>atom</cl> </e>
+<e n='217'> <in>\u00D9</in> <out>[+][+][D][9]</out> <cl>atom</cl>  </e>	<!-- ** -->
+<e n='218'> <in>\u00DA</in> <out>ww</out> <key>cardona.ww</key> <cl>full_form</cl> </e>	<!-- Matthias -->
+<e n='219'> <in>\u00DB</in> <out>[+][+][D][B]</out> <cl>atom</cl> </e>
+<e n='220'> <in>\u00DC</in> <out>[+][+][D][C]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='221'> <in>\u00DD</in> <out>[+][+][D][D]</out> <cl>atom</cl> </e>
+<e n='222'> <in>\u00DE</in> <out>hR</out> <key>cardona.hR</key> <cl>full_form</cl> </e>	<!-- Matthias -->
+<e n='223'> <in>\u00DF</in> <out>[+][+][D][F]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='224'> <in>\u00E0</in> <out>[+][+][E][0]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='225'> <in>\u00E1</in> <out>[+][+][E][1]</out> <cl>atom</cl> </e>
+<e n='226'> <in>\u00E2</in> <out>[+][+][E][2]</out> <cl>atom</cl> </e> 	<!-- ** -->
+<e n='227'> <in>\u00E3</in> <out>z</out> <cl>half_form</cl> </e>
+<e n='228'> <in>\u00E4</in> <out>[+][+][E][4]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='229'> <in>\u00E5</in> <lig>rU</lig> <key>ligature.rU</key> </e>	<!-- ** -->
+<e n='230'> <in>\u00E6</in> <out>tt</out> <cl>full_form</cl> </e>
+<e n='231'> <in>\u00E7</in> <out>hy</out> <cl>full_form</cl> </e>	<!-- ** -->
+<e n='232'> <in>\u00E8</in> <out>[+][+][E][8]</out> <cl>atom</cl> </e>
+<e n='233'> <in>\u00E9</in> <out>[+][+][E][9]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='234'> <in>\u00EA</in> <out>[+][+][E][A]</out> <cl>atom</cl> </e>	<!-- ** -->
+<e n='235'> <in>\u00EB</in> <lig>df</lig> <key>cardona.ligature.df</key> </e>	<!-- ** -->		 <!-- PLM-N-v3-b.rtf -->
+<e n='236'> <in>\u00EC</in> <out>[+][+][E][C]</out> <cl>atom</cl> </e>
+<e n='237'> <in>\u00ED</in> <out>dg</out> <key>cardona.dg</key> <cl>full_form</cl> </e>  <!-- Matthias -->
+<e n='238'> <in>\u00EE</in> <out>[+][+][E][E]</out> <cl>atom</cl> </e>
+<e n='239'> <in>\u00EF</in> <out>Yj</out> <cl>full_form</cl> </e>
+<e n='240'> <in>\u00F0</in> <out>[+][+][F][0]</out> <cl>atom</cl> </e>
+<e n='241'> <in>\u00F1</in> <out>[+][+][F][1]</out> <cl>atom</cl> </e> <!-- ** -->
+<e n='242'> <in>\u00F2</in> <out>[+][+][F][2]</out> <cl>atom</cl>  </e>
+<e n='243'> <in>\u00F3</in> <out>[+][+][F][3]</out> <cl>atom</cl> </e>
+<e n='244'> <in>\u00F4</in> <out>[+][+][F][4]</out> <cl>atom</cl> </e>
+<e n='245'> <in>\u00F5</in> <out>[+][+][F][5]</out> <cl>atom</cl> </e>
+<e n='246'> <in>\u00F6</in> <out>[+][+][F][6]</out> <cl>atom</cl> </e>
+<e n='247'> <in>\u00F7</in> <out>hm</out> <cl>full_form</cl> </e>
+<e n='248'> <in>\u00F8</in> <out>[+][+][F][8]</out> <cl>atom</cl>  </e>
+<e n='249'> <in>\u00F9</in> <out>[+][+][F][9]</out> <cl>atom</cl>   </e>	<!-- ** -->
+<e n='250'> <in>\u00FA</in> <out>[+][+][F][A]</out> <cl>atom</cl> </e>
+<e n='251'> <in>\u00FB</in> <out>Nk</out> <key>cardona.Nk</key> <cl>full_form</cl> </e>   <!-- Matthias -->
+<e n='252'> <in>\u00FC</in> <out>[+][+][F][C]</out> <cl>atom</cl> </e>
+<e n='253'> <in>\u00FD</in> <out>[+][+][F][D]</out> <cl>atom</cl> </e>
+<e n='254'> <in>\u00FE</in> <out>[+][+][F][E]</out> <cl>atom</cl> </e>
+<e n='255'> <in>\u00FF</in> <out>[+][+][F][F]</out> <cl>atom</cl> </e> 
+
+<e n='263'> <in>\u0100</in> <out>a</out> <cl>vowel_sign</cl> </e>  <!-- phantom vowel sign a -->
+
+</edges>
+
+<ligatures>
+	<ligature type='ru'>
+		<char key='full_form.r'/>
+		<char key='vowel_sign.u'/>
+	</ligature>  
+	<ligature type='rU'>
+		<char key='full_form.r'/>
+		<char key='vowel_sign.U'/>
+	</ligature>  
+	<ligature type='rM'>
+		<char key='prefix.r'/>
+		<char key='anusvara.M'/>
+	</ligature>  
+	<ligature type='df'>
+		<char key='full_form.d'/>
+		<char key='vowel_sign.f'/>
+	</ligature>  
+</ligatures>
+
+<merges>
+</merges>
+
+<buffers>
+	<buffer name='prefix'>
+		<member id='prefix'/>
+	</buffer>
+	<buffer name='atoms' action='!!'>
+		<member id='whitespace'/>
+		<member id='digit'/>
+		<member id='atom'/>
+		<member id='asis'/>
+		<member id='flag' action='x'/>
+	</buffer>
+	<buffer name='vowel_letters' action='!,|'>
+		<member id='vowel_letter'/>
+	</buffer>
+	<buffer name='consonents' merge='consonentMerge'>
+		<member id='half_form' action='?' map='common_consonent'/>
+		<member id='full_form' action='?,|,^' init='vowel_signs' map='common_consonent' required='y'/>
+		<member id='half_form_end' map='common_consonent'/>
+		<member id='common_consonent'/>  <!-- all consonents go here -->
+	</buffer>
+	<buffer name='vowel_signs' card='?' init='vowel_sign.a' merge='vowelMerge'>
+		<member id='vowel_sign.i' action='!'/>
+		<member id='vowel_sign'/>
+		<member id='virama' action='-' />
+		<errorMessage type='card' message='duplicate vowel signs'/>
+		<exists>vowel_letter|full_form</exists>
+	</buffer>
+	<buffer name='anusvara' card='?'>
+		<member id='anusvara'/>
+		<errorMessage type='card' message='duplicate vowel signs'/>
+		<exists>vowel_letter|full_form</exists>
+	</buffer>	
+	<buffer name='accent' card='?'>
+		<member id='accent'/>
+		<errorMessage type='card' message='duplicate accents'/>
+		<exists>vowel_letter|full_form</exists>
+	</buffer>
+	<buffer name='visarga' card='?'>
+		<member id='visarga'/>
+		<errorMessage type='card' message='duplicate accents'/>
+		<exists>vowel_letter|full_form</exists>
+	</buffer>
+	
+</buffers>
+
+</fsm>

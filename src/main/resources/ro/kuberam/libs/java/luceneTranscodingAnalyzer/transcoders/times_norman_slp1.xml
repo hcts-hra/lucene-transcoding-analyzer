@@ -1,0 +1,257 @@
+<fsm inputType='UTF-8' outputType='slp1' capitals='n' version='2'>
+<edges>
+<e n='0'> <in>A</in> <out>{a}</out><cl>vowel</cl> <dependant/></e>
+<e n='1'> <in>I</in> <out>{i}</out><cl>vowel</cl> <dependant/></e>
+<e n='2'> <in>U</in> <out>{u}</out><cl>vowel</cl> <dependant/></e>
+<e n='3'> <in>f</in> <out>[f]</out><cl>atom</cl></e>
+<e n='4'> <in>F</in> <out>[F]</out><cl>atom</cl></e>
+<e n='5'> <in>x</in> <out>[x]</out><cl>atom</cl></e>
+<e n='6'> <in>X</in> <out>[X]</out><cl>atom</cl></e>
+<e n='7'> <in>E</in> <out>{e}</out><cl>vowel</cl> <dependant/></e>
+<e n='8'> <in>O</in> <out>{o}</out><cl>vowel</cl> <dependant/></e>
+<e n='9'> <in>M</in> <out>{m}</out><cl>consonent</cl></e>
+<e n='10'> <in>H</in> <out>{h}</out><cl>vowel</cl></e>
+<e n='11'> <in>Z</in> <out>[Z]</out><cl>atom</cl></e>
+<e n='12'> <in>V</in> <out>{v}</out><cl>consonent</cl></e>
+<e n='13'> <in>K</in> <out>{k}</out><cl>consonent</cl></e>
+<e n='14'> <in>G</in> <out>{g}</out><cl>consonent</cl></e>
+<e n='15'> <in>N</in> <out>{n}</out><cl>consonent</cl></e>
+<e n='16'> <in>C</in> <out>{c}</out><cl>consonent</cl></e>
+<e n='17'> <in>J</in> <out>{j}</out><cl>consonent</cl></e>
+<e n='18'> <in>Y</in> <out>{y}</out><cl>consonent</cl></e>
+<e n='19'> <in>w</in> <out>[w]</out><cl>atom</cl></e>
+<e n='20'> <in>W</in> <out>[W]</out><cl>atom</cl></e>
+<e n='21'> <in>q</in> <out>[q]</out><cl>atom</cl></e>
+<e n='22'> <in>Q</in> <out>[Q]</out><cl>atom</cl></e>
+<e n='23'> <in>R</in> <out>[R]</out><cl>atom</cl></e>
+<e n='24'> <in>|</in> <out>[|]</out><cl>atom</cl></e>
+<e n='25'> <in>L</in> <out>{l}</out><cl>consonent</cl></e>
+<e n='26'> <in>T</in> <out>{t}</out><cl>consonent</cl></e>
+<e n='27'> <in>D</in> <out>{d}</out><cl>consonent</cl></e>
+<e n='28'> <in>P</in> <out>{p}</out><cl>consonent</cl></e>
+<e n='29'> <in>B</in> <out>{b}</out><cl>consonent</cl></e>
+<e n='30'> <in>S</in> <out>{s}</out><cl>consonent</cl></e>
+<e n='31'> <in>z</in> <out>[z]</out><cl>atom</cl></e>
+<e n='32'> <in>[</in> <out>[[]</out> <cl>atom</cl> </e>
+<e n='33'> <in>]</in> <out>[]]</out> <cl>atom</cl> </e>
+<e n='34'> <in>{</in> <out>[{]</out> <cl>atom</cl> </e>
+<e n='35'> <in>}</in> <out>[}]</out> <cl>atom</cl> </e>
+<e n='37'> <in>\u00fc</in> <out>[\u00fc]</out><cl>atom</cl></e>
+
+<e n='200'> <in>a</in> <out>a</out> <cl>vowel</cl> <dependant/></e>
+<e n='38'> <in>\u008c</in> <out>A</out> <cl>vowel</cl> <dependant/></e>
+<e n='39'> <in>\u00ee</in> <out>{A}</out> <cl>vowel</cl> <dependant/></e>
+
+<e n='201'> <in>i</in> <out>i</out> <cl>vowel</cl> <dependant/></e>
+<e n='40'> <in>\u00b4</in> <out>I</out> <cl>vowel</cl> <dependant/></e>
+<e n='41'> <in>\u00e7</in> <out>{I}</out> <cl>vowel</cl> <dependant/></e>
+
+<e n='202'> <in>u</in> <out>u</out> <cl>vowel</cl> <dependant/></e>
+<e n='42'> <in>\u00e8</in> <out>U</out> <cl>vowel</cl> <dependant/></e>
+<e n='43'> <in>\u00f2</in> <out>{U}</out> <cl>vowel</cl> <dependant/></e>
+
+<e n='44'> <in>\u00a8</in> <out>f</out> <cl>vowel</cl> <dependant/></e>
+<e n='45'> <in>\u00f4</in> <out>{f}</out> <cl>vowel</cl> <dependant/></e>
+
+<e n='46'> <in>\u00a5</in> <out>F</out> <cl>vowel</cl> <dependant/></e>
+<e n='47'> <in>\uff00</in> <out>{F}</out> <cl>flag</cl> <dependant/></e>   <!-- ? -->
+
+<e n='48'> <in>\u00d6</in> <out>x</out> <cl>vowel</cl> <dependant/></e>  <!-- l with a small circle (consonent l has solid dot -->
+<e n='49'> <in>\uff01</in> <out>{x}</out> <cl>vowel</cl> <dependant/></e> <!-- ? -->
+
+<e n='50'> <in>\uff02</in> <out>X</out> <cl>vowel</cl> <dependant/></e>     <!-- ? -->
+<e n='51'> <in>\uff03</in> <out>{X}</out> <cl>vowel</cl> <dependant/></e>   <!-- ? -->
+
+<e n='203'> <in>e</in> <out>e</out> <cl>vowel</cl> <dependant/></e>
+<e n='52'> <in>ai</in> <out>E</out> <cl>vowel</cl> <dependant/></e>
+<e n='53'> <in>AI</in> <out>{E}</out> <cl>vowel</cl> <dependant/></e>
+
+<e n='204'> <in>o</in> <out>o</out> <cl>vowel</cl> <dependant/></e>
+<e n='54'> <in>au</in> <out>O</out> <cl>vowel</cl> <dependant/></e>
+<e n='55'> <in>AU</in> <out>{O}</out> <cl>vowel</cl> <dependant/></e>
+
+<e n='205'> <in>h</in> <out>h</out> <cl>consonent</cl></e>
+<e n='56'> <in>\u00fa</in> <out>H</out> <cl>visarga</cl> <dependant/></e>
+<e n='57'> <in>\u00de</in> <out>{H}</out> <cl>visarga</cl> <dependant/></e>
+
+<e n='206'> <in>m</in> <out>m</out> <cl>consonent</cl></e>
+<e n='58'> <in>\u00b5</in> <out>M</out> <cl>anusvara</cl> <dependant/></e>
+<e n='59'> <in>\u00c8</in> <out>{M}</out> <cl>anusvara</cl> <dependant/></e>
+
+<e n='207'> <in>k</in> <out>k</out> <cl>consonent</cl></e>
+<e n='60'> <in>kh</in> <out>K</out> <cl>consonent</cl></e>
+<e n='61'> <in>Kh</in> <out>{K}</out> <cl>consonent</cl></e>
+<e n='61a'> <in>KH</in> <out>{K}</out> <cl>consonent</cl></e>
+
+<e n='208'> <in>g</in> <out>g</out> <cl>consonent</cl></e>
+<e n='62'> <in>gh</in> <out>G</out> <cl>consonent</cl></e>
+<e n='63'> <in>Gh</in> <out>{G}</out> <cl>consonent</cl></e>
+<e n='63a'> <in>GH</in> <out>{G}</out> <cl>consonent</cl></e>
+
+<e n='209'> <in>n</in> <out>n</out> <cl>consonent</cl></e>
+<e n='64'> <in>\u00ba</in> <out>N</out> <cl>consonent</cl></e>
+<e n='65'> <in>\u00dc</in> <out>{N}</out> <cl>consonent</cl></e>
+
+<e n='210'> <in>c</in> <out>c</out> <cl>consonent</cl></e>
+<e n='66'> <in>ch</in> <out>C</out> <cl>consonent</cl></e>
+<e n='67'> <in>Ch</in> <out>{C}</out> <cl>consonent</cl></e>
+<e n='67a'> <in>CH</in> <out>{C}</out> <cl>consonent</cl></e>
+
+<e n='211'> <in>j</in> <out>j</out> <cl>consonent</cl></e>
+<e n='68'> <in>jh</in> <out>J</out> <cl>consonent</cl></e>
+<e n='69'> <in>Jh</in> <out>{J}</out> <cl>consonent</cl></e>
+<e n='69a'> <in>JH</in> <out>{J}</out> <cl>consonent</cl></e>
+
+<e n='212'> <in>y</in> <out>y</out> <cl>consonent</cl></e>
+<e n='70'> <in>\u0096</in> <out>Y</out> <cl>consonent</cl></e>
+<e n='71'> <in>\u0084</in> <out>{Y}</out> <cl>consonent</cl></e>
+
+<e n='72'> <in>\u00a0</in> <out>w</out> <cl>consonent</cl></e>
+<e n='73'> <in>\u00e9</in> <out>{w}</out> <cl>consonent</cl></e>
+
+<e n='74'> <in>\u00a0h</in> <out>W</out> <cl>consonent</cl></e>
+<e n='75'> <in>\u00e9h</in> <out>{W}</out> <cl>consonent</cl></e>
+<e n='75a'> <in>\u00e9H</in> <out>{W}</out> <cl>consonent</cl></e>
+
+<e n='76'> <in>\u00b6</in> <out>q</out> <cl>consonent</cl></e>
+<e n='77'> <in>\u00df</in> <out>{q}</out> <cl>consonent</cl></e>
+
+<e n='78'> <in>\u00b6h</in> <out>Q</out> <cl>consonent</cl></e>
+<e n='79'> <in>\u00dfh</in> <out>{Q}</out> <cl>consonent</cl></e>
+<e n='79a'> <in>\u00dfH</in> <out>{Q}</out> <cl>consonent</cl></e>
+
+<e n='213'> <in>r</in> <out>r</out> <cl>consonent</cl></e>
+<e n='80'> <in>\u00f6</in> <out>R</out> <cl>consonent</cl></e>
+<e n='81'> <in>\u00ef</in> <out>{R}</out> <cl>consonent</cl></e>
+
+<e n='250'> <in>v</in> <out>v</out> <cl>consonent</cl></e>
+
+<e n='214'> <in>t</in> <out>t</out> <cl>consonent</cl></e>
+<e n='82'> <in>th</in> <out>T</out> <cl>consonent</cl></e>
+<e n='83'> <in>Th</in> <out>{T}</out> <cl>consonent</cl></e>
+<e n='83a'> <in>TH</in> <out>{T}</out> <cl>consonent</cl></e>
+
+<e n='215'> <in>d</in> <out>d</out> <cl>consonent</cl></e>
+<e n='84'> <in>dh</in> <out>D</out> <cl>consonent</cl></e>
+<e n='85'> <in>Dh</in> <out>{D}</out> <cl>consonent</cl></e>
+<e n='85a'> <in>DH</in> <out>{D}</out> <cl>consonent</cl></e>
+
+<e n='216'> <in>p</in> <out>p</out> <cl>consonent</cl></e>
+<e n='86'> <in>ph</in> <out>P</out> <cl>consonent</cl></e>
+<e n='87'> <in>Ph</in> <out>{P}</out> <cl>consonent</cl></e>
+<e n='87a'> <in>PH</in> <out>{P}</out> <cl>consonent</cl></e>
+
+<e n='217'> <in>b</in> <out>b</out> <cl>consonent</cl></e>
+<e n='88'> <in>bh</in> <out>B</out> <cl>consonent</cl></e>
+<e n='89'> <in>Bh</in> <out>{B}</out> <cl>consonent</cl></e>
+<e n='89a'> <in>BH</in> <out>{B}</out> <cl>consonent</cl></e>
+
+<e n='218'> <in>s</in> <out>s</out> <cl>consonent</cl></e>
+<e n='90'> <in>\u00a7</in> <out>S</out> <cl>consonent</cl></e>
+<e n='91'> <in>\u00ea</in> <out>{S}</out> <cl>consonent</cl></e>
+
+<e n='92'> <in>\u00b7</in> <out>z</out> <cl>consonent</cl></e>
+<e n='93'> <in>\u00dd</in> <out>{z}</out> <cl>consonent</cl></e>
+
+<e n='219'> <in>l</in> <out>l</out> <cl>consonent</cl></e>
+<e n='94'> <in>\u00c2</in> <out>L</out> <cl>consonent</cl></e>
+<e n='95'> <in>\u00e2</in> <out>{L}</out> <cl>consonent</cl></e>
+
+<e n='96'> <in>\u00c2h</in> <out>|</out> <cl>consonent</cl></e>
+<e n='97'> <in>\u00e2H</in> <out>{|}</out> <cl>consonent</cl></e>
+
+<e n='98'> <in>'</in> <out>'</out> <cl>atom</cl></e>
+
+<e n='99'> <in>\uff04</in> <out>~</out> <cl>accent</cl></e>  <!-- ? -->
+
+<e n='260'> <in>.</in> <out>.</out> <cl>atom</cl></e>
+
+<e n='102'> <in>\u0020</in> <out>\u0020</out> <cl>atom</cl></e>
+<e n='103'> <in>\u0009</in> <out>\u0009</out> <cl>atom</cl></e>
+<e n='104'> <in>\u000d</in> <out>\u000d</out> <cl>atom</cl></e>
+<e n='105'> <in>\u000a</in> <out>\u000a</out> <cl>atom</cl></e>
+
+<e n='200'> <in>0</in> <out>0</out> <cl>digit</cl> </e>
+<e n='201'> <in>1</in> <out>1</out> <cl>digit</cl> </e>
+<e n='202'> <in>2</in> <out>2</out> <cl>digit</cl> </e>
+<e n='203'> <in>3</in> <out>3</out> <cl>digit</cl> </e>
+<e n='204'> <in>4</in> <out>4</out> <cl>digit</cl> </e>
+<e n='205'> <in>5</in> <out>5</out> <cl>digit</cl> </e>
+<e n='206'> <in>6</in> <out>6</out> <cl>digit</cl> </e>
+<e n='207'> <in>7</in> <out>7</out> <cl>digit</cl> </e>
+<e n='208'> <in>8</in> <out>8</out> <cl>digit</cl> </e>
+<e n='209'> <in>9</in> <out>9</out> <cl>digit</cl> </e>
+
+<!--e n='62'> <in></in> <out>\</out> </e-->
+<!--
+<e n=''> <in>\u00e1</in> <out>/a</out> <cl>char</cl> </e>
+<e n='63'> <in>\u00ed</in> <out>/i</out> <cl>char</cl> </e>
+<e n='64'> <in>\u00fa</in> <out>/u</out> <cl>char</cl> </e>
+<e n='65'> <in>\u1e5b\u0301</in> <out>/f</out> <cl>char</cl> </e>
+<e n='66'> <in>\u1e37\u0301</in> <out>/x</out> <cl>char</cl> </e>
+<e n='67'> <in>\u0101\u0301</in> <out>/A</out> <cl>char</cl> </e>
+<e n='68'> <in>\u012b\u0301</in> <out>/I</out> <cl>char</cl> </e>
+<e n='69'> <in>\u016b\u0301</in> <out>/U</out> <cl>char</cl> </e>
+<e n='70'> <in>\u1e5d\u0301</in> <out>/F</out> <cl>char</cl> </e>
+<e n='71'> <in>\u1e39\u0301</in> <out>/X</out> <cl>char</cl> </e>
+<e n='72'> <in>\u00e9</in> <out>/e</out> <cl>char</cl> </e>
+<e n='73'> <in>\u00f3</in> <out>/o</out> <cl>char</cl> </e>
+<e n='74'> <in>a\u00ed</in> <out>/E</out> <cl>char</cl> </e>
+<e n='75'> <in>a\u00fa</in> <out>/O</out> <cl>char</cl> </e>
+<e n='76'> <in>\u00e0</in> <out>^a</out> <cl>char</cl> </e>
+<e n='77'> <in>\u00ec</in> <out>^i</out> <cl>char</cl> </e>
+<e n='78'> <in>\u00f9</in> <out>^u</out> <cl>char</cl> </e>
+<e n='79'> <in>\u1e5b\u0300</in> <out>^f</out> <cl>char</cl> </e>
+<e n='80'> <in>\u1e37\u0300</in> <out>^x</out> <cl>char</cl> </e>
+<e n='81'> <in>\u0101\u0300</in> <out>^A</out> <cl>char</cl> </e>
+<e n='82'> <in>\u012b\u0300</in> <out>^I</out> <cl>char</cl> </e>
+<e n='83'> <in>\u016b\u0300</in> <out>^U</out> <cl>char</cl> </e>
+<e n='84'> <in>\u1e5d\u0300</in> <out>^F</out> <cl>char</cl> </e>
+<e n='85'> <in>\u1e39\u0300</in> <out>^X</out> <cl>char</cl> </e>
+<e n='86'> <in>\u00e8</in> <out>^e</out> <cl>char</cl> </e>
+<e n='87'> <in>\u00f2</in> <out>^o</out> <cl>char</cl> </e>
+<e n='88'> <in>a\u00ec</in> <out>^E</out> <cl>char</cl> </e>
+<e n='89'> <in>a\u00f9</in> <out>^O</out> <cl>char</cl> </e>
+<e n='90'> <in>\u00e0</in> <out>`a</out> <cl>char</cl> </e>
+<e n='91'> <in>\u00ec</in> <out>`i</out> <cl>char</cl> </e>
+<e n='92'> <in>\u00f9</in> <out>`u</out> <cl>char</cl> </e>
+<e n='93'> <in>\u1e5b\u0300</in> <out>`f</out> <cl>char</cl> </e>
+<e n='94'> <in>\u1e37\u0300</in> <out>`x</out> <cl>char</cl> </e>
+<e n='95'> <in>\u0101\u0300</in> <out>`A</out> <cl>char</cl> </e>
+<e n='96'> <in>\u012b\u0300</in> <out>`I</out> <cl>char</cl> </e>
+<e n='97'> <in>\u016b\u0300</in> <out>`U</out> <cl>char</cl> </e>
+<e n='98'> <in>\u1e5d\u0300</in> <out>`F</out> <cl>char</cl> </e>
+<e n='99'> <in>\u1e39\u0300</in> <out>`X</out> <cl>char</cl> </e>
+<e n='100'> <in>\u00e8</in> <out>`e</out> <cl>char</cl> </e>
+<e n='101'> <in>\u00f2</in> <out>`o</out> <cl>char</cl> </e>
+<e n='102'> <in>a\u00ec</in> <out>`E</out> <cl>char</cl> </e>
+<e n='103'> <in>a\u00f9</in> <out>`O</out> <cl>char</cl> </e>
+-->
+</edges>
+
+<buffers>
+	<buffer name='atoms' action='!!'>
+		<member id='whitespace'/>
+		<member id='digit'/>
+		<member id='atom'/>
+		<member id='flag' action='error'/>
+	</buffer>
+	<buffer name='consonents' action='?'>
+		<member id='consonent'/>
+	</buffer>
+	<buffer name='vowels' action='|'>
+		<member id='vowel'/>
+	</buffer>
+	<buffer name='anusvara'>
+		<member id='anusvara'/>
+	</buffer>	
+	<buffer name='accent'>
+		<member id='accent'/>
+	</buffer>
+	<buffer name='visarga'>
+		<member id='visarga'/>
+	</buffer>
+</buffers>
+
+
+</fsm>

@@ -1,0 +1,8 @@
+<fsm addto='vedic97_slp1.xml'>
+<edges>
+<e n='135'> <in>\u0087</in> <out>[\u1cd5]</out> <key>aggravated.independent.svarita</key> <cl>accent</cl></e>  <!-- vedic tone yajurvedic aggravated independent svarita -->
+<e n='139'> <in>\u008B</in> <out>[\u1cea\u0902]</out> <key>anusvara.bahirgomukha</key> <cl>anusvara</cl> </e>  <!-- where is the dot? -->
+<e n='160'> <in>\u00A0</in> <out>tt</out> <map>full_form.tt</map> </e>
+<e n='253'> <in>\u00FD</in> <out>[\ua8f3]</out> <key>candrabindu.virama</key> <cl>accent</cl> </e>	<!-- devanagari sign candrabindu virama --> 
+</edges>
+</fsm>

@@ -1,0 +1,14 @@
+<fsm inputType='slp1' outputType='UTF8' outputIsUnicodeInSecondPlane='true' version='2'>
+<!-- x attribute is short of existence-->
+<!-- vowel letters -->
+<!-- in words: a vowel that is **not** directly preceded by a consonent or is at the beginning of the line is a vowel letter -->
+<edges>
+<e n='0'> <in>a</in> <out>\u10000</out> <cl>vowel_letter</cl></e>
+<e n='1'> <in>e</in> <out>\u10001</out>  <cl>vowel_letter</cl></e>
+<e n='2'> <in>i</in> <out>\u10002</out>  <cl>vowel_letter</cl></e>
+<e n='3'> <in>o</in> <out>\u10003</out>  <cl>vowel_letter</cl></e>
+<e n='4'> <in>u</in> <out>\u10004</out>  <cl>vowel_letter</cl></e>
+<e n='116'> <in>\u0020</in> <out>\u0020</out> <cl>whitespace</cl></e>
+</edges>
+<!-- no buffers element means write immediately -->	
+</fsm>

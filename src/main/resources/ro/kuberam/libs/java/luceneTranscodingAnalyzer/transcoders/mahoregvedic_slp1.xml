@@ -1,0 +1,5 @@
+<fsm addto='vedic97_slp1.xml'>
+<edges>
+<e n='160'> <in>\u00A0</in> <out>tt</out> <map>full_form.tt</map> </e>
+</edges>
+</fsm>

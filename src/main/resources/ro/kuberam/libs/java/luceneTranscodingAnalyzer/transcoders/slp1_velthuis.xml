@@ -1,0 +1,77 @@
+<fsm inputType='slp1' outputType='UTF-8' version='2' testBlanks='n'>
+<edges>
+<e n='0'> <in>a</in> <out>a</out> <cl>atom</cl> </e>
+<e n='1'> <in>A</in> <out>aa</out> <cl>atom</cl> </e>
+<e n='2'> <in>i</in> <out>i</out> <cl>atom</cl> </e>
+<e n='3'> <in>I</in> <out>ii</out> <cl>atom</cl> </e>
+<e n='4'> <in>u</in> <out>u</out> <cl>atom</cl> </e>
+<e n='5'> <in>U</in> <out>uu</out> <cl>atom</cl> </e>
+<e n='6'> <in>f</in> <out>.r</out> <cl>atom</cl> </e>
+<e n='7'> <in>F</in> <out>.rr</out> <cl>atom</cl> </e>
+<e n='8'> <in>x</in> <out>.l</out> <cl>atom</cl> </e>  <!-- treat it as l followed by vocalic r rather than as a retroflex l. Vedatype does not have a vocalic l, it uses lq-->
+<e n='9'> <in>e</in> <out>e</out> <cl>atom</cl> </e>
+<e n='10'> <in>E</in> <out>ai</out> <cl>atom</cl> </e>
+<e n='11'> <in>o</in> <out>o</out> <cl>atom</cl> </e>
+<e n='12'> <in>O</in> <out>au</out> <cl>atom</cl> </e>
+<e n='12a'> <in>M</in> <out>.m</out> <cl>atom</cl> </e>
+<e n='12b'> <in>H</in> <out>.h</out> <cl>atom</cl> </e>
+<e n='12c'> <in>Z</in> <out>Hj</out> <cl>atom</cl> </e>
+
+<e n='13'> <in>k</in> <out>k</out> <cl>atom</cl> </e>
+<e n='14'> <in>K</in> <out>kh</out> <cl>atom</cl> </e>
+<e n='15'> <in>g</in> <out>g</out> <cl>atom</cl> </e>
+<e n='16'> <in>G</in> <out>gh</out> <cl>atom</cl> </e>
+<e n='18'> <in>N</in> <out>"n</out> <cl>atom</cl> </e>
+<e n='19'> <in>c</in> <out>c</out> <cl>atom</cl> </e>
+<e n='20'> <in>C</in> <out>ch</out> <cl>atom</cl> </e>
+<e n='21'> <in>j</in> <out>j</out> <cl>atom</cl> </e>
+<e n='22'> <in>J</in> <out>jh</out> <cl>atom</cl> </e>
+<e n='23'> <in>Y</in> <out>~n</out> <cl>atom</cl> </e>
+<e n='24'> <in>w</in> <out>.t</out> <cl>atom</cl> </e>
+<e n='25'> <in>W</in> <out>.th</out> <cl>atom</cl> </e>
+<e n='26'> <in>q</in> <out>.d</out> <cl>atom</cl> </e>
+<e n='27'> <in>Q</in> <out>.dh</out> <cl>atom</cl> </e>
+<e n='28'> <in>R</in> <out>.n</out> <cl>atom</cl> </e>
+<e n='29'> <in>t</in> <out>t</out> <cl>atom</cl> </e>
+<e n='30'> <in>T</in> <out>th</out> <cl>atom</cl> </e>
+<e n='31'> <in>d</in> <out>d</out> <cl>atom</cl> </e>
+<e n='32'> <in>D</in> <out>dh</out> <cl>atom</cl> </e>
+<e n='33'> <in>n</in> <out>n</out> <cl>atom</cl> </e>
+<e n='34'> <in>p</in> <out>p</out> <cl>atom</cl> </e>
+<e n='35'> <in>P</in> <out>ph</out> <cl>atom</cl> </e>
+<e n='36'> <in>b</in> <out>b</out> <cl>atom</cl> </e>
+<e n='37'> <in>B</in> <out>bh</out> <cl>atom</cl> </e>
+<e n='37a'>  <in>m</in> <out>m</out> <cl>atom</cl> </e>
+<e n='38'> <in>y</in> <out>y</out> <cl>atom</cl> </e>
+<e n='39'> <in>r</in> <out>r</out> <cl>atom</cl> </e>
+<e n='40'> <in>l</in> <out>l</out> <cl>atom</cl> </e>
+<e n='41'> <in>v</in> <out>v</out> <cl>atom</cl> </e>
+<e n='42'> <in>S</in> <out>"s</out> <cl>atom</cl> </e>
+<e n='43'> <in>z</in> <out>.s</out> <cl>atom</cl> </e>
+<e n='43a'> <in>s</in> <out>s</out> <cl>atom</cl> </e>
+<e n='43b'> <in>h</in> <out>h</out> <cl>atom</cl> </e>
+
+<e n='70'> <in>.</in> <out>.</out> <cl>atom</cl> </e>
+<e n='71'> <in>..</in> <out>..</out> <cl>atom</cl> </e>
+<e n='72'> <in>~</in> <out>"m</out>  <cl>atom</cl> </e>
+
+<e n='73'> <in>\u0009</in> <out>\u0009</out> <cl>atom</cl> </e>
+<e n='74'> <in>\u000a</in> <out>\u000a</out> <cl>atom</cl> </e>
+<e n='75'> <in>\u000d</in> <out>\u000d</out> <cl>atom</cl> </e>
+<e n='76'> <in>\u0020</in> <out>\u0020</out> <cl>atom</cl> </e>
+
+<e n='77'> <in>'</in> <out>'</out> </e>
+<e n='78'> <in>0</in> <out>0</out> </e>
+<e n='79'> <in>1</in> <out>1</out> </e>
+<e n='80'> <in>2</in> <out>2</out> </e>
+<e n='81'> <in>3</in> <out>3</out> </e>
+<e n='82'> <in>4</in> <out>4</out> </e>
+<e n='83'> <in>5</in> <out>5</out> </e>
+<e n='84'> <in>6</in> <out>6</out> </e>
+<e n='85'> <in>7</in> <out>7</out> </e>
+<e n='86'> <in>8</in> <out>8</out> </e>
+<e n='87'> <in>9</in> <out>9</out> </e>
+<e n='88'> <in>-</in> <out>-</out> </e>
+<e n='89'> <in>-</in> <out>-</out> </e>  <!-- is this in slp1? -->
+</edges>
+</fsm>

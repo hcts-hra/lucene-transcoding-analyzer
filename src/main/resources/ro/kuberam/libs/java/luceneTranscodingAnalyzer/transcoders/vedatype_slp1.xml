@@ -1,0 +1,111 @@
+<fsm inputType='UTF-8' outputType='slp1' version='2' testBlanks='n'>
+<edges>
+<e n='0'>  <in>a</in> <out>a</out> <cl>atom</cl> </e>
+<e n='1'>  <in>A</in> <out>A</out> <cl>atom</cl> </e>
+<e n='2'>  <in>i</in> <out>i</out> <cl>atom</cl> </e>
+<e n='3'>  <in>I</in> <out>I</out> <cl>atom</cl> </e>
+<e n='4'>  <in>u</in> <out>u</out> <cl>atom</cl> </e>
+<e n='5'>  <in>U</in> <out>U</out> <cl>atom</cl> </e>
+<e n='6'>  <in>q</in> <out>f</out> <cl>atom</cl> </e>
+<e n='7'>  <in>Q</in> <out>F</out> <cl>atom</cl> </e>
+<e n='8'>  <in>\</in> <out>x</out> <cl>atom</cl> </e>  <!-- assume that lq is vocalic l -->
+<e n='9'>  <in>e</in> <out>e</out> <cl>atom</cl> </e>
+<e n='10'>  <in>ai</in> <out>E</out> <cl>atom</cl> </e>
+<e n='11'>  <in>o</in> <out>o</out> <cl>atom</cl> </e>
+<e n='12'>  <in>au</in> <out>O</out> <cl>atom</cl> </e>
+<e n='12a'> <in>M</in> <out>M</out> <cl>atom</cl> </e>
+<e n='12b'> <in>H</in> <out>H</out> <cl>atom</cl> </e>
+<e n='12c'> <in>Hj</in> <out>Z</out> <cl>atom</cl> </e>
+
+<e n='13'>  <in>k</in> <out>k</out> <cl>atom</cl> </e>
+<e n='14'>  <in>kh</in> <out>K</out> <cl>atom</cl> </e>
+<e n='15'>  <in>g</in> <out>g</out> <cl>atom</cl> </e>
+<e n='16'>  <in>gh</in> <out>G</out> <cl>atom</cl> </e>
+<e n='17'>  <in>z</in> <out>N</out> <cl>atom</cl> </e>
+<e n='18'>  <in>c</in> <out>c</out> <cl>atom</cl> </e>
+<e n='19'>  <in>ch</in> <out>C</out> <cl>atom</cl> </e>
+<e n='20'>  <in>j</in> <out>j</out> <cl>atom</cl> </e>
+<e n='21'>  <in>jh</in> <out>J</out> <cl>atom</cl> </e>
+<e n='22'>  <in>x</in> <out>Y</out> <cl>atom</cl> </e>
+<e n='23'>  <in>T</in> <out>w</out> <cl>atom</cl> </e>
+<e n='24'>  <in>Th</in> <out>W</out> <cl>atom</cl> </e>
+<e n='25'>  <in>D</in> <out>q</out> <cl>atom</cl> </e>
+<e n='26'>  <in>Dh</in> <out>Q</out> <cl>atom</cl> </e>
+<e n='27'>  <in>N</in> <out>R</out> <cl>atom</cl> </e>
+<e n='28'>  <in>t</in> <out>t</out> <cl>atom</cl> </e>
+<e n='29'>  <in>th</in> <out>T</out> <cl>atom</cl> </e>
+<e n='30'>  <in>d</in> <out>d</out> <cl>atom</cl> </e>
+<e n='31'>  <in>dh</in> <out>D</out> <cl>atom</cl> </e>
+<e n='32'>  <in>n</in> <out>n</out> <cl>atom</cl> </e>
+<e n='33'>  <in>p</in> <out>p</out> <cl>atom</cl> </e>
+<e n='34'>  <in>ph</in> <out>P</out> <cl>atom</cl> </e>
+<e n='35'>  <in>b</in> <out>b</out> <cl>atom</cl> </e>
+<e n='36'>  <in>bh</in> <out>B</out> <cl>atom</cl> </e>
+<e n='37'>  <in>m</in> <out>m</out> <cl>atom</cl> </e>
+<e n='37a'> <in>y</in> <out>y</out> <cl>atom</cl> </e>
+<e n='37b'> <in>r</in> <out>r</out> <cl>atom</cl> </e>
+<e n='37c'> <in>l</in> <out>l</out> <cl>atom</cl> </e>
+<e n='37d'> <in>v</in> <out>v</out> <cl>atom</cl> </e>
+<e n='38'>  <in>f</in> <out>S</out> <cl>atom</cl> </e>
+<e n='39'>  <in>S</in> <out>z</out> <cl>atom</cl> </e>
+<e n='39a'>  <in>s</in> <out>s</out> <cl>atom</cl> </e>
+<e n='39b'>  <in>h</in> <out>h</out> <cl>atom</cl> </e>
+
+<e n='40'>  <in>a/</in> <out>a/</out> <cl>atom</cl> </e>
+<e n='41'>  <in>A/</in> <out>A/</out> <cl>atom</cl> </e>
+<e n='42'>  <in>i/</in> <out>i/</out> <cl>atom</cl> </e>
+<e n='43'>  <in>I/</in> <out>I/</out> <cl>atom</cl> </e>
+<e n='44'>  <in>u/</in> <out>u/</out> <cl>atom</cl> </e>
+<e n='45'>  <in>U/</in> <out>U/</out> <cl>atom</cl> </e>
+<e n='46'>  <in>q/</in> <out>f/</out> <cl>atom</cl> </e>
+<e n='47'>  <in>Q/</in> <out>F/</out> <cl>atom</cl> </e>
+<e n='48'>  <in>lq/</in> <out>x/</out> <cl>atom</cl> </e>  <!-- assume that lq is vocalic l -->
+<e n='49'>  <in>e/</in> <out>e/</out> <cl>atom</cl> </e>
+<e n='50'>  <in>ai/</in> <out>E/</out> <cl>atom</cl> </e>
+<e n='51'>  <in>o/</in> <out>o/</out> <cl>atom</cl> </e>
+<e n='52'>  <in>au/</in> <out>O/</out> <cl>atom</cl> </e>
+
+<e n='53'>  <in>a\</in> <out>a\</out> <cl>atom</cl> </e>
+<e n='54'>  <in>A\</in> <out>A\</out> <cl>atom</cl> </e>
+<e n='55'>  <in>i\</in> <out>i\</out> <cl>atom</cl> </e>
+<e n='56'>  <in>I\</in> <out>I\</out> <cl>atom</cl> </e>
+<e n='57'>  <in>u\</in> <out>u\</out> <cl>atom</cl> </e>
+<e n='58'>  <in>U\</in> <out>U\</out> <cl>atom</cl> </e>
+<e n='59'>  <in>q\</in> <out>f\</out> <cl>atom</cl> </e>
+<e n='60'>  <in>Q\</in> <out>F\</out> <cl>atom</cl> </e>
+<e n='61'>  <in>lq\</in> <out>x\</out> <cl>atom</cl> </e>  <!-- assume that lq is vocalic l -->
+<e n='62'>  <in>e\</in> <out>e\</out> <cl>atom</cl> </e>
+<e n='63'>  <in>ai\</in> <out>E\</out> <cl>atom</cl> </e>
+<e n='64'>  <in>o\</in> <out>o\</out> <cl>atom</cl> </e>
+<e n='65'>  <in>au\</in> <out>O\</out> <cl>atom</cl> </e>
+
+<e n='66'>  <in>,</in> <out>.</out>  <cl>atom</cl> </e>
+<e n='67'>  <in>.</in> <out>..</out>  <cl>atom</cl> </e>
+<e n='68'>  <in>MM</in> <out>~</out>  <cl>atom</cl> </e>
+
+<e n='69'> <in>\u0009</in> <out>\u0009</out> <cl>atom</cl> </e>
+<e n='70'> <in>\u000a</in> <out>\u000a</out> <cl>atom</cl> </e>
+<e n='71'> <in>\u000d</in> <out>\u000d</out> <cl>atom</cl> </e>
+<e n='72'> <in>\u0020</in> <out>\u0020</out> <cl>atom</cl> </e>
+
+<e n='73'> <in>'</in> <out>'</out> </e>
+<e n='74'> <in>0</in> <out>0</out> </e>
+<e n='75'> <in>1</in> <out>1</out> </e>
+<e n='76'> <in>2</in> <out>2</out> </e>
+<e n='77'> <in>3</in> <out>3</out> </e>
+<e n='78'> <in>4</in> <out>4</out> </e>
+<e n='79'> <in>5</in> <out>5</out> </e>
+<e n='80'> <in>6</in> <out>6</out> </e>
+<e n='81'> <in>7</in> <out>7</out> </e>
+<e n='82'> <in>8</in> <out>8</out> </e>
+<e n='83'> <in>9</in> <out>9</out> </e>
+<e n='84'> <in>-</in> <out>-</out> </e>  <!-- is this in slp1? -->
+<e n='85'> <in>O</in> <out>oM</out> </e>  <!-- OM -->
+</edges>
+
+<buffers>
+	<buffer name='atoms' action='!!'>
+		<member id='atom'/>
+	</buffer>
+</buffers>
+</fsm>

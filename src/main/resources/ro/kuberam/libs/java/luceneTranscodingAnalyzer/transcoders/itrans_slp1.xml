@@ -1,0 +1,85 @@
+<fsm inputType='UTF-8' outputType='slp1' version='2' testBlanks='n'>
+<edges>
+<e n='0'> <in>a</in> <out>a</out> <cl>atom</cl> </e>
+<e n='1'> <in>aa</in> <out>A</out> <cl>atom</cl> </e>
+<e n='2'> <in>i</in> <out>i</out> <cl>atom</cl> </e>
+<e n='3'> <in>ii</in> <out>I</out> <cl>atom</cl> </e>
+<e n='4'> <in>u</in> <out>u</out> <cl>atom</cl> </e>
+<e n='5'> <in>uu</in> <out>U</out> <cl>atom</cl> </e>
+<e n='6'> <in>Ri</in> <out>f</out> <cl>atom</cl> </e>
+<e n='6a'> <in>R^i</in>  <map>atom.f</map> </e>
+<e n='6b'> <in>RRi</in>  <map>atom.f</map> </e>
+<e n='7'> <in>RI</in> <out>F</out> <cl>atom</cl> </e>
+<e n='7a'> <in>R^I</in>  <map>atom.F</map> </e>
+<e n='7b'> <in>RRI</in>  <map>atom.F</map> </e>
+<e n='8'> <in>Li</in> <out>x</out> <cl>atom</cl> </e>
+<e n='8a'> <in>L^i</in>  <map>atom.x</map> </e>
+<e n='8b'> <in>LLi</in>  <map>atom.x</map> </e>
+<e n='9'> <in>LI</in> <out>X</out> <cl>atom</cl> </e>
+<e n='9a'> <in>L^I</in>  <map>atom.X</map> </e>
+<e n='9b'> <in>LLI</in>  <map>atom.X</map> </e>
+<e n='10'> <in>e</in> <out>e</out> <cl>atom</cl> </e>
+<e n='11'> <in>ai</in> <out>E</out> <cl>atom</cl> </e>
+<e n='12'> <in>o</in> <out>o</out> <cl>atom</cl> </e>
+<e n='13'> <in>au</in> <out>O</out> <cl>atom</cl> </e>
+<e n='14'> <in>M</in> <out>M</out> <cl>atom</cl> </e>
+<e n='14a'> <in>.n</in>  <map>atom.M</map> </e>
+<e n='15'> <in>H</in> <out>H</out> <cl>atom</cl> </e>
+
+<e n='16'> <in>x</in> <out>kz</out> <cl>atom</cl> </e>
+<e n='17'> <in>k</in> <out>k</out> <cl>atom</cl> </e>
+<e n='18'> <in>kh</in> <out>K</out> <cl>atom</cl> </e>
+<e n='19'> <in>g</in> <out>g</out> <cl>atom</cl> </e>
+<e n='20'> <in>gh</in> <out>G</out> <cl>atom</cl> </e>
+<e n='21'> <in>~N</in> <out>N</out> <cl>atom</cl> </e>
+
+<e n='22'> <in>ch</in> <out>c</out> <cl>atom</cl> </e>
+<e n='23'> <in>Ch</in> <out>C</out> <cl>atom</cl> </e>
+<e n='24'> <in>j</in> <out>j</out> <cl>atom</cl> </e>
+<e n='25'> <in>jh</in> <out>J</out> <cl>atom</cl> </e>
+<e n='26'> <in>GY</in> <out>jY</out> <cl>atom</cl> </e>
+<e n='27'> <in>~n</in> <out>Y</out> <cl>atom</cl> </e>
+
+<e n='28'> <in>T</in> <out>w</out> <cl>atom</cl> </e>
+<e n='29'> <in>Th</in> <out>W</out> <cl>atom</cl> </e>
+<e n='30'> <in>D</in> <out>q</out> <cl>atom</cl> </e>
+<e n='31'> <in>Dh</in> <out>Q</out> <cl>atom</cl> </e>
+<e n='32'> <in>N</in> <out>R</out> <cl>atom</cl> </e>
+
+<e n='33'> <in>t</in> <out>t</out> <cl>atom</cl> </e>
+<e n='34'> <in>th</in> <out>T</out> <cl>atom</cl> </e>
+<e n='35'> <in>d</in> <out>d</out> <cl>atom</cl> </e>
+<e n='36'> <in>dh</in> <out>D</out> <cl>atom</cl> </e>
+<e n='37'> <in>n</in> <out>n</out> <cl>atom</cl> </e>
+
+<e n='38'> <in>p</in> <out>p</out> <cl>atom</cl> </e>
+<e n='39'> <in>ph</in> <out>P</out> <cl>atom</cl> </e>
+<e n='40'> <in>b</in> <out>b</out> <cl>atom</cl> </e>
+<e n='41'> <in>bh</in> <out>B</out> <cl>atom</cl> </e>
+<e n='42'> <in>m</in> <out>m</out> <cl>atom</cl> </e>
+
+<e n='43'> <in>y</in> <out>y</out> <cl>atom</cl> </e>
+<e n='44'> <in>r</in> <out>r</out> <cl>atom</cl> </e>
+<e n='45'> <in>l</in> <out>l</out> <cl>atom</cl> </e>
+<e n='46'> <in>v</in> <out>v</out> <cl>atom</cl> </e>
+
+<e n='47'> <in>sh</in> <out>S</out> <cl>atom</cl> </e>
+<e n='48'> <in>Sh</in> <out>z</out> <cl>atom</cl> </e>
+<e n='49'> <out>s</out> <in>s</in> <cl>atom</cl> </e>
+<e n='50'> <in>h</in> <out>h</out> <cl>atom</cl> </e>
+
+<e n='51'> <in>.a</in> <out>'</out> <cl>atom</cl> </e>
+
+<e n='52'> <in>\u0009</in> <out>\u0009</out> <cl>atom</cl> </e>
+<e n='53'> <in>\u000a</in> <out>\u000a</out> <cl>atom</cl> </e>
+<e n='54'> <in>\u000d</in> <out>\u000d</out> <cl>atom</cl> </e>
+<e n='55'> <in>\u0020</in> <out>\u0020</out> <cl>atom</cl> </e>
+</edges>
+
+<buffers>
+	<buffer name='atoms' action='!!'>
+		<member id='atom'/>
+	</buffer>
+</buffers>
+
+</fsm>
