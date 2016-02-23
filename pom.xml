@@ -6,6 +6,7 @@
 	<groupId>ro.kuberam.libs.java</groupId>
 	<artifactId>lucene-transcoding-analyzer</artifactId>
 	<version>0.1.3</version>
+	<url>http://sarit.indology.info</url>
 
 	<prerequisites>
 		<maven>${maven-version}</maven>
@@ -14,15 +15,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java-version>1.8</java-version>
-		<maven-version>3.1.1</maven-version>
+		<maven-version>3.3.3</maven-version>
 		<lucene-version>4.4.0</lucene-version>
-		<sanskritlibrary-lib-path>${basedir}/lib/SanskritLibrary.jar</sanskritlibrary-lib-path>
-		
-		<package-title>EXPath Lucene Transcoding analyzer</package-title>
-		<package-name>http://hra.uni-heidelberg.de/ns/sarit/${project.artifactId}</package-name>
-		<package-abbrev>expath-${project.artifactId}-exist-lib</package-abbrev>
-		<package-type>application</package-type>
-		<package-final-name>expath-${project.artifactId}-exist-lib-${project.version}</package-final-name>		
 	</properties>
 
 	<dependencies>
@@ -30,8 +24,6 @@
 			<groupId>org.sanskritlibrary</groupId>
 			<artifactId>sl</artifactId>
 			<version>0.1</version>
-			<scope>system</scope>
-			<systemPath>${sanskritlibrary-lib-path}</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
