@@ -17,6 +17,12 @@
 		<maven-version>3.1.1</maven-version>
 		<lucene-version>4.4.0</lucene-version>
 		<sanskritlibrary-lib-path>${basedir}/lib/SanskritLibrary.jar</sanskritlibrary-lib-path>
+		
+		<package-title>EXPath Lucene Transcoding analyzer</package-title>
+		<package-name>http://hra.uni-heidelberg.de/ns/sarit/${project.artifactId}</package-name>
+		<package-abbrev>expath-${project.artifactId}-exist-lib</package-abbrev>
+		<package-type>application</package-type>
+		<package-final-name>expath-${project.artifactId}-exist-lib-${project.version}</package-final-name>		
 	</properties>
 
 	<dependencies>
