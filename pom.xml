@@ -5,7 +5,7 @@
 
 	<groupId>de.uni-hd.hra</groupId>
 	<artifactId>lucene-transcoding-analyzer</artifactId>
-	<version>0.1.3</version>
+	<version>0.1.4</version>
 	<url>http://sarit.indology.info</url>
 
 	<prerequisites>
