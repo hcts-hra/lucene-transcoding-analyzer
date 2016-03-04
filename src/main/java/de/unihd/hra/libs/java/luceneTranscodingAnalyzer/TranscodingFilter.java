@@ -1,4 +1,4 @@
-package ro.kuberam.libs.java.luceneTranscodingAnalyzer;
+package de.unihd.hra.libs.java.luceneTranscodingAnalyzer;
 
 import java.io.IOException;
 import java.util.HashMap;

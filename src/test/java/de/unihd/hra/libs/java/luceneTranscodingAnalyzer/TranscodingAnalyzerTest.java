@@ -1,4 +1,4 @@
-package ro.kuberam.libs.java.luceneTranscodingAnalyzer;
+package de.unihd.hra.libs.java.luceneTranscodingAnalyzer;
 
 import static org.junit.Assert.assertEquals;
 
@@ -26,6 +26,8 @@ import org.apache.lucene.util.Version;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import de.unihd.hra.libs.java.luceneTranscodingAnalyzer.TranscodingAnalyzer;
 
 @RunWith(com.carrotsearch.randomizedtesting.RandomizedRunner.class)
 public class TranscodingAnalyzerTest {
