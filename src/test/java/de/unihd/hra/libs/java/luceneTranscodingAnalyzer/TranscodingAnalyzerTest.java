@@ -1,4 +1,4 @@
-package ro.kuberam.libs.java.luceneTranscodingAnalyzer;
+package de.unihd.hra.libs.java.luceneTranscodingAnalyzer;
 
 import static org.junit.Assert.assertEquals;
 
@@ -14,6 +14,8 @@ import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.IndexWriterConfig.OpenMode;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
+import org.apache.lucene.queryparser.xml.CorePlusExtensionsParser;
+import org.apache.lucene.queryparser.xml.QueryTemplateManager;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
@@ -25,13 +27,17 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import de.unihd.hra.libs.java.luceneTranscodingAnalyzer.TranscodingAnalyzer;
+
 @RunWith(com.carrotsearch.randomizedtesting.RandomizedRunner.class)
 public class TranscodingAnalyzerTest {
 
 	private Version matchVersion = Version.LUCENE_44;
-	TranscodingAnalyzer analyzer = new TranscodingAnalyzer(matchVersion);
+	private TranscodingAnalyzer analyzer = new TranscodingAnalyzer(matchVersion);
 	private Directory index;
-	IndexReader reader;
+	private IndexReader reader;
+	private QueryTemplateManager queryTemplateManager;
+	private CorePlusExtensionsParser xmlParser;
 
 	int limit = 10;
 	String fieldName = "title";
@@ -43,8 +49,7 @@ public class TranscodingAnalyzerTest {
 		// IndexWriterConfig config = new IndexWriterConfig(new
 		// TransliterationAnalyzer())
 		// .setOpenMode(OpenMode.CREATE);
-		IndexWriterConfig config = new IndexWriterConfig(matchVersion, analyzer)
-				.setOpenMode(OpenMode.CREATE);
+		IndexWriterConfig config = new IndexWriterConfig(matchVersion, analyzer).setOpenMode(OpenMode.CREATE);
 
 		IndexWriter writer = null;
 		try {
@@ -79,72 +84,66 @@ public class TranscodingAnalyzerTest {
 
 	@Test
 	public void termQuery() throws IOException, ParseException {
-		QueryParser queryParser = new QueryParser(matchVersion, fieldName,
-				new TranscodingAnalyzer(matchVersion));
+		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
 
-		Query query = queryParser.parse("<query><term>tasmAt</term></query>");
+		Query query = queryParser.parse("tasmAt");
 
 		int totalHits = executeSearch(limit, query, reader);
-		
+
 		assertEquals(totalHits, 4);
 	}
 
 	@Test
 	public void leadingWildcardQuery() throws IOException, ParseException {
-		QueryParser queryParser = new QueryParser(matchVersion, fieldName,
-				new TranscodingAnalyzer(matchVersion));
+		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
 		queryParser.setAllowLeadingWildcard(true);
 		queryParser.setLowercaseExpandedTerms(false);
 
-		Query query = queryParser.parse("<query><wildcard>*asmAt</wildcard></query>");
+		Query query = queryParser.parse("*asmAt");
 
 		int totalHits = executeSearch(limit, query, reader);
-		
+
 		assertEquals(totalHits, 4);
 	}
 
 	@Test
 	public void intermediateWildcardQuery() throws IOException, ParseException {
-		QueryParser queryParser = new QueryParser(matchVersion, fieldName,
-				new TranscodingAnalyzer(matchVersion));
+		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
 		queryParser.setLowercaseExpandedTerms(false);
 
-		Query query = queryParser.parse("<query><wildcard>ta*mAt</wildcard></query>");
+		Query query = queryParser.parse("ta*mAt");
 
 		int totalHits = executeSearch(limit, query, reader);
-		
+
 		assertEquals(totalHits, 4);
 	}
 
 	@Test
 	public void trailingWildcardQuery() throws IOException, ParseException {
-		QueryParser queryParser = new QueryParser(matchVersion, fieldName,
-				new TranscodingAnalyzer(matchVersion));
+		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
 		queryParser.setLowercaseExpandedTerms(false);
 
-		Query query = queryParser.parse("<query><wildcard>tasmA*</wildcard></query>");
+		Query query = queryParser.parse("tasmA*");
 
 		int totalHits = executeSearch(limit, query, reader);
-		
+
 		assertEquals(totalHits, 4);
 	}
 
 	@Test
 	public void allWildcardQuery() throws IOException, ParseException {
-		QueryParser queryParser = new QueryParser(matchVersion, fieldName,
-				new TranscodingAnalyzer(matchVersion));
+		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
 		queryParser.setAllowLeadingWildcard(true);
 		queryParser.setLowercaseExpandedTerms(false);
 
-		Query query = queryParser.parse("<query><wildcard>*a*mA*</wildcard></query>");
+		Query query = queryParser.parse("*a*mA*");
 
 		int totalHits = executeSearch(limit, query, reader);
-		
+
 		assertEquals(totalHits, 4);
 	}
 
-	private int executeSearch(final int limit, final Query query,
-			final IndexReader reader) throws IOException {
+	private int executeSearch(final int limit, final Query query, final IndexReader reader) throws IOException {
 		int totalHits;
 		IndexSearcher searcher = new IndexSearcher(reader);
 		TopDocs docs = searcher.search(query, limit);

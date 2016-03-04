@@ -1,4 +1,4 @@
-package ro.kuberam.libs.java.luceneTranscodingAnalyzer;
+package de.unihd.hra.libs.java.luceneTranscodingAnalyzer;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -6,6 +6,8 @@ import static org.junit.Assert.assertTrue;
 import java.io.IOException;
 
 import org.junit.Test;
+
+import de.unihd.hra.libs.java.luceneTranscodingAnalyzer.UnicodeBlocksDetection;
 
 public class UnicodeBlocksDetectionTest {
 
