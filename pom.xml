@@ -24,6 +24,8 @@
 			<groupId>org.sanskritlibrary</groupId>
 			<artifactId>sl</artifactId>
 			<version>0.1</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/SanskritLibrary.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
