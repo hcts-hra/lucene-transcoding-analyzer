@@ -27,5 +27,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="lib/SanskritLibrary.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
