@@ -25,6 +25,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+@Ignore
 @RunWith(com.carrotsearch.randomizedtesting.RandomizedRunner.class)
 public class TranscodingAnalyzer3Test {
 
@@ -70,7 +71,6 @@ public class TranscodingAnalyzer3Test {
 		}
 	}
 
-	@Ignore
 	@Test
 	public void termQuery() throws IOException, ParseException {
 		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));

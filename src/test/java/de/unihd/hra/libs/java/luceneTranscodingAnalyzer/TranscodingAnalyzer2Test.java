@@ -16,6 +16,7 @@ import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
@@ -25,6 +26,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+@Ignore
 @RunWith(com.carrotsearch.randomizedtesting.RandomizedRunner.class)
 public class TranscodingAnalyzer2Test {
 
@@ -70,7 +72,6 @@ public class TranscodingAnalyzer2Test {
 		}
 	}
 
-	@Ignore
 	@Test
 	public void termQuery() throws IOException, ParseException {
 		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
@@ -140,9 +141,10 @@ public class TranscodingAnalyzer2Test {
 
 		System.out.println(totalHits + " found for query: " + query);
 
-//		for (final ScoreDoc scoreDoc : docs.scoreDocs) {
-//			System.out.println(searcher.doc(scoreDoc.doc));
-//		}
+		for (final ScoreDoc scoreDoc : docs.scoreDocs) {
+			System.out.println();
+			System.out.println(searcher.doc(scoreDoc.doc));
+		}
 
 		return totalHits;
 	}
