@@ -15,7 +15,7 @@ public class TransformMaps {
 	public static HashMap<String, TransformMap> transformMaps = new HashMap<String, TransformMap>();
 	private final static Logger logger = Logger.getLogger(TransformMaps.class);
 
-	public static class Transcoders implements ResourceInputStream {
+	static class Transcoders implements ResourceInputStream {
 
 		public Transcoders() {
 		}
