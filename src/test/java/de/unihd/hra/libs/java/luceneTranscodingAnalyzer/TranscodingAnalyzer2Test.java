@@ -14,30 +14,24 @@ import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.IndexWriterConfig.OpenMode;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
-import org.apache.lucene.queryparser.xml.CorePlusExtensionsParser;
-import org.apache.lucene.queryparser.xml.QueryTemplateManager;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import de.unihd.hra.libs.java.luceneTranscodingAnalyzer.TranscodingAnalyzer;
-
 @RunWith(com.carrotsearch.randomizedtesting.RandomizedRunner.class)
-public class TranscodingAnalyzerTest {
+public class TranscodingAnalyzer2Test {
 
 	private Version matchVersion = Version.LUCENE_44;
 	private TranscodingAnalyzer analyzer = new TranscodingAnalyzer(matchVersion);
 	private Directory index;
 	private IndexReader reader;
-	private QueryTemplateManager queryTemplateManager;
-	private CorePlusExtensionsParser xmlParser;
 
 	int limit = 10;
 	String fieldName = "title";
@@ -56,21 +50,15 @@ public class TranscodingAnalyzerTest {
 			writer = new IndexWriter(index, config);
 
 			Document document1 = new Document();
-			document1.add(new TextField(fieldName, "तस्मात् उवाच", Store.YES));
+			document1.add(new TextField(fieldName, "सुखेन", Store.YES));
+			System.out.println("document1 = " + document1);
 
 			Document document2 = new Document();
-			document2.add(new TextField(fieldName, "तस्मात्", Store.YES));
-
-			Document document3 = new Document();
-			document3.add(new TextField(fieldName, "tasmāt uvāca", Store.YES));
-
-			Document document4 = new Document();
-			document4.add(new TextField(fieldName, "tasmāt", Store.YES));
-
+			document2.add(new TextField(fieldName, "sukhena", Store.YES));
+			System.out.println("document2 = " + document2);
+			
 			writer.addDocument(document1);
 			writer.addDocument(document2);
-			writer.addDocument(document3);
-			writer.addDocument(document4);
 			writer.commit();
 			writer.close();
 
@@ -82,15 +70,16 @@ public class TranscodingAnalyzerTest {
 		}
 	}
 
+	@Ignore
 	@Test
 	public void termQuery() throws IOException, ParseException {
 		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
 
-		Query query = queryParser.parse("tasmAt");
+		Query query = queryParser.parse("suKena");
 
 		int totalHits = executeSearch(limit, query, reader);
 
-		assertEquals(totalHits, 4);
+		assertEquals(totalHits, 2);
 	}
 
 	@Test
@@ -99,11 +88,11 @@ public class TranscodingAnalyzerTest {
 		queryParser.setAllowLeadingWildcard(true);
 		queryParser.setLowercaseExpandedTerms(false);
 
-		Query query = queryParser.parse("*asmAt");
+		Query query = queryParser.parse("*uKena");
 
 		int totalHits = executeSearch(limit, query, reader);
 
-		assertEquals(totalHits, 4);
+		assertEquals(totalHits, 2);
 	}
 
 	@Test
@@ -111,11 +100,11 @@ public class TranscodingAnalyzerTest {
 		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
 		queryParser.setLowercaseExpandedTerms(false);
 
-		Query query = queryParser.parse("ta*mAt");
+		Query query = queryParser.parse("suK*na");
 
 		int totalHits = executeSearch(limit, query, reader);
 
-		assertEquals(totalHits, 4);
+		assertEquals(totalHits, 2);
 	}
 
 	@Test
@@ -123,11 +112,11 @@ public class TranscodingAnalyzerTest {
 		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
 		queryParser.setLowercaseExpandedTerms(false);
 
-		Query query = queryParser.parse("tasmA*");
+		Query query = queryParser.parse("suKen*");
 
 		int totalHits = executeSearch(limit, query, reader);
 
-		assertEquals(totalHits, 4);
+		assertEquals(totalHits, 2);
 	}
 
 	@Test
@@ -136,11 +125,11 @@ public class TranscodingAnalyzerTest {
 		queryParser.setAllowLeadingWildcard(true);
 		queryParser.setLowercaseExpandedTerms(false);
 
-		Query query = queryParser.parse("*a*mA*");
+		Query query = queryParser.parse("*uK*n*");
 
 		int totalHits = executeSearch(limit, query, reader);
 
-		assertEquals(totalHits, 4);
+		assertEquals(totalHits, 2);
 	}
 
 	private int executeSearch(final int limit, final Query query, final IndexReader reader) throws IOException {
@@ -151,9 +140,9 @@ public class TranscodingAnalyzerTest {
 
 		System.out.println(totalHits + " found for query: " + query);
 
-		for (final ScoreDoc scoreDoc : docs.scoreDocs) {
-			System.out.println(searcher.doc(scoreDoc.doc));
-		}
+//		for (final ScoreDoc scoreDoc : docs.scoreDocs) {
+//			System.out.println(searcher.doc(scoreDoc.doc));
+//		}
 
 		return totalHits;
 	}
