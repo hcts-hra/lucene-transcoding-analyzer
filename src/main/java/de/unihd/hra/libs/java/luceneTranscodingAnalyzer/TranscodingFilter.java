@@ -46,8 +46,9 @@ public class TranscodingFilter extends TokenFilter {
 					logger.debug("transcodedCurrentToken = " + transcodedCurrentToken);
 				}
 
-				logger.debug("UnicodeBlocksDetection.detectSlp1Blocks(currentToken) = " + UnicodeBlocksDetection.detectSlp1Blocks(currentToken));
-				if (UnicodeBlocksDetection.detectDevanagariTransliterationBlocks(currentToken)) {
+				System.out.println("currentToken = " + currentToken);
+				if (UnicodeBlocksDetection.detectSlp1Blocks(currentToken)) {
+				} else if (UnicodeBlocksDetection.detectDevanagariTransliterationBlocks(currentToken)) {
 					logger.debug("transformMaps roman2slp1 = " + transformMaps.get("roman2slp1"));
 
 					transcodedCurrentToken = WebServices.transformString(currentToken, transformMaps.get("roman2slp1"));
