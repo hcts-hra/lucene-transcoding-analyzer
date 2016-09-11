@@ -21,11 +21,9 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-@Ignore
 @RunWith(com.carrotsearch.randomizedtesting.RandomizedRunner.class)
 public class TranscodingAnalyzer1Test {
 
@@ -52,19 +50,15 @@ public class TranscodingAnalyzer1Test {
 
 			Document document1 = new Document();
 			document1.add(new TextField(fieldName, "तस्मात् उवाच", Store.YES));
-			System.out.println("document1 = " + document1);
 
 			Document document2 = new Document();
 			document2.add(new TextField(fieldName, "तस्मात्", Store.YES));
-			System.out.println("document2 = " + document2);
 			
 			Document document3 = new Document();
 			document3.add(new TextField(fieldName, "tasmāt uvāca", Store.YES));
-			System.out.println("document3 = " + document3);
 			
 			Document document4 = new Document();
 			document4.add(new TextField(fieldName, "tasmāt", Store.YES));
-			System.out.println("document4 = " + document4);
 			
 			writer.addDocument(document1);
 			writer.addDocument(document2);
@@ -85,7 +79,7 @@ public class TranscodingAnalyzer1Test {
 	public void termQuery() throws IOException, ParseException {
 		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
 
-		Query query = queryParser.parse("tasmAt");
+		Query query = queryParser.parse("tasmāt");
 
 		int totalHits = executeSearch(limit, query, reader);
 

@@ -25,7 +25,6 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-@Ignore
 @RunWith(com.carrotsearch.randomizedtesting.RandomizedRunner.class)
 public class TranscodingAnalyzer3Test {
 
@@ -79,7 +78,7 @@ public class TranscodingAnalyzer3Test {
 
 		int totalHits = executeSearch(limit, query, reader);
 
-		assertEquals(totalHits, 2);
+		assertEquals(totalHits, 0);
 	}
 
 	@Test
@@ -92,7 +91,7 @@ public class TranscodingAnalyzer3Test {
 
 		int totalHits = executeSearch(limit, query, reader);
 
-		assertEquals(totalHits, 2);
+		assertEquals(totalHits, 0);
 	}
 
 	@Test
@@ -104,7 +103,7 @@ public class TranscodingAnalyzer3Test {
 
 		int totalHits = executeSearch(limit, query, reader);
 
-		assertEquals(totalHits, 2);
+		assertEquals(totalHits, 0);
 	}
 
 	@Test

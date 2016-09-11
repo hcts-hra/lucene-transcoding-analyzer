@@ -40,20 +40,23 @@ public class TranscodingFilter extends TokenFilter {
 
 			try {
 				if (UnicodeBlocksDetection.detectDevanagariBlocks(currentToken)) {
-					logger.debug("transformMaps deva2slp1 = " + transformMaps.get("deva2slp1"));
-
 					transcodedCurrentToken = WebServices.transformString(currentToken, transformMaps.get("deva2slp1"));
 					logger.debug("transcodedCurrentToken = " + transcodedCurrentToken);
-				}
-
-				System.out.println("currentToken = " + currentToken);
-				if (UnicodeBlocksDetection.detectSlp1Blocks(currentToken)) {
-				} else if (UnicodeBlocksDetection.detectDevanagariTransliterationBlocks(currentToken)) {
-					logger.debug("transformMaps roman2slp1 = " + transformMaps.get("roman2slp1"));
-
+				} else {
 					transcodedCurrentToken = WebServices.transformString(currentToken, transformMaps.get("roman2slp1"));
 					logger.debug("transcodedCurrentToken = " + transcodedCurrentToken);
 				}
+
+				// if (UnicodeBlocksDetection.detectSlp1Blocks(currentToken)) {
+				// } else if
+				// (UnicodeBlocksDetection.detectDevanagariTransliterationBlocks(currentToken))
+				// {
+				// transcodedCurrentToken =
+				// WebServices.transformString(currentToken,
+				// transformMaps.get("roman2slp1"));
+				// logger.debug("transcodedCurrentToken = " +
+				// transcodedCurrentToken);
+				// }
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

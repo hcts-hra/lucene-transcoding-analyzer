@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 
+import org.apache.log4j.Logger;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field.Store;
 import org.apache.lucene.document.TextField;
@@ -22,11 +23,9 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-@Ignore
 @RunWith(com.carrotsearch.randomizedtesting.RandomizedRunner.class)
 public class TranscodingAnalyzer2Test {
 
@@ -34,6 +33,7 @@ public class TranscodingAnalyzer2Test {
 	private TranscodingAnalyzer analyzer = new TranscodingAnalyzer(matchVersion);
 	private Directory index;
 	private IndexReader reader;
+	private final static Logger logger = Logger.getLogger(TranscodingFilter.class);
 
 	int limit = 10;
 	String fieldName = "title";
@@ -53,14 +53,13 @@ public class TranscodingAnalyzer2Test {
 
 			Document document1 = new Document();
 			document1.add(new TextField(fieldName, "सुखेन", Store.YES));
-			System.out.println("document1 = " + document1);
 
 			Document document2 = new Document();
 			document2.add(new TextField(fieldName, "sukhena", Store.YES));
-			System.out.println("document2 = " + document2);
-			
+
 			writer.addDocument(document1);
 			writer.addDocument(document2);
+
 			writer.commit();
 			writer.close();
 
@@ -75,8 +74,8 @@ public class TranscodingAnalyzer2Test {
 	@Test
 	public void termQuery() throws IOException, ParseException {
 		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
-
-		Query query = queryParser.parse("suKena");
+		
+		Query query = queryParser.parse("sukhena");
 
 		int totalHits = executeSearch(limit, query, reader);
 
@@ -109,7 +108,7 @@ public class TranscodingAnalyzer2Test {
 	}
 
 	@Test
-	public void trailingWildcardQuery() throws IOException, ParseException {
+	public void trailingWildcardQuery1() throws IOException, ParseException {
 		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
 		queryParser.setLowercaseExpandedTerms(false);
 
@@ -119,6 +118,18 @@ public class TranscodingAnalyzer2Test {
 
 		assertEquals(totalHits, 2);
 	}
+	
+	@Test
+	public void trailingWildcardQuery2() throws IOException, ParseException {
+		QueryParser queryParser = new QueryParser(matchVersion, fieldName, new TranscodingAnalyzer(matchVersion));
+		queryParser.setLowercaseExpandedTerms(false);
+
+		Query query = queryParser.parse("suKena*");
+
+		int totalHits = executeSearch(limit, query, reader);
+
+		assertEquals(totalHits, 2);
+	}	
 
 	@Test
 	public void allWildcardQuery() throws IOException, ParseException {
@@ -139,11 +150,11 @@ public class TranscodingAnalyzer2Test {
 		TopDocs docs = searcher.search(query, limit);
 		totalHits = docs.totalHits;
 
-		System.out.println(totalHits + " found for query: " + query);
+		logger.debug("");
+		logger.debug(totalHits + " found for query: " + query);
 
 		for (final ScoreDoc scoreDoc : docs.scoreDocs) {
-			System.out.println();
-			System.out.println(searcher.doc(scoreDoc.doc));
+			logger.debug(searcher.doc(scoreDoc.doc));
 		}
 
 		return totalHits;
