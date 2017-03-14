@@ -38,7 +38,6 @@ public class TranscodingAnalyzer extends Analyzer {
 		StandardTokenizer tokenizer = new StandardTokenizer(matchVersion, reader);
 
 		TokenStream tokenStream = new TranscodingFilter(matchVersion, tokenizer, TransformMaps.transformMaps);
-		logger.debug("tokenStream = " + tokenStream);
 
 		return new TokenStreamComponents(tokenizer, tokenStream);
 	}

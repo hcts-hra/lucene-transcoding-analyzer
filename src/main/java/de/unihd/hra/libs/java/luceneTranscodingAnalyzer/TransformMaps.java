@@ -26,7 +26,6 @@ public class TransformMaps {
 			int i = 0;
 
 			for (String name : fileNames) {
-				logger.debug("name = " + name);
 				try {
 					iss[i++] = getClass().getResourceAsStream("transcoders" + name);
 				} catch (Exception e) {
