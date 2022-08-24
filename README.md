@@ -33,7 +33,7 @@ You should see:
 The module was used in the development of [SARIT](https://sarit.indology.info) via [sarit-existdb](https://github.com/sarit/sarit-existdb).
 Historic links to this repo or its artifact might have used either `exc-asia-and-europe` as the org name for the source code repo, or `org.sanskritlibrary` as `<groupId>` for build dependencies pipelines.
 
-Since its inception, the GitHub org was renamed to `HCTS` and the packages have been republished to the GitHub Packages registry attached to this repo. 
+Since its inception, the GitHub org was renamed to `hcts-hra` and the packages have been republished to the GitHub Packages registry attached to this repo. 
 To declare a dependencie use:
 
 ```xml
