@@ -28,6 +28,16 @@ You should see:
 …
 ```
 
+## Release
+
+Release are automated via CI. Pushes to the `master` branch will trigger new `-SNAPSHOT` releases. To set a full version number for a release:
+
+```shell
+mvn release:update-versions
+```
+
+Commit and push.
+
 ## History
 
 The module was used in the development of [SARIT](https://sarit.indology.info) via [sarit-existdb](https://github.com/sarit/sarit-existdb).
