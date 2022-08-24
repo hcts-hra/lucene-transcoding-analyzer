@@ -1,0 +1,20 @@
+<fsm addto='vedic97_slp1.xml'>
+<edges>
+<e n='128'> <in>\u0080</in> <out>[\u1cd8]</out> <key>candra.below</key> <cl>accent</cl> </e>  <!-- vedic tone candra below --> 
+<e n='133'> <in>\u0085</in> <map>candra.below</map> </e>
+<e n='135'> <in>\u0087</in> <out>[\u1cd5]</out> <key>independent.svarita.aggravated</key> <cl>accent</cl></e>  <!-- vedic tone yajurvedic aggravated independent svarita -->
+<e n='139'> <in>\u008B</in> <out>[\u1cea\u0902]</out> <key>anusvara.bahirgomukha</key> <cl>anusvara</cl> </e>  <!-- where is the dot? -->
+<e n='143'> <in>\u008F</in> <map>independent.svarita.aggravated</map> </e>  <!-- vedic tone yajurvedic aggravated independent svarita -->
+<e n='153'> <in>\u0099</in> <map>candra.below</map> </e>
+<e n='157'> <in>\u009D</in> <out>[\u1cd6]</out> <key>independent.svarita</key> <cl></cl> </e>
+<e n='158'> <in>\u009E</in> <map>candra.below</map> </e>
+<e n='160'> <in>\u00A0</in> <out>tt</out> <map>full_form.tt</map> </e>
+<e n='174'> <in>\u00AE</in> <out>[\u1ce3\u0903]</out> <key>visarga.anudatta.reversed</key> <cl>visarga</cl> </e>  <!-- vedic sign reversed visarga anudatta --> <!-- where are dots -->
+<e n='178'> <in>\u00B2</in> <out>[\u097a]</out> <key>full_form.heavy.y</key> <cl>full_form</cl> </e>
+<e n='190'> <in>\u00BE</in> <out>[\u1ce2\u0903]</out> <key>vedic.division</key> <cl>accent</cl></e>   <!-- what is this? -->
+<e n='201'> <in>\u00C9</in> <out>[\u1ce5\u0903]</out> <key>visarga.anudatta</key> <cl>visarga</cl></e> <!-- vedic sign visarga anudatta --> <!-- where are dots -->
+<e n='226'> <in>\u00E2</in> <out>[\ua8f2]</out> <key>spacing.candrabindu</key> <cl>anusvara</cl> </e>
+<e n='253'> <in>\u00FD</in> <out>[\u1cef\u0902]</out> <key></key> <key>long.anusvara</key> <cl>anusvara</cl> </e>  <!-- vedic sign long anusvara-->
+<e n='254'> <in>\u00FE</in> <out>[\u097a]</out> <key>half_form.heavy.y</key> <cl>half_form</cl></e>
+</edges>
+</fsm>

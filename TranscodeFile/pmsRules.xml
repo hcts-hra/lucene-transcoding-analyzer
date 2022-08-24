@@ -1,0 +1,106 @@
+<!--
+    Legal values for source and target encodings    
+    slp1        SLP1    
+    hk          Kyoto-Harvard
+    wx				  Hyderabad-Tirupati
+  	itrans		  ITrans
+   	velthuis	  Velthuis
+    vedatype	  Vedatype (M.U.M.)
+    deva			  Devanagari Unicode
+    roman			  Roman Unicode IAST
+    romanstrict Roman Unicode ISO 15919
+    bengali		  Bengali Unicode
+    gujarati	  Gujarati Unicode
+    gurmukhi	  Gurmukhi Unicode
+    kannada		  Kannada Unicode
+    oriya			  Oriya Unicode
+    malayalam	  Malayalam Unicode
+    tamil			  Tamil Unicode
+    telugu		  Telugu Unicode
+    skttex      TeX Devanagari
+    texroman    Tex Roman Transliteration
+    asis			  Anything
+-->
+
+<transcodingRules>
+ <regexp name='alldeva' pattern="/^(.*)$/m">
+  <transcodingRule groupNumber='1' sourceEncoding='slp1' targetEncoding='deva'/>
+ </regexp>
+ <regexp name='allroman' pattern="/^(.*)$/m">
+  <transcodingRule groupNumber='1' sourceEncoding='slp1' targetEncoding='roman'/>
+ </regexp>
+ <regexp name='HarivamsaSRoman' pattern="/^(\d\d?\d?\.\d\d?\d?[abcdef]?[abcdef]?[abcdef]?\*?\d\d?\d?\d?[ABC]?:?\d?\d?[abcdefs] )(.+)$/m">
+  <transcodingRule groupNumber='1' sourceEncoding='asis' targetEncoding='asis'/>
+  <transcodingRule groupNumber='2' sourceEncoding='slp1' targetEncoding='roman' leftFlag='&lt;' rightFlag='&gt;' unknown='flag' flagged='asis-'>
+  	<mappings>
+  		<mapping char='@' target='!!!'/>
+  	</mappings>
+  </transcodingRule>	
+ </regexp>
+ <regexp name='HarivamsaSDeva' pattern="/^(\d\d?\d?\.\d\d?\d?[abcdef]?[abcdef]?[abcdef]?\*?\d\d?\d?\d?[ABC]?:?\d?\d?[abcdefs] )(.+)$/m">
+  <transcodingRule groupNumber='1' sourceEncoding='asis' targetEncoding='asis'/>
+  <transcodingRule groupNumber='2' sourceEncoding='slp1' targetEncoding='deva' leftFlag='&lt;' rightFlag='&gt;' unknown='flag' flagged='asis-'/>
+ </regexp>
+ <regexp name='HarivamsaRoman' pattern="/^(\d\d?\d?\.\d\d?\d?(?:[abcdefsz]|\.\d) )(.+)$/m">
+  <transcodingRule groupNumber='1' sourceEncoding='asis' targetEncoding='asis'/>
+  <transcodingRule groupNumber='2' sourceEncoding='slp1' targetEncoding='roman' leftFlag='[' rightFlag=']' unknown='flag' flagged='asis+'/>
+ </regexp>
+ <regexp name='HarivamsaDeva' pattern="/^(\d\d?\d?\.\d\d?\d?(?:[abcdefsz]|\.\d) )(.+)$/m">
+  <transcodingRule groupNumber='1' sourceEncoding='asis' targetEncoding='asis'/>
+  <transcodingRule groupNumber='2' sourceEncoding='slp1' targetEncoding='deva' leftFlag='[' rightFlag=']' unknown='flag' flagged='asis+'/>
+ </regexp>
+ <regexp name='speaker' pattern="/(&lt;speaker[^&gt;]*&gt;)([^&lt;]+)(&lt;/speaker&gt;)/m">
+  <transcodingRule groupNumber='1' sourceEncoding='asis' targetEncoding='asis'/>
+  <transcodingRule groupNumber='2' sourceEncoding='tz' targetEncoding='slp1' leftFlag='[' rightFlag=']' unknown='flag' flagged='asis+'/>
+  <transcodingRule groupNumber='3' sourceEncoding='asis' targetEncoding='asis'/>
+ </regexp>
+ <regexp name='seg' pattern="/(&lt;seg[^&gt;]*&gt;)([^&lt;]+)(&lt;/seg&gt;)/m">
+  <transcodingRule groupNumber='1' sourceEncoding='asis' targetEncoding='asis'/>
+  <transcodingRule groupNumber='2' sourceEncoding='tz' targetEncoding='slp1' leftFlag='[' rightFlag=']' unknown='flag' flagged='asis+'/>
+  <transcodingRule groupNumber='3' sourceEncoding='asis' targetEncoding='asis'/>
+ </regexp>
+ <regexp name='l' pattern="/(&lt;l[^&gt;]*&gt;)([^&lt;]+)(&lt;/l&gt;)/m">
+  <transcodingRule groupNumber='1' sourceEncoding='asis' targetEncoding='asis'/>
+  <transcodingRule groupNumber='2' sourceEncoding='tz' targetEncoding='slp1' leftFlag='[' rightFlag=']' unknown='flag' flagged='asis+'/>
+  <transcodingRule groupNumber='3' sourceEncoding='asis' targetEncoding='asis'/>
+ </regexp>
+ <regexp name='segORs' pattern="/(&lt;seg type='foot' n='\d\d?\d?\.\d\d?\d?[abcdefsz]'&gt;|&lt;s&gt;)([^&lt;]+)(&lt;/seg&gt;|&lt;/s&gt;)/m">
+  <transcodingRule groupNumber='1' sourceEncoding='asis' targetEncoding='asis'/>
+  <transcodingRule groupNumber='2' sourceEncoding='tz' targetEncoding='slp1' leftFlag='[' rightFlag=']' unknown='flag' flagged='asis+'/>
+  <transcodingRule groupNumber='3' sourceEncoding='asis' targetEncoding='asis'/>
+ </regexp>
+ <regexp name='SITAroman' pattern='/^(\d\d\d\d\d\d\d\.?\d?[abcdefs] )(.*)$/m'>
+  <transcodingRule groupNumber='1' sourceEncoding='asis' targetEncoding='asis'/>
+  <transcodingRule groupNumber='2' sourceEncoding='slp1' targetEncoding='roman' leftFlag='[' rightFlag=']' unknown='flag' flagged='asis+'/>
+ </regexp>
+ <regexp name='SITAdeva' pattern='/^(\d\d\d\d\d\d\d\.?\d?[abcdefs] )(.*)$/m'>
+  <transcodingRule groupNumber='1' sourceEncoding='asis' targetEncoding='asis'/>
+  <transcodingRule groupNumber='2' sourceEncoding='slp1' targetEncoding='deva' leftFlag='[' rightFlag=']' unknown='flag' flagged='asis+'/>
+ </regexp>
+
+<!--  
+	<regexp name='SITAdeva'  pattern='/^([SA](?!\d\d0+ )[\dA-Za-z]+ )(?!Colophon)(.*)$/m'>
+		<transcodingRule groupNumber='1' sourceEncoding='asis' targetEncoding='asis'/>
+		<transcodingRule groupNumber='2' sourceEncoding='slp1' targetEncoding='deva' leftFlag='&lt;' rightFlag='&gt;' unknown='asis' flagged='asis-'/>
+	</regexp>
+-->
+
+  <!--transcodingRule startTag='&lt;rom&gt;' endTag='&lt;/rom&gt;' sourceEncoding='roman' targetEncoding='deva' 
+  	               removeTag='n' newStartTag='&lt;rom&gt;' newEndTag='&lt;/rom&gt;' leftFlagx='*' rightFlagx='*'
+  	               unknownx='asis' flaggedx='asis+'>
+  	 <mappings>
+  	 	<mapping char=',' target=':'/>
+  	 	<mapping char='?' target='.'/>
+  	 </mappings>
+  </transcodingRule-->
+  <!--transcodingRule startTag='&lt;roman&gt;' endTag='&lt;/roman&gt;' sourceEncoding='romanstrict' targetEncoding='slp1'/>
+   <transcodingRule startTag='*' endTag='' sourceEncoding='slp1' targetEncoding='deva'/>
+   <transcodingRule startTag='&lt;ts&gt;' endTag='&lt;/ts&gt;' sourceEncoding='slp1' targetEncoding='tamil'/>
+   <transcodingRule startTag='{gr}' endTag='{/gr}' sourceEncoding='slp1' targetEncoding='linearb'/>
+   <transcodingRule startTag='&lt;dev&gt;' endTag='&lt;/dev&gt;' sourceEncoding='slp1' targetEncoding='deva'/>
+   <transcodingRule startTag='&lt;rom&gt;' endTag='&lt;/rom&gt;' sourceEncoding='slp1' targetEncoding='roman'/>
+   <transcodingRule startTag='[ta]' endTag='[/ta]' sourceEncoding='slp1' targetEncoding='tamil'/>
+   <transcodingRule startTag='[te]' endTag='[/te]' sourceEncoding='slp1' targetEncoding='telugu'/>
+   <transcodingRule startTag='[xd]' endTag='[/xd]' sourceEncoding='slp1' targetEncoding='skttex'/>
+   <transcodingRule startTag='[xr]' endTag='[/xr]' sourceEncoding='slp1' targetEncoding='texroman'/-->
+</transcodingRules>

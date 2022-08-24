@@ -1,0 +1,132 @@
+<!-- Tracy's typing format -->
+<fsm inputType='UTF-8' outputType='slp1' version='2' testBlanks='n'>
+<edges>
+<e n='0'>  <in>a</in> <out>a</out> <cl>atom</cl> </e>
+<e n='1'>  <in>a-</in> <out>A</out> <cl>atom</cl> </e>
+<e n='2'>  <in>i</in> <out>i</out> <cl>atom</cl> </e>
+<e n='3'>  <in>i-</in> <out>I</out> <cl>atom</cl> </e>
+<e n='4'>  <in>u</in> <out>u</out> <cl>atom</cl> </e>
+<e n='5'>  <in>u-</in> <out>U</out> <cl>atom</cl> </e>
+<e n='6'>  <in>r.</in> <out>f</out>  <cl>atom</cl></e>
+<e n='7'>  <in>r.-</in> <out>F</out>  <key>F1</key> <cl>atom</cl></e>
+<e n='7a'>  <in>r-.</in> <out>F</out>  <key>F2</key> <cl>atom</cl></e>
+<e n='8'>  <in>l.</in> <out>x</out>  <cl>atom</cl></e>
+<e n='8a'> <in>l.-</in> <out>X</out>  <key>X1</key> <cl>atom</cl></e>
+<e n='8b'> <in>l-.</in> <out>X</out>  <key>X2</key> <cl>atom</cl></e>
+<e n='9'>  <in>e</in> <out>e</out> <cl>atom</cl> </e>
+<e n='10'> <in>ai</in> <out>E</out>  <cl>atom</cl></e>
+<e n='11'>  <in>o</in> <out>o</out> <cl>atom</cl> </e>
+<e n='12'> <in>au</in> <out>O</out>  <cl>atom</cl></e>
+<e n='13'> <in>m.</in> <out>M</out>  <cl>atom</cl> </e>
+<e n='14'> <in>h.</in> <out>H</out> <cl>atom</cl> </e>
+<e n='15'> <in>k</in> <out>k</out> <cl>atom</cl></e>
+<e n='16'> <in>kh</in> <out>K</out>  <cl>atom</cl></e>
+<e n='17'> <in>g</in> <out>g</out> <cl>atom</cl></e>
+<e n='18'> <in>gh</in> <out>G</out>  <cl>atom</cl></e>
+<e n='19'> <in>n.</in> <out>N</out>  <cl>atom</cl></e>
+<e n='20'> <in>c</in> <out>c</out> <cl>atom</cl></e>
+<e n='21'> <in>ch</in> <out>C</out>  <cl>atom</cl></e>
+<e n='22'> <in>j</in> <out>j</out> <cl>atom</cl></e>
+<e n='23'> <in>jh</in> <out>J</out>  <cl>atom</cl></e>
+<e n='24'> <in>n~</in> <out>Y</out>  <cl>atom</cl></e>
+<e n='25'> <in>t.</in> <out>w</out>  <cl>atom</cl></e>
+<e n='26'> <in>t.h</in> <out>W</out>  <cl>atom</cl></e>
+<e n='27'> <in>d.</in> <out>q</out>  <cl>atom</cl></e>
+<e n='28'> <in>d.h</in> <out>Q</out>  <cl>atom</cl></e>
+<e n='29'> <in>n.</in> <out>R</out>  <cl>atom</cl></e>
+<e n='30'> <in>t</in> <out>t</out> <cl>atom</cl></e>
+<e n='31'> <in>th</in> <out>T</out>  <cl>atom</cl></e>
+<e n='32'> <in>d</in> <out>d</out> <cl>atom</cl></e>
+<e n='33'> <in>dh</in> <out>D</out>  <cl>atom</cl></e>
+<e n='34'> <in>n</in> <out>n</out> <cl>atom</cl></e>
+<e n='35'> <in>p</in> <out>p</out> <cl>atom</cl></e>
+<e n='36'> <in>ph</in> <out>P</out>  <cl>atom</cl></e>
+<e n='37'> <in>b</in> <out>b</out> <cl>atom</cl></e>
+<e n='38'> <in>bh</in> <out>B</out>  <cl>atom</cl></e>
+<e n='39'> <in>m</in> <out>m</out> <cl>atom</cl></e>
+<e n='40'> <in>y</in> <out>y</out> <cl>atom</cl> </e>
+<e n='41'> <in>r</in> <out>r</out> <cl>atom</cl> </e>
+<e n='42'> <in>l</in> <out>l</out> <cl>atom</cl> </e>
+<e n='43'> <in>v</in> <out>v</out> <cl>atom</cl> </e>
+<e n='44'> <in>s'</in> <out>S</out>  <cl>atom</cl></e>
+<e n='45'> <in>s.</in> <out>z</out>  <cl>atom</cl></e>
+<e n='46'> <in>s</in> <out>s</out> <cl>atom</cl></e>
+<e n='47'> <in>h</in> <out>h</out> <cl>atom</cl></e>
+
+<e n='100'>  <in>A</in> <out>{a}</out> <key></key><cl>atom</cl> </e>
+<e n='101'>  <in>A-</in> <out>{A}</out> <cl>atom</cl> </e>
+<e n='102'>  <in>I</in> <out>{i}</out> <cl>atom</cl> </e>
+<e n='103'>  <in>I-</in> <out>{I}</out> <cl>atom</cl> </e>
+<e n='104'>  <in>U</in> <out>{u}</out> <cl>atom</cl> </e>
+<e n='105'>  <in>U-</in> <out>{U}</out> <cl>atom</cl> </e>
+<e n='106'>  <in>R.</in> <out>{f}</out>  <cl>atom</cl></e>
+<e n='107'>  <in>R.-</in> <out>{F}</out>  <key>_F1</key> <cl>atom</cl></e>
+<e n='107a'>  <in>R-.</in> <out>{F}</out>  <key>_F2</key> <cl>atom</cl></e>
+<e n='108'>  <in>L.</in> <out>{x}</out>  <cl>atom</cl></e>
+<e n='108a'> <in>L.-</in> <out>{X}</out>  <key>_X1</key> <cl>atom</cl></e>
+<e n='108b'> <in>L-.</in> <out>{X}</out>  <key>_X2</key> <cl>atom</cl></e>
+<e n='109'>  <in>E</in> <out>{e}</out> <cl>atom</cl> </e>
+<e n='110'> <in>Ai</in> <out>{E}</out>  <cl>atom</cl></e>
+<e n='111'>  <in>O</in> <out>{o}</out> <cl>atom</cl> </e>
+<e n='112'> <in>Au</in> <out>{O}</out>  <cl>atom</cl></e>
+<e n='113'> <in>M.</in> <out>{M}</out>  <cl>atom</cl> </e>
+<e n='114'> <in>H.</in> <out>{H}</out> <cl>atom</cl> </e>
+<e n='115'> <in>K</in> <out>{k}</out> <cl>atom</cl></e>
+<e n='116'> <in>Kh</in> <out>{K}</out>  <cl>atom</cl></e>
+<e n='117'> <in>G</in> <out>{g}</out> <cl>atom</cl></e>
+<e n='118'> <in>Gh</in> <out>{G}</out>  <cl>atom</cl></e>
+<e n='119'> <in>N.</in> <out>{N}</out>  <cl>atom</cl></e>
+<e n='120'> <in>C</in> <out>{c}</out> <cl>atom</cl></e>
+<e n='121'> <in>Ch</in> <out>{C}</out>  <cl>atom</cl></e>
+<e n='122'> <in>J</in> <out>{j}</out> <cl>atom</cl></e>
+<e n='123'> <in>Jh</in> <out>{J}</out>  <cl>atom</cl></e>
+<e n='124'> <in>N~</in> <out>{Y}</out>  <cl>atom</cl></e>
+<e n='125'> <in>T.</in> <out>{w}</out>  <cl>atom</cl></e>
+<e n='126'> <in>T.h</in> <out>{W}</out>  <cl>atom</cl></e>
+<e n='127'> <in>D.</in> <out>{q}</out>  <cl>atom</cl></e>
+<e n='128'> <in>D.h</in> <out>{Q}</out>  <cl>atom</cl></e>
+<e n='129'> <in>N.</in> <out>{R}</out>  <cl>atom</cl></e>
+<e n='130'> <in>T</in> <out>{t}</out> <cl>atom</cl></e>
+<e n='131'> <in>Th</in> <out>{T}</out>  <cl>atom</cl></e>
+<e n='132'> <in>D</in> <out>{d}</out> <cl>atom</cl></e>
+<e n='133'> <in>Dh</in> <out>{D}</out>  <cl>atom</cl></e>
+<e n='134'> <in>N</in> <out>{n}</out> <cl>atom</cl></e>
+<e n='135'> <in>P</in> <out>{p}</out> <cl>atom</cl></e>
+<e n='136'> <in>Ph</in> <out>{P}</out>  <cl>atom</cl></e>
+<e n='137'> <in>B</in> <out>{b}</out> <cl>atom</cl></e>
+<e n='138'> <in>Bh</in> <out>{B}</out>  <cl>atom</cl></e>
+<e n='139'> <in>M</in> <out>{m}</out> <cl>atom</cl></e>
+<e n='140'> <in>Y</in> <out>{y}</out> <cl>atom</cl> </e>
+<e n='141'> <in>R</in> <out>{r}</out> <cl>atom</cl> </e>
+<e n='142'> <in>L</in> <out>{l}</out> <cl>atom</cl> </e>
+<e n='143'> <in>V</in> <out>{v}</out> <cl>atom</cl> </e>
+<e n='144'> <in>S'</in> <out>{S}</out>  <cl>atom</cl></e>
+<e n='145'> <in>S.</in> <out>{z}</out>  <cl>atom</cl></e>
+<e n='146'> <in>S</in> <out>{s}</out> <cl>atom</cl></e>
+<e n='147'> <in>H</in> <out>{h}</out> <cl>atom</cl></e>
+
+
+<e n='48'> <in>\u0009</in> <out>\u0009</out> <cl>atom</cl> </e>
+<e n='49'> <in>\u000a</in> <out>\u000a</out> <cl>atom</cl> </e>
+<e n='50'> <in>\u000d</in> <out>\u000d</out> <cl>atom</cl> </e>
+<e n='51'> <in>\u0020</in> <out>\u0020</out> <cl>atom</cl> </e>
+
+<e n='60'> <in>0</in> <out>0</out> <cl>atom</cl></e>
+<e n='61'> <in>1</in> <out>1</out> <cl>atom</cl></e>
+<e n='62'> <in>2</in> <out>2</out> <cl>atom</cl></e>
+<e n='63'> <in>3</in> <out>3</out> <cl>atom</cl></e>
+<e n='64'> <in>4</in> <out>4</out> <cl>atom</cl></e>
+<e n='65'> <in>5</in> <out>5</out> <cl>atom</cl></e>
+<e n='66'> <in>6</in> <out>6</out> <cl>atom</cl></e>
+<e n='67'> <in>7</in> <out>7</out> <cl>atom</cl></e>
+<e n='68'> <in>8</in> <out>8</out> <cl>atom</cl></e>
+<e n='69'> <in>9</in> <out>9</out> <cl>atom</cl></e>
+</edges>
+
+<buffers>
+	<buffer name='atoms' action='!!'>
+		<member id='atom'/>
+	</buffer>
+</buffers>
+
+</fsm>
