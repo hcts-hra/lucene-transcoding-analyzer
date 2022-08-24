@@ -2,7 +2,7 @@ package de.unihd.hra.libs.java.luceneTranscodingAnalyzer;
 
 import java.io.Reader;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.standard.StandardTokenizer;
@@ -12,7 +12,7 @@ import org.sanskritlibrary.webservice.TransformMap;
 
 public class TranscodingAnalyzer extends Analyzer {
 
-	private final static Logger logger = Logger.getLogger(TranscodingAnalyzer.class);
+	private final static LogManager LogManager = LogManager.getLogger(TranscodingAnalyzer.class);
 
 	private Version matchVersion = Version.LUCENE_44;
 
@@ -33,7 +33,7 @@ public class TranscodingAnalyzer extends Analyzer {
 
 	@Override
 	protected TokenStreamComponents createComponents(final String fieldName, final Reader reader) {
-		logger.debug("fieldName = " + fieldName);
+		LogManager.debug("fieldName = " + fieldName);
 
 		StandardTokenizer tokenizer = new StandardTokenizer(matchVersion, reader);
 

@@ -4,7 +4,7 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Hashtable;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.sanskritlibrary.FSM;
 import org.sanskritlibrary.ResourceInputStream;
 import org.sanskritlibrary.webservice.TransformMap;
@@ -13,7 +13,7 @@ public class TransformMaps {
 
 	public static Hashtable<String, FSM[]> fsmh = new Hashtable<String, FSM[]>();
 	public static HashMap<String, TransformMap> transformMaps = new HashMap<String, TransformMap>();
-	private final static Logger logger = Logger.getLogger(TransformMaps.class);
+	private final static LogManager LogManager = LogManager.getLogger(TransformMaps.class);
 
 	public static class Transcoders implements ResourceInputStream {
 

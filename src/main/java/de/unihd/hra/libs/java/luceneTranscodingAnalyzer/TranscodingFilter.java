@@ -3,7 +3,7 @@ package de.unihd.hra.libs.java.luceneTranscodingAnalyzer;
 import java.io.IOException;
 import java.util.HashMap;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
@@ -16,7 +16,7 @@ public class TranscodingFilter extends TokenFilter {
 	private final Version matchVersion;
 	public final HashMap<String, TransformMap> transformMaps;
 	protected CharTermAttribute charTermAttribute = addAttribute(CharTermAttribute.class);
-	private final static Logger logger = Logger.getLogger(TranscodingFilter.class);
+	private final static LogManager LogManager = LogManager.getLogger(TranscodingFilter.class);
 
 	// this is for Lucene 5.3.1.
 	// protected TransliterationFilter(TokenStream input) {
@@ -34,17 +34,17 @@ public class TranscodingFilter extends TokenFilter {
 	final public boolean incrementToken() throws IOException {
 		if (input.incrementToken()) {
 			String currentToken = this.input.getAttribute(CharTermAttribute.class).toString().trim();
-			logger.debug("currentToken = " + currentToken);
+			LogManager.debug("currentToken = " + currentToken);
 
 			String transcodedCurrentToken = currentToken;
 
 			try {
 				if (UnicodeBlocksDetection.detectDevanagariBlocks(currentToken)) {
 					transcodedCurrentToken = WebServices.transformString(currentToken, transformMaps.get("deva2slp1"));
-					logger.debug("transcodedCurrentToken = " + transcodedCurrentToken);
+					LogManager.debug("transcodedCurrentToken = " + transcodedCurrentToken);
 				} else {
 					transcodedCurrentToken = WebServices.transformString(currentToken, transformMaps.get("roman2slp1"));
-					logger.debug("transcodedCurrentToken = " + transcodedCurrentToken);
+					LogManager.debug("transcodedCurrentToken = " + transcodedCurrentToken);
 				}
 
 				// if (UnicodeBlocksDetection.detectSlp1Blocks(currentToken)) {
@@ -54,7 +54,7 @@ public class TranscodingFilter extends TokenFilter {
 				// transcodedCurrentToken =
 				// WebServices.transformString(currentToken,
 				// transformMaps.get("roman2slp1"));
-				// logger.debug("transcodedCurrentToken = " +
+				// LogManager.debug("transcodedCurrentToken = " +
 				// transcodedCurrentToken);
 				// }
 			} catch (Exception e) {
