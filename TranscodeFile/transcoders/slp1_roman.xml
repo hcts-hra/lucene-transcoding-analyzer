@@ -1,0 +1,220 @@
+<fsm  inputType='slp1' outputType='UTF-8' version='2' capitalsSupported='y'>
+<!-- Anything in brackets will be passed through with brackets removed. -->
+<edges>
+<e n='0'> <in>a</in> <out>a</out> <cl>char</cl></e>
+<e n='1'> <in>{a}</in> <out>A</out> <cl>char</cl></e>
+<e n='2'> <in>A</in> <out>\u0101</out> <cl>char</cl></e>
+<e n='3'> <in>{A}</in> <out>\u0100</out> <cl>char</cl></e>
+
+<e n='4'> <in>i</in> <out>i</out> <cl>char</cl></e>
+<e n='5'> <in>{i}</in> <out>I</out> <cl>char</cl></e>
+<e n='6'> <in>I</in> <out>\u012b</out> <cl>char</cl></e>
+<e n='7'> <in>{I}</in>  <out>\u012a</out> <cl>char</cl></e>
+
+<e n='8'> <in>u</in> <out>u</out> <cl>char</cl></e>
+<e n='9'> <in>{u}</in> <out>U</out> <cl>char</cl></e>
+<e n='10'> <in>U</in> <out>\u016b</out> <cl>char</cl></e>
+<e n='11'> <in>{U}</in> <out>\u016a</out> <cl>char</cl></e>
+
+<e n='12'> <in>f</in> <out>\u1e5b</out> <cl>char</cl></e>
+<e n='13'> <in>{f}</in> <out>\u1e5a</out> <cl>char</cl></e>
+
+<e n='14'> <in>F</in> <out>\u1e5d</out> <cl>char</cl></e>
+<e n='15'> <in>{F}</in> <out>\u1e5c</out> <cl>char</cl></e>
+
+<e n='16'> <in>x</in> <out>\u1e37</out> <cl>char</cl></e>
+<e n='17'> <in>{x}</in>  <out>\u1e36</out> <cl>char</cl></e>
+
+<e n='18'> <in>X</in> <out>\u1e39</out> <cl>char</cl></e>
+<e n='19'> <in>{X}</in>  <out>\u1e38</out> <cl>char</cl></e>
+
+<e n='20'> <in>e</in> <out>e</out> <cl>char</cl></e>
+<e n='21'> <in>{e}</in> <out>E</out> <cl>char</cl></e>
+<e n='22'> <in>E</in> <out>ai</out> <cl>char</cl></e>
+<e n='23'> <in>{E}</in>  <out>Ai</out> <cl>char</cl></e>
+
+<e n='24'> <in>o</in> <out>o</out> <cl>char</cl></e>
+<e n='25'> <in>{o}</in> <out>O</out> <cl>char</cl></e>
+<e n='26'> <in>O</in> <out>au</out> <cl>char</cl></e>
+<e n='27'> <in>{O}</in>  <out>Au</out> <cl>char</cl></e>
+
+<e n='28'> <in>h</in> <out>h</out> <cl>char</cl></e>
+<e n='29'> <in>{h}</in> <out>H</out> <cl>char</cl></e>
+<e n='30'> <in>H</in> <out>\u1e25</out> <cl>char</cl></e>
+<e n='31'> <in>{H}</in>  <out>\u1e24</out> <cl>char</cl></e>
+
+<e n='32'> <in>m</in> <out>m</out> <cl>char</cl></e>
+<e n='33'> <in>{m}</in> <out>M</out> <cl>char</cl></e>
+<e n='34'> <in>M</in> <out>\u1e43</out> <cl>char</cl></e>
+<e n='35'> <in>{M}</in>  <out>\u1e42</out> <cl>char</cl></e>
+
+<e n='36'> <in>k</in> <out>k</out> <cl>char</cl></e>
+<e n='37'> <in>{k}</in> <out>K</out> <cl>char</cl></e>
+<e n='38'> <in>K</in> <out>kh</out> <cl>char</cl></e>
+<e n='39'> <in>{K}</in>  <out>Kh</out> <cl>char</cl></e>
+
+<e n='40'> <in>g</in> <out>g</out> <cl>char</cl></e>
+<e n='41'> <in>{g}</in> <out>G</out> <cl>char</cl></e>
+<e n='42'> <in>G</in> <out>gh</out> <cl>char</cl></e>
+<e n='43'> <in>{G}</in>  <out>Gh</out> <cl>char</cl></e>
+
+<e n='44'> <in>n</in> <out>n</out> <cl>char</cl></e>
+<e n='45'> <in>{n}</in> <out>N</out> <cl>char</cl></e>
+<e n='46'> <in>N</in> <out>\u1e45</out> <cl>char</cl></e>
+<e n='47'> <in>{N}</in>  <out>\u1e44</out> <cl>char</cl></e>
+
+<e n='48'> <in>c</in> <out>c</out> <cl>char</cl></e>
+<e n='49'> <in>{c}</in> <out>C</out> <cl>char</cl></e>
+<e n='50'> <in>C</in> <out>ch</out> <cl>char</cl></e>
+<e n='51'> <in>{C}</in>  <out>Ch</out> <cl>char</cl></e>
+
+<e n='52'> <in>j</in> <out>j</out> <cl>char</cl></e>
+<e n='53'> <in>{j}</in> <out>J</out> <cl>char</cl></e>
+<e n='54'> <in>J</in> <out>jh</out> <cl>char</cl></e>
+<e n='55'> <in>{J}</in>  <out>Jh</out> <cl>char</cl></e>
+
+<e n='56'> <in>Y</in> <out>\u00f1</out> <cl>char</cl></e>
+<e n='57'> <in>{Y}</in>  <out>\u00d1</out> <cl>char</cl></e>
+
+<e n='58'> <in>w</in> <out>\u1e6d</out> <cl>char</cl></e>
+<e n='59'> <in>{w}</in>  <out>\u1e6c</out> <cl>char</cl></e>
+
+<e n='60'> <in>W</in> <out>\u1e6dh</out> <cl>char</cl></e>
+<e n='61'> <in>{W}</in>  <out>\u1e6cH</out> <cl>char</cl></e>
+
+<e n='62'> <in>q</in> <out>\u1e0d</out> <cl>char</cl></e>
+<e n='63'> <in>{q}</in>  <out>\u1e0c</out> <cl>char</cl></e>
+
+<e n='64'> <in>Q</in> <out>\u1e0dh</out> <cl>char</cl></e>
+<e n='65'> <in>{Q}</in>  <out>\u1e0cH</out> <cl>char</cl></e>
+
+<e n='66'> <in>R</in> <out>\u1e47</out> <cl>char</cl></e>
+<e n='67'> <in>{R}</in>  <out>\u1e46</out> <cl>char</cl></e>
+
+<e n='68'> <in>t</in> <out>t</out> <cl>char</cl></e>
+<e n='69'> <in>{t}</in> <out>T</out> <cl>char</cl></e>
+<e n='70'> <in>T</in> <out>th</out> <cl>char</cl></e>
+<e n='71'> <in>{T}</in>  <out>Th</out> <cl>char</cl></e>
+
+<e n='72'> <in>d</in> <out>d</out> <cl>char</cl></e>
+<e n='73'> <in>{d}</in> <out>D</out> <cl>char</cl></e>
+<e n='74'> <in>D</in> <out>dh</out> <cl>char</cl></e>
+<e n='75'> <in>{D}</in>  <out>Dh</out> <cl>char</cl></e>
+
+<e n='76'> <in>p</in> <out>p</out> <cl>char</cl></e>
+<e n='77'> <in>{p}</in> <out>P</out> <cl>char</cl></e>
+<e n='78'> <in>P</in> <out>ph</out> <cl>char</cl></e>
+<e n='79'> <in>{P}</in>  <out>Ph</out> <cl>char</cl></e>
+
+<e n='80'> <in>b</in> <out>b</out> <cl>char</cl></e>
+<e n='81'> <in>{b}</in> <out>B</out> <cl>char</cl></e>
+<e n='82'> <in>B</in> <out>bh</out> <cl>char</cl></e>
+<e n='83'> <in>{B}</in>  <out>Bh</out> <cl>char</cl></e>
+
+<e n='84'> <in>y</in> <out>y</out> <cl>char</cl></e>
+<e n='85'> <in>{y}</in> <out>Y</out> <cl>char</cl></e>
+
+<e n='86'> <in>r</in> <out>r</out> <cl>char</cl></e>
+<e n='87'> <in>{r}</in> <out>R</out> <cl>char</cl></e>
+
+<e n='88'> <in>l</in> <out>l</out> <cl>char</cl></e>
+<e n='89'> <in>{l}</in> <out>L</out> <cl>char</cl></e>
+
+<e n='90'> <in>v</in> <out>v</out> <cl>char</cl></e>
+<e n='91'> <in>{v}</in> <out>V</out> <cl>char</cl></e>
+
+<e n='92'> <in>s</in> <out>s</out> <cl>char</cl></e>
+<e n='93'> <in>{s}</in> <out>S</out> <cl>char</cl></e>
+<e n='94'> <in>S</in> <out>\u015b</out> <cl>char</cl></e>
+<e n='95'> <in>{S}</in>  <out>\u015a</out> <cl>char</cl></e>
+
+<e n='96'> <in>z</in> <out>\u1e63</out> <cl>char</cl></e>
+<e n='97'> <in>{z}</in>  <out>\u1e62</out> <cl>char</cl></e>
+
+<e n='98'> <in>L</in> <out>\u1e37</out> <cl>char</cl></e>
+<e n='99'> <in>{L}</in>  <out>\u1e36</out> <cl>char</cl></e>
+
+<e n='100'> <in>|</in> <out>\u1e3Bh</out> <cl>char</cl></e>
+<e n='101'> <in>{|}</in>  <out>\u1e3AH</out> <cl>char</cl></e>
+
+<e n='102'> <in>'</in> <out>'</out> <cl>char</cl></e>
+
+<e n='103'> <in>~</in> <out>\u0303</out><cl>char</cl></e>
+
+<e n='104'> <in>\</in> <out></out><cl>char</cl></e>
+<e n='105'> <in>hack1</in> <out></out><cl>char</cl></e>
+<e n='106'> <in>hack2</in> <out></out><cl>char</cl></e>
+
+<e n='107'> <in>\u0020</in> <out>\u0020</out> <cl>char</cl></e>
+<e n='108'> <in>\u0009</in> <out>\u0009</out> <cl>char</cl></e>
+<e n='109'> <in>\u000d</in> <out>\u000d</out> <cl>char</cl></e>
+<e n='110'> <in>\u000a</in> <out>\u000a</out> <cl>char</cl></e>
+
+<e n='111'> <in>.</in> <out>.</out> <cl>char</cl></e>
+<!--e n='112'> <in>;</in> <out>;</out> <cl>char</cl></e-->
+
+<e n='120'> <in>0</in> <out>0</out> <cl>char</cl></e>
+<e n='121'> <in>1</in> <out>1</out> <cl>char</cl></e>
+<e n='122'> <in>2</in> <out>2</out> <cl>char</cl></e>
+<e n='123'> <in>3</in> <out>3</out> <cl>char</cl></e>
+<e n='124'> <in>4</in> <out>4</out> <cl>char</cl></e>
+<e n='125'> <in>5</in> <out>5</out> <cl>char</cl></e>
+<e n='126'> <in>6</in> <out>6</out> <cl>char</cl></e>
+<e n='127'> <in>7</in> <out>7</out> <cl>char</cl></e>
+<e n='128'> <in>8</in> <out>8</out> <cl>char</cl></e>
+<e n='129'> <in>9</in> <out>9</out> <cl>char</cl></e>
+
+<e n='130'> <in>-</in> <out>-</out> <cl>char</cl></e>
+<!--
+<e n='0'> <in>/a</in> <out>\u00e1</out> <cl>char</cl></e>
+<e n='0'> <in>/i</in> <out>\u00ed</out> <cl>char</cl></e>
+<e n='0'> <in>/u</in> <out>\u00fa</out> <cl>char</cl></e>
+<e n='0'> <in>/f</in> <out>\u1e5b\u0301</out> <cl>char</cl></e>
+<e n='0'> <in>/x</in> <out>\u1e37\u0301</out> <cl>char</cl></e>
+<e n='0'> <in>/A</in> <out>\u0101\u0301</out> <cl>char</cl></e>
+<e n='0'> <in>/I</in> <out>\u012b\u0301</out> <cl>char</cl></e>
+<e n='0'> <in>/U</in> <out>\u016b\u0301</out> <cl>char</cl></e>
+<e n='0'> <in>/F</in> <out>\u1e5d\u0301</out> <cl>char</cl></e>
+<e n='0'> <in>/X</in> <out>\u1e39\u0301</out> <cl>char</cl></e>
+<e n='0'> <in>/e</in> <out>\u00e9</out> <cl>char</cl></e>
+<e n='0'> <in>/o</in> <out>\u00f3</out> <cl>char</cl></e>
+<e n='0'> <in>/E</in> <out>a\u00ed</out> <cl>char</cl></e>
+<e n='0'> <in>/O</in> <out>a\u00fa</out> <cl>char</cl></e>
+
+<e n='0'> <in>^a</in> <out>\u00e0</out> <cl>char</cl></e>
+<e n='0'> <in>^i</in> <out>\u00ec</out> <cl>char</cl></e>
+<e n='0'> <in>^u</in> <out>\u00f9</out> <cl>char</cl></e>
+<e n='0'> <in>^f</in> <out>\u1e5b\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>^x</in> <out>\u1e37\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>^A</in> <out>\u0101\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>^I</in> <out>\u012b\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>^U</in> <out>\u016b\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>^F</in> <out>\u1e5d\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>^X</in> <out>\u1e39\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>^e</in> <out>\u00e8</out> <cl>char</cl></e>
+<e n='0'> <in>^o</in> <out>\u00f2</out> <cl>char</cl></e>
+<e n='0'> <in>^E</in> <out>a\u00ec</out> <cl>char</cl></e>
+<e n='0'> <in>^O</in> <out>a\u00f9</out> <cl>char</cl></e>
+
+<e n='0'> <in>`a</in> <out>\u00e0</out> <cl>char</cl></e>
+<e n='0'> <in>`i</in> <out>\u00ec</out> <cl>char</cl></e>
+<e n='0'> <in>`u</in> <out>\u00f9</out> <cl>char</cl></e>
+<e n='0'> <in>`f</in> <out>\u1e5b\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>`x</in> <out>\u1e37\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>`A</in> <out>\u0101\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>`I</in> <out>\u012b\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>`U</in> <out>\u016b\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>`F</in> <out>\u1e5d\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>`X</in> <out>\u1e39\u0300</out> <cl>char</cl></e>
+<e n='0'> <in>`e</in> <out>\u00e8</out> <cl>char</cl></e>
+<e n='0'> <in>`o</in> <out>\u00f2</out> <cl>char</cl></e>
+<e n='0'> <in>`E</in> <out>a\u00ec</out> <cl>char</cl></e>
+<e n='0'> <in>`O</in> <out>a\u00f9</out> <cl>char</cl></e>
+-->
+</edges>
+<buffers>
+	<buffer name='chars' action='!!'>
+		<member id='char'/>
+	</buffer>
+</buffers>
+</fsm>

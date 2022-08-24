@@ -9,16 +9,23 @@ in full at http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode, and summa
 
 -  Java `8`
 -  Maven `3.8` (for building from source)
--  transcodeFile.zip (for building from source)
+-  [transcodeFile.zip](http://sanskritlibrary.org/software/transcodeFile.zip) (for building from source)
 
 ## Build
 
-```
-[ ! -f transcodeFile.zip ] && wget http://sanskritlibrary.org/software/transcodeFile.zip
-unzip transcodeFile.zip
+`transcodeFile` has been added to this repo, in case of updates `wget http://sanskritlibrary.org/software/transcodeFile.zip`
+
+```shell
 mvn install:install-file -Dfile=./TranscodeFile/dist/lib/SanskritLibrary.jar -DgroupId=org.sanskritlibrary -DartifactId=sl -Dversion=0.1 -Dpackaging=jar
-cd ./lucene-transcoding-analyzer/
-mvn clean install -DskipTests
+mvn clean install 
+```
+
+You should see:
+
+```shell
+…
+[INFO] BUILD SUCCESS
+…
 ```
 
 ## History

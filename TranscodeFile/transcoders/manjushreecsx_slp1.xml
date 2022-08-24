@@ -1,0 +1,221 @@
+<fsm inputType='8bit' outputType='slp1' version='2'>
+<edges>
+<e n='130'> <in>\u0082</in> <out>[\u00e9]</out> <cl>atom</cl> </e> <!-- e' -->
+<e n='133'> <in>\u0085</in> <out>[\u00e0]</out> <cl>atom</cl> </e> <!-- a` -->
+
+
+<e n='224'> <in>\u00e0</in> <out>A</out> <cl>atom</cl> </e>
+<e n='226'> <in>\u00e2</in> <out>{A}</out> <cl>atom</cl> </e>
+
+<e n='227'> <in>\u00e3</in> <out>I</out> <cl>atom</cl> </e>
+<e n='228'> <in>\u00e4</in> <out>{I}</out> <cl>atom</cl> </e>
+
+<e n='229'> <in>\u00e5</in> <out>U</out> <cl>atom</cl> </e>
+<e n='230'> <in>\u00e6</in> <out>{U}</out> <cl>atom</cl> </e>
+
+<e n='231'> <in>\u00e7</in> <out>f</out> <cl>atom</cl> </e>
+<e n='232'> <in>\u00e8</in> <out>{f}</out> <cl>atom</cl> </e>
+
+<e n='233'> <in>\u00e9</in> <out>F</out> <cl>atom</cl> </e>
+<e n='234'> <in>\u00ea</in> <out>{F}</out> <cl>atom</cl> </e>
+
+<e n='235'> <in>\u00eb</in> <out>x</out> <cl>atom</cl> </e>
+<e n='236'> <in>\u00ec</in> <out>{x}</out> <cl>atom</cl> </e>
+
+<e n='237'> <in>\u00ed</in> <out>X</out> <cl>atom</cl> </e>
+<e n='238'> <in>\u00ee</in> <out>{X}</out> <cl>atom</cl> </e>
+
+<e n='.1'> <in>ai</in> <out>E</out> <cl>atom</cl> </e>
+<e n='.2'> <in>AI</in> <out>{E}</out> <cl>atom</cl> </e>
+
+<e n='.3'> <in>au</in> <out>O</out> <cl>atom</cl> </e>
+<e n='.4'> <in>AU</in> <out>{O}</out> <cl>atom</cl> </e>
+
+<e n='254'> <in>\u00fe</in> <out>H</out> <cl>atom</cl> </e>
+<e n='255'> <in>\u00ff</in> <out>{H}</out> <cl>atom</cl> </e>
+
+<e n='252'> <in>\u00fc</in> <out>M</out> <cl>atom</cl> </e>
+<e n='253'> <in>\u00fd</in> <out>{M}</out> <cl>atom</cl> </e>
+
+<e n='.5'> <in>kh</in> <out>K</out> <cl>atom</cl> </e>
+<e n='.6'> <in>KH</in> <out>{K}</out> <cl>atom</cl> </e>
+
+<e n='.7'> <in>gh</in> <out>G</out> <cl>atom</cl> </e>
+<e n='.8'> <in>GH</in> <out>{G}</out> <cl>atom</cl> </e>
+
+<e n='239'> <in>\u00ef</in> <out>N</out> <cl>atom</cl> </e>
+<e n='240'> <in>\u00f0</in> <out>{N}</out> <cl>atom</cl> </e>
+
+<e n='.9'> <in>ch</in> <out>C</out> <cl>atom</cl> </e>
+<e n='.10'> <in>CH</in> <out>{C}</out> <cl>atom</cl> </e>
+
+<e n='.11'> <in>jh</in> <out>J</out> <cl>atom</cl> </e>
+<e n='.12'> <in>JH</in> <out>{J}</out> <cl>atom</cl> </e>
+
+<e n='164'> <in>\u00a4</in> <out>Y</out> <cl>atom</cl> </e>
+<e n='165'> <in>\u00a5</in> <out>{Y}</out> <cl>atom</cl> </e>
+
+<e n='241'> <in>\u00f1</in> <out>w</out> <cl>atom</cl> </e>
+<e n='242'> <in>\u00f2</in> <out>{w}</out> <cl>atom</cl> </e>
+
+<e n='241h'> <in>\u00f1h</in> <out>W</out> <cl>atom</cl> </e>
+<e n='242h'> <in>\u00f2H</in> <out>{W}</out> <cl>atom</cl> </e>
+
+<e n='243'> <in>\u00f3</in> <out>q</out> <cl>atom</cl> </e>
+<e n='244'> <in>\u00f4</in> <out>{q}</out> <cl>atom</cl> </e>
+
+<e n='243h'> <in>\u00f3h</in> <out>Q</out> <cl>atom</cl> </e>
+<e n='244h'> <in>\u00f4H</in> <out>{Q}</out> <cl>atom</cl> </e>
+
+<e n='245'> <in>\u00f5</in> <out>R</out> <cl>atom</cl> </e>
+<e n='246'> <in>\u00f6</in> <out>{R}</out> <cl>atom</cl> </e>
+
+<e n='.13'> <in>th</in> <out>T</out> <cl>atom</cl> </e>
+<e n='.14'> <in>TH</in> <out>{T}</out> <cl>atom</cl> </e>
+
+<e n='.15'> <in>dh</in> <out>D</out> <cl>atom</cl> </e>
+<e n='.16'> <in>DH</in> <out>{D}</out> <cl>atom</cl> </e>
+
+<e n='.17'> <in>ph</in> <out>P</out> <cl>atom</cl> </e>
+<e n='.18'> <in>PH</in> <out>{P}</out> <cl>atom</cl> </e>
+
+<e n='.19'> <in>bh</in> <out>B</out> <cl>atom</cl> </e>
+<e n='.20'> <in>BH</in> <out>{B}</out> <cl>atom</cl> </e>
+
+<e n='247'> <in>\u00f7</in> <out>S</out> <cl>atom</cl> </e>
+<e n='248'> <in>\u00f8</in> <out>{S}</out> <cl>atom</cl> </e>
+
+<e n='249'> <in>\u00f9</in> <out>z</out> <cl>atom</cl> </e>
+<e n='250'> <in>\u00fa</in> <out>{z}</out> <cl>atom</cl> </e>
+
+<e n='193'> <in>\u00c1</in> <out>V</out> <cl>atom</cl> </e>
+<e n='205'> <in>\u00cd</in> <out>Z</out> <cl>atom</cl> </e>
+
+<e n='251'> <in>\u00fb</in> <out>L</out> <cl>atom</cl> </e>
+<e n='251h'> <in>\u00fbh</in> <out>|</out> <cl>atom</cl> </e>
+
+<e n='.21'> <in>~y</in> <out>y~</out> <cl>atom</cl> </e>
+<e n='.22'> <in>~l</in> <out>l~</out> <cl>atom</cl> </e>
+<e n='.23'> <in>~v</in> <out>v~</out> <cl>atom</cl> </e>
+
+<e n='.24'> <in>[</in> <out>[[]</out> <cl>atom</cl> </e>
+<e n='.25'> <in>]</in> <out>[]]</out> <cl>atom</cl> </e>
+<e n='.26'> <in>{</in> <out>[{]</out> <cl>atom</cl> </e>
+<e n='.27'> <in>}</in> <out>[}]</out> <cl>atom</cl> </e>
+
+<e n='216'> <in>\u00d8</in> <out>[\u2018]</out> <cl>atom</cl> </e> <!-- left single quotation mark -->
+<e n='217'> <in>\u00d9</in> <out>[\u2019]</out> <cl>atom</cl> </e> <!-- right single quotation mark -->
+<e n='218'> <in>\u00da</in> <out>[\u201C]</out> <cl>atom</cl> </e> <!-- left double quotation mark -->
+<e n='219'> <in>\u00db</in> <out>[\u201D]</out> <cl>atom</cl> </e> <!-- right double quotation mark -->
+
+<e n='138'> <in>\u008a</in> <out>[\u00e8]</out> <cl>atom</cl> </e> <!-- small e with grave (`) -->
+<e n='148'> <in>\u0094</in> <out>[\u00f6]</out> <cl>atom</cl> </e> <!-- small o with umlaut -->
+<e n='160'> <in>\u00a0</in> <out>[\u00e1]</out> <cl>atom</cl> </e> <!-- small a with acute (') -->
+<e n='161'> <in>\u00a1</in> <out>[\u00ed]</out> <cl>atom</cl> </e> <!-- small i with acute (') -->
+<e n='162'> <in>\u00a2</in> <out>[\u00f3]</out> <cl>atom</cl> </e> <!-- small o with acute (') -->
+<e n='167'> <in>\u00a7</in> <out>[\u1e41]</out> <cl>atom</cl> </e> <!-- anusvara -->
+<e n='181'> <in>\u00b5</in> <out>[\u0101\u0301]</out> <cl>atom</cl> </e> <!-- small a macron acute -->
+<e n='182'> <in>\u00b6</in> <out>[\u0101\u0300]</out> <cl>atom</cl> </e> <!-- small a macron grave -->
+<e n='198'> <in>\u00c6</in> <out>[\u1E5B\u0301]</out> <cl>atom</cl> </e> <!-- r with dot acute -->
+<e n='1'> <in>\u0001</in> <out>?</out> <key>unmapped.1</key><cl>atom</cl></e>  <!-- a~' -->
+<e n='2'> <in>\u0002</in> <out>?</out> <key>unmapped.2</key><cl>atom</cl></e>  <!-- a~` -->
+<e n='3'> <in>\u0003</in> <out>?</out> <key>unmapped.3</key><cl>atom</cl></e>  <!-- a-~' -->
+<e n='4'> <in>\u0004</in> <out>?</out> <key>unmapped.4</key><cl>atom</cl></e>  <!-- a-~` -->
+<e n='5'> <in>\u0005</in> <out>?</out> <key>unmapped.5</key><cl>atom</cl></e>  <!-- i~' -->
+<e n='7'> <in>\u0007</in> <out>?</out> <key>unmapped.6</key><cl>atom</cl></e>  <!-- i~` -->
+<e n='14'> <in>\u000e</in> <out>?</out> <key>unmapped.7</key><cl>atom</cl></e>  <!-- i-~' -->
+<e n='15'> <in>\u000f</in> <out>?</out> <key>unmapped.8</key><cl>atom</cl></e>  <!-- i-~` -->
+<e n='21'> <in>\u0015</in> <out>?</out> <key>unmapped.9</key><cl>atom</cl></e>  <!-- u~' -->
+<e n='22'> <in>\u0016</in> <out>?</out> <key>unmapped.10</key><cl>atom</cl></e>  <!-- u~` -->
+<e n='23'> <in>\u0017</in> <out>?</out> <key>unmapped.11</key><cl>atom</cl></e>  <!-- u-~' -->
+<e n='24'> <in>\u0018</in> <out>?</out> <key>unmapped.12</key><cl>atom</cl></e>  <!-- u-~` -->
+<e n='25'> <in>\u0019</in> <out>?</out> <key>unmapped.13</key><cl>atom</cl></e>  <!-- r(_.)~' -->
+<e n='26'> <in>\u001a</in> <out>?</out> <key>unmapped.14</key><cl>atom</cl></e>  <!-- r(_.)~` -->
+<e n='27'> <in>\u001b</in> <out>?</out> <key>unmapped.15</key><cl>atom</cl></e>  <!-- r(_.)-~' -->
+<e n='28'> <in>\u001c</in> <out>?</out> <key>unmapped.16</key><cl>atom</cl></e>  <!-- r(_.)-~` -->
+<e n='29'> <in>\u001d</in> <out>?</out> <key>unmapped.17</key><cl>atom</cl></e>  <!-- l(_.)~' -->
+<e n='128'> <in>\u0080</in> <out>?</out> <key>unmapped.18</key><cl>atom</cl></e>  <!-- r(_.)~ -->
+<e n='129'> <in>\u0081</in> <out>?</out> <key>unmapped.19</key><cl>atom</cl></e>  <!-- u: -->
+<e n='131'> <in>\u0083</in> <out>?</out> <key>unmapped.20</key><cl>atom</cl></e>  <!-- a-~ -->
+<e n='132'> <in>\u0084</in> <out>?</out> <key>unmapped.21</key><cl>atom</cl></e>  <!-- a: -->
+<e n='134'> <in>\u0086</in> <out>?</out> <key>unmapped.22</key><cl>atom</cl></e>  <!-- a(^.) -->
+<e n='135'> <in>\u0087</in> <out>?</out> <key>unmapped.23</key><cl>atom</cl></e>  <!-- c(v) -->
+<e n='136'> <in>\u0088</in> <out>?</out> <key>unmapped.24</key><cl>atom</cl></e>  <!-- e^ -->
+<e n='137'> <in>\u0089</in> <out>?</out> <key>unmapped.25</key><cl>atom</cl></e>  <!-- e: -->
+<e n='139'> <in>\u008b</in> <out>?</out> <key>unmapped.26</key><cl>atom</cl></e>  <!-- i: -->
+<e n='140'> <in>\u008c</in> <out>?</out> <key>unmapped.27</key><cl>atom</cl></e>  <!-- i-~ -->
+<e n='141'> <in>\u008d</in> <out>?</out> <key>unmapped.28</key><cl>atom</cl></e>  <!-- i` -->
+<e n='142'> <in>\u008e</in> <out>?</out> <key>unmapped.29</key><cl>atom</cl></e>  <!-- A: -->
+<e n='143'> <in>\u008f</in> <out>?</out> <key>unmapped.30</key><cl>atom</cl></e>  <!-- A(^.) -->
+<e n='144'> <in>\u0090</in> <out>?</out> <key>unmapped.31</key><cl>atom</cl></e>  <!-- E' -->
+<e n='145'> <in>\u0091</in> <out>?</out> <key>unmapped.32</key><cl>atom</cl></e>  <!-- v~ -->
+<e n='146'> <in>\u0092</in> <out>?</out> <key>unmapped.33</key><cl>atom</cl></e>  <!-- j(v) -->
+<e n='147'> <in>\u0093</in> <out>?</out> <key>unmapped.34</key><cl>atom</cl></e>  <!-- o- -->
+<e n='149'> <in>\u0095</in> <out>?</out> <key>unmapped.35</key><cl>atom</cl></e>  <!-- o` -->
+<e n='150'> <in>\u0096</in> <out>?</out> <key>unmapped.36</key><cl>atom</cl></e>  <!-- u-~ -->
+<e n='151'> <in>\u0097</in> <out>?</out> <key>unmapped.37</key><cl>atom</cl></e>  <!-- u` -->
+<e n='152'> <in>\u0098</in> <out>?</out> <key>unmapped.38</key><cl>atom</cl></e>  <!-- i(_.)' -->
+<e n='153'> <in>\u0099</in> <out>?</out> <key>unmapped.39</key><cl>atom</cl></e>  <!-- O: -->
+<e n='154'> <in>\u009a</in> <out>?</out> <key>unmapped.40</key><cl>atom</cl></e>  <!-- U: -->
+<e n='155'> <in>\u009b</in> <out>?</out> <key>unmapped.41</key><cl>atom</cl></e>  <!-- l(_.)` -->
+<e n='156'> <in>\u009c</in> <out>?</out> <key>unmapped.42</key><cl>atom</cl></e>  <!-- L_. -->
+<e n='157'> <in>\u009d</in> <out>?</out> <key>unmapped.43</key><cl>atom</cl></e>  <!-- y~ -->
+<e n='158'> <in>\u009e</in> <out>?</out> <key>unmapped.44</key><cl>atom</cl></e>  <!-- E^ -->
+<e n='159'> <in>\u009f</in> <out>?</out> <key>unmapped.45</key><cl>atom</cl></e>  <!-- r_ -->
+<e n='163'> <in>\u00a3</in> <out>?</out> <key>unmapped.46</key><cl>atom</cl></e>  <!-- u' -->
+<e n='166'> <in>\u00a6</in> <out>?</out> <key>unmapped.47</key><cl>atom</cl></e>  <!-- l~ -->
+<e n='168'> <in>\u00a8</in> <out>?</out> <key>unmapped.48</key><cl>atom</cl></e>  <!-- a-@ -->
+<e n='169'> <in>\u00a9</in> <out>?</out> <key>unmapped.49</key><cl>atom</cl></e>  <!-- i-@ -->
+<e n='170'> <in>\u00aa</in> <out>?</out> <key>unmapped.50</key><cl>atom</cl></e>  <!-- u-@ -->
+<e n='171'> <in>\u00ab</in> <out>?</out> <key>unmapped.51</key><cl>atom</cl></e>  <!-- O' -->
+<e n='172'> <in>\u00ac</in> <out>?</out> <key>unmapped.52</key><cl>atom</cl></e>  <!-- O` -->
+<e n='173'> <in>\u00ad</in> <out>?</out> <key>unmapped.53</key><cl>atom</cl></e>  <!-- n_ -->
+<e n='174'> <in>\u00ae</in> <out>?</out> <key>unmapped.54</key><cl>atom</cl></e>  <!-- z(v) -->
+<e n='175'> <in>\u00af</in> <out>?</out> <key>unmapped.55</key><cl>atom</cl></e>  <!-- upside down e -->
+<e n='176'> <in>\u00b0</in> <out>?</out> <key>unmapped.56</key><cl>atom</cl></e>  <!-- r(_.)-~ -->
+<e n='177'> <in>\u00b1</in> <out>?</out> <key>unmapped.57</key><cl>atom</cl></e>  <!-- A` -->
+<e n='178'> <in>\u00b2</in> <out>?</out> <key>unmapped.58</key><cl>atom</cl></e>  <!-- A' -->
+<e n='179'> <in>\u00b3</in> <out>?</out> <key>unmapped.59</key><cl>atom</cl></e>  <!-- n(_.) -->
+<e n='180'> <in>\u00b4</in> <out>?</out> <key>unmapped.60</key><cl>atom</cl></e>  <!-- D_ -->
+<e n='183'> <in>\u00b7</in> <out>?</out> <key>unmapped.61</key><cl>atom</cl></e>  <!-- i-' -->
+<e n='184'> <in>\u00b8</in> <out>?</out> <key>unmapped.62</key><cl>atom</cl></e>  <!-- i-` -->
+<e n='185'> <in>\u00b9</in> <out>?</out> <key>unmapped.63</key><cl>atom</cl></e>  <!-- u@ -->
+<e n='186'> <in>\u00ba</in> <out>?</out> <key>unmapped.64</key><cl>atom</cl></e>  <!-- z(.) -->
+<e n='187'> <in>\u00bb</in> <out>?</out> <key>unmapped.65</key><cl>atom</cl></e>  <!-- @. -->
+<e n='188'> <in>\u00bc</in> <out>?</out> <key>unmapped.66</key><cl>atom</cl></e>  <!-- a@ -->
+<e n='189'> <in>\u00bd</in> <out>?</out> <key>unmapped.67</key><cl>atom</cl></e>  <!-- u-' -->
+<e n='190'> <in>\u00be</in> <out>?</out> <key>unmapped.68</key><cl>atom</cl></e>  <!-- u-` -->
+<e n='191'> <in>\u00bf</in> <out>?</out> <key>unmapped.69</key><cl>atom</cl></e>  <!-- i@ -->
+<e n='192'> <in>\u00c0</in> <out>?</out> <key>unmapped.70</key><cl>atom</cl></e>  <!-- o-@ -->
+<e n='194'> <in>\u00c2</in> <out>?</out> <key>unmapped.71</key><cl>atom</cl></e>  <!-- half o below -->
+<e n='195'> <in>\u00c3</in> <out>?</out> <key>unmapped.72</key><cl>atom</cl></e>  <!-- e-@ -->
+<e n='196'> <in>\u00c4</in> <out>?</out> <key>unmapped.73</key><cl>atom</cl></e>  <!-- n with a tail -->
+<e n='197'> <in>\u00c5</in> <out>?</out> <key>unmapped.74</key><cl>atom</cl></e>  <!-- T_ -->
+<e n='199'> <in>\u00c7</in> <out>?</out> <key>unmapped.75</key><cl>atom</cl></e>  <!-- r(_.)` -->
+<e n='200'> <in>\u00c8</in> <out>?</out> <key>unmapped.76</key><cl>atom</cl></e>  <!-- z' -->
+<e n='201'> <in>\u00c9</in> <out>?</out> <key>unmapped.77</key><cl>atom</cl></e>  <!-- e- -->
+<e n='202'> <in>\u00ca</in> <out>?</out> <key>unmapped.78</key><cl>atom</cl></e>  <!-- t_ -->
+<e n='203'> <in>\u00cb</in> <out>?</out> <key>unmapped.79</key><cl>atom</cl></e>  <!-- E` -->
+<e n='204'> <in>\u00cc</in> <out>?</out> <key>unmapped.80</key><cl>atom</cl></e>  <!-- d_ -->
+<e n='206'> <in>\u00ce</in> <out>?</out> <key>unmapped.81</key><cl>atom</cl></e>  <!-- m(_.) -->
+<e n='207'> <in>\u00cf</in> <out>?</out> <key>unmapped.82</key><cl>atom</cl></e>  <!-- r(_.)-' -->
+<e n='208'> <in>\u00d0</in> <out>?</out> <key>unmapped.83</key><cl>atom</cl></e>  <!-- a~ -->
+<e n='209'> <in>\u00d1</in> <out>?</out> <key>unmapped.84</key><cl>atom</cl></e>  <!-- i~ -->
+<e n='210'> <in>\u00d2</in> <out>?</out> <key>unmapped.85</key><cl>atom</cl></e>  <!-- u~ -->
+<e n='211'> <in>\u00d3</in> <out>?</out> <key>unmapped.86</key><cl>atom</cl></e>  <!-- e~ -->
+<e n='212'> <in>\u00d4</in> <out>?</out> <key>unmapped.87</key><cl>atom</cl></e>  <!-- o~ -->
+<e n='213'> <in>\u00d5</in> <out>?</out> <key>unmapped.88</key><cl>atom</cl></e>  <!-- e@ -->
+<e n='214'> <in>\u00d6</in> <out>?</out> <key>unmapped.89</key><cl>atom</cl></e>  <!-- o@ -->
+<e n='215'> <in>\u00d7</in> <out>?</out> <key>unmapped.90</key><cl>atom</cl></e>  <!-- l_ -->
+<e n='220'> <in>\u00dc</in> <out>?</out> <key>unmapped.91</key><cl>atom</cl></e>  <!-- e~' -->
+<e n='221'> <in>\u00dd</in> <out>?</out> <key>unmapped.92</key><cl>atom</cl></e>  <!-- e~` -->
+<e n='222'> <in>\u00de</in> <out>?</out> <key>unmapped.93</key><cl>atom</cl></e>  <!-- o~' -->
+<e n='223'> <in>\u00df</in> <out>?</out> <key>unmapped.94</key><cl>atom</cl></e>  <!-- o~` -->
+<e n='225'> <in>\u00e1</in> <out>?</out> <key>unmapped.95</key><cl>atom</cl></e>  <!-- b with a tail -->
+</edges>
+<buffers>
+	<buffer name='atoms' action='!!'>
+		<member id='atom'/>
+	</buffer>
+</buffers>
+</fsm>

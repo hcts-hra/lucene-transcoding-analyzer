@@ -1,0 +1,137 @@
+<fsm inputType='slp1' outputType='UTF8' version='2'>
+<!-- vowel letters -->
+<!-- in words: a vowel that is **not** directly preceded by a consonent or is at the beginning of the line is a vowel letter -->
+<edges>
+<e n='0'> <in>a</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d05</out> <cl>vowel_letter</cl></e>
+<e n='1'> <in>A</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d06</out>  <cl>vowel_letter</cl></e>
+<e n='2'> <in>i</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d07</out>  <cl>vowel_letter</cl></e>
+<e n='3'> <in>I</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d08</out>  <cl>vowel_letter</cl></e>
+<e n='4'> <in>u</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d09</out>  <cl>vowel_letter</cl></e>
+<e n='5'> <in>U</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d0a</out>  <cl>vowel_letter</cl></e>
+<e n='6'> <in>f</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d0b</out>  <cl>vowel_letter</cl></e>
+<e n='7'> <in>F</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d60</out>  <cl>vowel_letter</cl></e>
+<e n='8'> <in>x</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d0c</out>  <cl>vowel_letter</cl></e>
+<e n='9'> <in>X</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d61</out>  <cl>vowel_letter</cl></e>
+<e n='10'> <in>e</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d0f</out>  <cl>vowel_letter</cl></e>
+<e n='11'> <in>E</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d10</out>  <cl>vowel_letter</cl></e>
+<e n='12'> <in>o</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d13</out>  <cl>vowel_letter</cl></e>
+<e n='13'> <in>O</in> <ctx card='+' dir='before' x='n|eol'>$consonent_no_vowel</ctx> <out>\u0d14</out>  <cl>vowel_letter</cl></e>
+
+<!-- vowel signs -->
+<!-- in words: a vowel that **is** directly preceded by a consonent is a vowel sign-->
+<e n='14'> <in>a</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out></out> <cl>vowel_sign</cl></e>
+<e n='15'> <in>A</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d3e</out> <cl>vowel_sign</cl></e>
+<e n='16'> <in>i</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d3f</out> <cl>vowel_sign</cl></e>
+<e n='17'> <in>I</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d40</out> <cl>vowel_sign</cl></e>
+<e n='18'> <in>u</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d41</out> <cl>vowel_sign</cl></e>
+<e n='19'> <in>U</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d42</out> <cl>vowel_sign</cl></e>
+<e n='20'> <in>f</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d43</out> <cl>vowel_sign</cl></e>
+<e n='21'> <in>F</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d44</out> <cl>vowel_sign</cl></e>
+<e n='22'> <in>x</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d62</out> <cl>vowel_sign</cl></e>
+<e n='23'> <in>X</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d63</out> <cl>vowel_sign</cl></e>
+<e n='24'> <in>e</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d47</out> <cl>vowel_sign</cl></e>
+<e n='25'> <in>E</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d48</out> <cl>vowel_sign</cl></e>
+<e n='26'> <in>o</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d4b</out> <cl>vowel_sign</cl></e>
+<e n='27'> <in>O</in> <ctx card='+' dir='before' x='y'>$consonent_no_vowel</ctx> <out>\u0d4c</out> <cl>vowel_sign</cl></e>
+
+<!-- consonents with virama -->
+<!-- in words: a consonent that is **not** followed by a vowel sign or is at the end of a line takes a virama-->
+<e n='30'> <in>k</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d15\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='31'> <in>K</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d16\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='32'> <in>g</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d17\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='33'> <in>G</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d18\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='34'> <in>N</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d19\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='35'> <in>c</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d1a\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='36'> <in>C</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d1b\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='37'> <in>j</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d1c\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='38'> <in>J</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d1d\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='39'> <in>Y</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d1e\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='40'> <in>w</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d1f\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='41'> <in>W</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d20\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='42'> <in>q</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d21\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='43'> <in>Q</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d22\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='44'> <in>R</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d23\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='45'> <in>t</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d24\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='46'> <in>T</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d25\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='47'> <in>d</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d26\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='48'> <in>D</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d27\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='49'> <in>n</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d28\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='50'> <in>p</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d2a\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='51'> <in>P</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d2b\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='52'> <in>b</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d2c\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='53'> <in>B</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d2d\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='54'> <in>m</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d2e\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='55'> <in>y</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d2f\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='56'> <in>r</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d30\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='57'> <in>l</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d32\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='58'> <in>L</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d33\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='59'> <in>|</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d34\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='60'> <in>v</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d35\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='61'> <in>S</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d36\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='62'> <in>z</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d37\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='63'> <in>s</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d38\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+<e n='64'> <in>h</in> <ctx card='+' dir='after' x='n|eol'>$vowel_sign</ctx> <out>\u0d39\u0d4d</out> <cl>consonent_no_vowel</cl></e>
+
+<!-- consonents with attached vowel (or schwa) -->
+<!-- in words: a consonent that **is** followed by a vowel sign does not take a virama-->
+<e n='65'> <in>k</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d15</out> <cl>consonent_schwa</cl></e>
+<e n='66'> <in>K</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d16</out> <cl>consonent_schwa</cl></e>
+<e n='67'> <in>g</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d17</out> <cl>consonent_schwa</cl></e>
+<e n='68'> <in>G</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d18</out> <cl>consonent_schwa</cl></e>
+<e n='69'> <in>N</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d19</out> <cl>consonent_schwa</cl></e>
+<e n='70'> <in>c</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d1a</out> <cl>consonent_schwa</cl></e>
+<e n='71'> <in>C</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d1b</out> <cl>consonent_schwa</cl></e>
+<e n='72'> <in>j</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d1c</out> <cl>consonent_schwa</cl></e>
+<e n='73'> <in>J</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d1d</out> <cl>consonent_schwa</cl></e>
+<e n='74'> <in>Y</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d1e</out> <cl>consonent_schwa</cl></e>
+<e n='75'> <in>w</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d1f</out> <cl>consonent_schwa</cl></e>
+<e n='76'> <in>W</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d20</out> <cl>consonent_schwa</cl></e>
+<e n='77'> <in>q</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d21</out> <cl>consonent_schwa</cl></e>
+<e n='78'> <in>Q</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d22</out> <cl>consonent_schwa</cl></e>
+<e n='79'> <in>R</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d23</out> <cl>consonent_schwa</cl></e>
+<e n='80'> <in>t</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d24</out> <cl>consonent_schwa</cl></e>
+<e n='81'> <in>T</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d25</out> <cl>consonent_schwa</cl></e>
+<e n='82'> <in>d</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d26</out> <cl>consonent_schwa</cl></e>
+<e n='83'> <in>D</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d27</out> <cl>consonent_schwa</cl></e>
+<e n='84'> <in>n</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d28</out> <cl>consonent_schwa</cl></e>
+<e n='85'> <in>p</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d2a</out> <cl>consonent_schwa</cl></e>
+<e n='86'> <in>P</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d2b</out> <cl>consonent_schwa</cl></e>
+<e n='87'> <in>b</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d2c</out> <cl>consonent_schwa</cl></e>
+<e n='88'> <in>B</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d2d</out> <cl>consonent_schwa</cl></e>
+<e n='89'> <in>m</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d2e</out> <cl>consonent_schwa</cl></e>
+<e n='90'> <in>y</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d2f</out> <cl>consonent_schwa</cl></e>
+<e n='91'> <in>r</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d30</out> <cl>consonent_schwa</cl></e>
+<e n='92'> <in>l</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d32</out> <cl>consonent_schwa</cl></e>
+<e n='93'> <in>L</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d33</out> <cl>consonent_schwa</cl></e>
+<e n='94'> <in>|</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d34</out> <cl>consonent_schwa</cl></e>
+<e n='95'> <in>v</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d35</out> <cl>consonent_schwa</cl></e>
+<e n='96'> <in>S</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d36</out> <cl>consonent_schwa</cl></e>
+<e n='97'> <in>z</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d37</out> <cl>consonent_schwa</cl></e>
+<e n='98'> <in>s</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d38</out> <cl>consonent_schwa</cl></e>
+<e n='99'> <in>h</in> <ctx card='+' dir='after' x='y'>$vowel_sign</ctx> <out>\u0d39</out> <cl>consonent_schwa</cl></e>
+<e n='100'> <in>M</in> <out>\u0d02</out> <cl>vowel_sign</cl></e>
+<e n='102'> <in>H</in> <out>\u0d03</out> <cl>vowel_sign</cl></e>
+<e n='103'> <in>'</in> <out>\u0d3d</out> <cl>punctuation</cl></e>
+<e n='106'> <in>0</in> <out>\u0d66</out> <cl>number</cl></e>
+<e n='107'> <in>1</in> <out>\u0d67</out> <cl>number</cl></e>
+<e n='108'> <in>2</in> <out>\u0d68</out> <cl>number</cl></e>
+<e n='109'> <in>3</in> <out>\u0d69</out> <cl>number</cl></e>
+<e n='110'> <in>4</in> <out>\u0d6a</out> <cl>number</cl></e>
+<e n='111'> <in>5</in> <out>\u0d6b</out> <cl>number</cl></e>
+<e n='112'> <in>6</in> <out>\u0d6c</out> <cl>number</cl></e>
+<e n='113'> <in>7</in> <out>\u0d6d</out> <cl>number</cl></e>
+<e n='114'> <in>8</in> <out>\u0d6e</out> <cl>number</cl></e>
+<e n='115'> <in>9</in> <out>\u0d6f</out> <cl>number</cl></e>
+<e n='116'> <in>\u0020</in> <out>\u0020</out> <cl>whitespace</cl></e>
+<e n='117'> <in>\u0009</in> <out>\u0009</out> <cl>whitespace</cl></e>
+<e n='118'> <in>\u000d</in> <out>\u000d</out> <cl>whitespace</cl></e>
+<e n='119'> <in>\u000a</in> <out>\u000a</out> <cl>whitespace</cl></e>
+
+<!-- weirdnesses -->
+
+<!-- other -->
+</edges>
+
+<!-- no buffers element means write immediately -->	
+
+</fsm>

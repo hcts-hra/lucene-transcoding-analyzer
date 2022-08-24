@@ -1,0 +1,129 @@
+<fsm inputType='8bit' outputType='slp1' version='2'>
+<edges>
+<e n='1'> <in>\u0087</in> <out>a/</out> <cl>char</cl> </e>
+<e n='2'> <in>\u0092</in> <out>i/</out> <cl>char</cl> </e>
+<e n='3'> <in>\u009C</in> <out>u/</out> <cl>char</cl> </e>
+<e n='4'> <in>\u008E</in> <out>e/</out> <cl>char</cl> </e>
+<e n='5'> <in>\u0097</in> <out>o/</out> <cl>char</cl> </e>
+
+<e n='6'> <in>\u0088</in> <out>a^</out> <cl>char</cl> </e>
+<e n='7'> <in>\u0093</in> <out>i^</out> <cl>char</cl> </e>
+<e n='8'> <in>\u009D</in> <out>u^</out> <cl>char</cl> </e>
+<e n='9'> <in>\u008F</in> <out>e^</out> <cl>char</cl> </e>
+<e n='10'> <in>\u0098</in> <out>o^</out> <cl>char</cl> </e>
+
+<e n='11'> <in>\u00CFa</in> <out>A</out> <key>altA</key> <cl>char</cl> </e>
+<e n='12'> <in>\u00CFi</in> <out>I</out> <key>altI</key> <cl>char</cl> </e>
+<e n='13'> <in>\u00CFu</in> <out>U</out> <key>altU</key> <cl>char</cl> </e>
+<e n='14'> <in>\u00CF\u00A8</in> <out>F</out> <key>altF</key> <cl>char</cl> </e>
+<e n='15'> <in>\u00CF\u00C2</in> <out>X</out> <cl>char</cl> </e>
+
+<e n='16'> <in>~</in> <out>~</out> <key>alt~</key> <cl>char</cl> </e>
+<e n='17'> <in>$</in> <out>/</out> <cl>char</cl> </e>
+
+<e n='18'> <in>\u00DAa</in> <out>A/</out> <key>altA/</key> <cl>char</cl> </e>
+<e n='19'> <in>\u00DAi</in> <out>I/</out> <key>altI/</key> <cl>char</cl> </e>
+<e n='20'> <in>\u00DAu</in> <out>U/</out> <key>altU/</key> <cl>char</cl> </e>
+<e n='21'> <in>\u00DA\u00A8</in> <out>F/</out> <key>altF/</key> <cl>char</cl> </e>
+<e n='22'> <in>\u00DA\u00C2</in> <out>X/</out> <cl>char</cl> </e>
+<e n='23'> <in>\u00DA\u008C</in> <out>A/</out> <cl>char</cl> </e>
+<e n='24'> <in>\u00DA^</in> <out>I/</out> <cl>char</cl> </e>
+<e n='25'> <in>\u00DA\u00AC</in> <out>U/</out> <cl>char</cl> </e>
+<e n='26'> <in>\u00DA\u00AB</in> <out>F/</out> <cl>char</cl> </e>
+
+<e n='27'> <in>@</in> <out>^</out> <cl>char</cl> </e>
+<e n='28'> <in>\u00D9a</in> <out>A^</out> <key>altA^</key> <cl>char</cl> </e>
+<e n='29'> <in>\u00D9i</in> <out>I^</out> <key>altI^</key> <cl>char</cl> </e>
+<e n='30'> <in>\u00D9u</in> <out>U^</out> <key>altU^</key> <cl>char</cl> </e>
+<e n='31'> <in>\u00D9\u00A8</in> <out>F^</out> <key>altF^</key> <cl>char</cl> </e>
+<e n='32'> <in>\u00D9\u00C2</in> <out>X^</out> <cl>char</cl> </e>
+<e n='33'> <in>\u00D9\u008C</in> <out>A^</out> <cl>char</cl> </e>
+<e n='34'> <in>\u00D9^</in> <out>I^</out> <cl>char</cl> </e>
+<e n='35'> <in>\u00D9\u00AC</in> <out>U^</out> <cl>char</cl> </e>
+<e n='36'> <in>\u00D9\u00AB</in> <out>F^</out> <cl>char</cl> </e>
+
+<e n='37'> <in>ai</in> <out>E</out> <cl>char</cl> </e>
+<e n='38'> <in>au</in> <out>O</out> <cl>char</cl> </e>
+<e n='39'> <in>a</in> <out>a</out> <cl>char</cl> </e>
+
+<e n='40'> <in>\u008C</in> <out>A</out> <cl>char</cl> </e>
+<e n='41'> <in>i</in> <out>i</out> <cl>char</cl> </e>
+<e n='42'> <in>^</in> <out>I</out> <cl>char</cl> </e>
+<e n='43'> <in>u</in> <out>u</out> <cl>char</cl> </e>
+<e n='44'> <in>\u00AC</in> <out>U</out> <cl>char</cl> </e>
+<e n='45'> <in>\u00A8</in> <out>f</out> <cl>char</cl> </e>
+<e n='46'> <in>\u00AB</in> <out>F</out> <cl>char</cl> </e>
+
+<e n='47'> <in>\u00C2</in> <out>x</out> <cl>char</cl> </e>
+<e n='48'> <in>e</in> <out>e</out> <cl>char</cl> </e>
+<e n='49'> <in>o</in> <out>o</out> <cl>char</cl> </e>
+<e n='50'> <in>\u00FA</in> <out>H</out> <cl>char</cl> </e>
+<e n='51'> <in>\u00B2</in> <out>M</out> <cl>char</cl> </e>
+<e n='52'> <in>\u00B5</in> <out>~</out> <cl>char</cl> </e>
+
+<e n='53'> <in>Xk</in> <out>Zk</out> <key>altZk</key> <cl>char</cl> </e>
+<e n='54'> <in>Xp</in> <out>Vp</out> <key>altVp</key> <cl>char</cl> </e>
+
+<e n='55'> <in>Xk</in> <out>Zk</out> <cl>char</cl> </e>
+<e n='56'> <in>Xp</in> <out>Vp</out> <cl>char</cl> </e>
+
+<e n='57'> <in>'</in> <out>'</out> <cl>char</cl> </e>
+<e n='58'> <in>\u00F2</in> <out>%</out> <cl>char</cl> </e>
+<e n='59'> <in>k</in> <out>k</out> <cl>char</cl> </e>
+<e n='60'> <in>kh</in> <out>K</out> <cl>char</cl> </e>
+<e n='61'> <in>g</in> <out>g</out> <cl>char</cl> </e>
+<e n='62'> <in>gh</in> <out>G</out> <cl>char</cl> </e>
+<e n='63'> <in>\u00BA</in> <out>N</out> <cl>char</cl> </e>
+<e n='64'> <in>c</in> <out>c</out> <cl>char</cl> </e>
+<e n='65'> <in>ch</in> <out>C</out> <cl>char</cl> </e>
+<e n='66'> <in>j</in> <out>j</out> <cl>char</cl> </e>
+<e n='67'> <in>jh</in> <out>J</out> <cl>char</cl> </e>
+<e n='68'> <in>\u0096</in> <out>Y</out> <cl>char</cl> </e>
+<e n='69'> <in>\u00A0</in> <out>w</out> <cl>char</cl> </e>
+<e n='70'> <in>\u00A0h</in> <out>W</out> <cl>char</cl> </e>
+<e n='71'> <in>\u00B6</in> <out>q</out> <cl>char</cl> </e>
+<e n='72'> <in>\u00B6h</in> <out>Q</out> <cl>char</cl> </e>
+<e n='73'> <in>\u00F6</in> <out>R</out> <cl>char</cl> </e>
+<e n='74'> <in>t</in> <out>t</out> <cl>char</cl> </e>
+<e n='75'> <in>th</in> <out>T</out> <cl>char</cl> </e>
+<e n='76'> <in>d</in> <out>d</out> <cl>char</cl> </e>
+<e n='77'> <in>dh</in> <out>D</out> <cl>char</cl> </e>
+<e n='78'> <in>n</in> <out>n</out> <cl>char</cl> </e>
+<e n='79'> <in>p</in> <out>p</out> <cl>char</cl> </e>
+<e n='80'> <in>ph</in> <out>P</out> <cl>char</cl> </e>
+<e n='81'> <in>b</in> <out>b</out> <cl>char</cl> </e>
+<e n='82'> <in>bh</in> <out>B</out> <cl>char</cl> </e>
+<e n='83'> <in>m</in> <out>m</out> <cl>char</cl> </e>
+<e n='84'> <in>y</in> <out>y</out> <cl>char</cl> </e>
+<e n='85'> <in>r</in> <out>r</out> <cl>char</cl> </e>
+<e n='86'> <in>l</in> <out>l</out> <cl>char</cl> </e>
+<e n='87'> <in>v</in> <out>v</out> <cl>char</cl> </e>
+<e n='88'> <in>\u00A7</in> <out>S</out> <cl>char</cl> </e>
+<e n='89'> <in>\u00B7</in> <out>z</out> <key>altz_1</key> <cl>char</cl> </e>
+<e n='90'> <in>\u00BD</in> <out>z</out> <key>altz_2</key> <cl>char</cl> </e>
+<e n='91'> <in>\u00E3</in> <out>z</out> <cl>char</cl> </e>
+<e n='92'> <in>s</in> <out>s</out> <cl>char</cl> </e>
+<e n='93'> <in>h</in> <out>h</out> <cl>char</cl> </e>
+<e n='95'> <in>0</in> <out>0</out> <cl>char</cl> </e>
+<e n='96'> <in>1</in> <out>1</out> <cl>char</cl> </e>
+<e n='97'> <in>2</in> <out>2</out> <cl>char</cl> </e>
+<e n='98'> <in>3</in> <out>3</out> <cl>char</cl> </e>
+<e n='99'> <in>4</in> <out>4</out> <cl>char</cl> </e>
+<e n='100'> <in>5</in> <out>5</out> <cl>char</cl> </e>
+<e n='101'> <in>6</in> <out>6</out> <cl>char</cl> </e>
+<e n='102'> <in>7</in> <out>7</out> <cl>char</cl> </e>
+<e n='103'> <in>8</in> <out>8</out> <cl>char</cl> </e>
+<e n='104'> <in>9</in> <out>9</out> <cl>char</cl> </e>
+<e n='105'> <in>\u0020</in> <out>\u0020</out> <cl>char</cl></e>
+<e n='106'> <in>\u0009</in> <out>\u0009</out> <cl>char</cl></e>
+<e n='107'> <in>\u000d</in> <out>\u000d</out> <cl>char</cl></e>
+<e n='108'> <in>\u000a</in> <out>\u000a</out> <cl>char</cl></e>
+</edges>
+
+<buffers>
+	<buffer name='chars' action='!!'>
+		<member id='char'/>
+	</buffer>
+</buffers>
+
+</fsm>

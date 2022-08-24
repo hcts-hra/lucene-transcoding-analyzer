@@ -1,0 +1,69 @@
+<fsm inputType='slp1' outputType='UTF-8' version='2' testBlanks='n'>
+<edges>
+<e n='0'>  <in>a</in> <out>a</out> <cl>atom</cl> </e>
+<e n='1'>  <in>A</in> <out>A</out> <cl>atom</cl> </e>
+<e n='2'>  <in>i</in> <out>i</out> <cl>atom</cl> </e>
+<e n='3'>  <in>I</in> <out>I</out> <cl>atom</cl> </e>
+<e n='4'>  <in>u</in> <out>u</out> <cl>atom</cl> </e>
+<e n='5'>  <in>U</in> <out>U</out> <cl>atom</cl> </e>
+<e n='6'> <in>f</in> <out>.r</out> <cl>atom</cl></e>
+<e n='7'> <in>F</in> <out>.R</out> <cl>atom</cl></e>
+<e n='8'> <in>x</in> <out>.l</out> <cl>atom</cl></e>
+<e n='8a'> <in>X</in> <out>.l.l</out> <cl>atom</cl></e>
+<e n='9'>  <in>e</in> <out>e</out> <cl>atom</cl> </e>
+<e n='10'> <in>E</in> <out>ai</out> <cl>atom</cl></e>
+<e n='11'>  <in>o</in> <out>o</out> <cl>atom</cl> </e>
+<e n='12'> <in>O</in> <out>au</out> <cl>atom</cl></e>
+<e n='13'> <in>M</in> <out>.m</out> <cl>atom</cl> </e>
+<e n='14'> <in>H</in> <out>H</out> <cl>atom</cl> </e>
+<e n='15'> <in>k</in> <out>k</out> <cl>atom</cl></e>
+<e n='16'> <in>K</in> <out>kh</out> <cl>atom</cl></e>
+<e n='17'> <in>g</in> <out>g</out> <cl>atom</cl></e>
+<e n='18'> <in>G</in> <out>gh</out> <cl>atom</cl></e>
+<e n='19'> <in>N</in> <out>"n</out> <cl>atom</cl></e>
+<e n='20'> <in>c</in> <out>c</out> <cl>atom</cl></e>
+<e n='21'> <in>C</in> <out>ch</out> <cl>atom</cl></e>
+<e n='22'> <in>j</in> <out>j</out> <cl>atom</cl></e>
+<e n='23'> <in>J</in> <out>jh</out> <cl>atom</cl></e>
+<e n='24'> <in>Y</in> <out>~n</out> <cl>atom</cl></e>
+<e n='25'> <in>w</in> <out>.t</out> <cl>atom</cl></e>
+<e n='26'> <in>W</in> <out>.th</out> <cl>atom</cl></e>
+<e n='27'> <in>q</in> <out>.d</out> <cl>atom</cl></e>
+<e n='28'> <in>Q</in> <out>.dh</out> <cl>atom</cl></e>
+<e n='29'> <in>R</in> <out>.n</out> <cl>atom</cl></e>
+<e n='30'> <in>t</in> <out>t</out> <cl>atom</cl></e>
+<e n='31'> <in>T</in> <out>th</out> <cl>atom</cl></e>
+<e n='32'> <in>d</in> <out>d</out> <cl>atom</cl></e>
+<e n='33'> <in>D</in> <out>dh</out> <cl>atom</cl></e>
+<e n='34'> <in>n</in> <out>n</out> <cl>atom</cl></e>
+<e n='35'> <in>p</in> <out>p</out> <cl>atom</cl></e>
+<e n='36'> <in>P</in> <out>ph</out> <cl>atom</cl></e>
+<e n='37'> <in>b</in> <out>b</out> <cl>atom</cl></e>
+<e n='38'> <in>B</in> <out>bh</out> <cl>atom</cl></e>
+<e n='39'> <in>m</in> <out>m</out> <cl>atom</cl></e>
+<e n='40'> <in>y</in> <out>y</out> <cl>atom</cl> </e>
+<e n='41'> <in>r</in> <out>r</out> <cl>atom</cl> </e>
+<e n='42'> <in>l</in> <out>l</out> <cl>atom</cl> </e>
+<e n='43'> <in>v</in> <out>v</out> <cl>atom</cl> </e>
+<e n='44'> <in>S</in> <out>"s</out> <cl>atom</cl></e>
+<e n='45'> <in>z</in> <out>.s</out> <cl>atom</cl></e>
+<e n='46'> <in>s</in> <out>s</out> <cl>atom</cl></e>
+<e n='47'> <in>h</in> <out>h</out> <cl>atom</cl></e>
+
+<e n='47a'> <in>'</in> <out>.a</out> <cl>atom</cl></e>	<!-- avagraha -->
+<e n='47b'> <in>~</in> <out>/</out> <cl>atom</cl></e>	<!-- candrabindu -->
+<e n='47c'> <in>oM</in> <out>.o</out> <cl>atom</cl></e>	<!-- if preceded and followed by space or other non SLP1 chars -->
+
+<e n='48'> <in>\u0009</in> <out>\u0009</out> <cl>atom</cl> </e>
+<e n='49'> <in>\u000a</in> <out>\u000a</out> <cl>atom</cl> </e>
+<e n='50'> <in>\u000d</in> <out>\u000d</out> <cl>atom</cl> </e>
+<e n='51'> <in>\u0020</in> <out>\u0020</out> <cl>atom</cl> </e>
+</edges>
+
+<buffers>
+	<buffer name='atoms' action='!!'>
+		<member id='atom'/>
+	</buffer>
+</buffers>
+
+</fsm>

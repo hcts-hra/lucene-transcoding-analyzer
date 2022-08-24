@@ -1,0 +1,467 @@
+<fsm inputType='8bit' outputType='slp1' version='2' testBlanks='y'>
+<edges>
+<e n='0'> <in>\u0000</in> <cl>flag</cl></e>
+<e n='1'> <in>\u0001</in> <cl>flag</cl></e>
+<e n='2'> <in>\u0002</in> <out>wv</out><cl>full_form</cl></e>
+<e n='3'> <in>\u0003</in> <out>dbr</out><cl>full_form</cl></e>
+<e n='4'> <in>\u0004</in> <out>zwv</out><cl>full_form</cl></e>
+<e n='5'> <in>\u0005</in> qv<cl>full_form</cl></e>
+<e n='6'> <in>\u0006</in> <cl>flag</cl></e>
+<e n='7'> <in>\u0007</in> <out>gn</out><cl>full_form</cl></e>
+<e n='8'> <in>\u0008</in> <cl>flag</cl></e>
+<e n='9'> <in>\u0009</in> <out>\u0009</out><cl>whitespace</cl></e>
+<e n='10'> <in>\u000A</in> <out>\u000A</out><cl>whitespace</cl></e>
+<e n='11'> <in>\u000B</in> <cl>flag</cl></e>
+<e n='12'> <in>\u000C</in> <cl>flag</cl></e>
+<e n='13'> <in>\u000D</in> <out>\u000D</out><cl>whitespace</cl></e>
+<e n='14'> <in>\u000E</in> <out>gn</out><cl>half_form</cl></e>
+<e n='14a'> <in>\u000E\u0061</in> <map>full_form.gn</map></e> <!-- half form completed with danda-->
+<e n='15'> <in>\u000F</in> <out>nn</out><cl>half_form</cl></e>
+<e n='15a'> <in>\u000F\u0061</in> <map>full_form.nn</map></e> <!-- half form completed with danda-->
+<e n='16'> <in>\u0010</in> <cl>flag</cl></e>
+<e n='17'> <in>\u0011</in> <cl>flag</cl></e>
+<e n='18'> <in>\u0012</in> <cl>flag</cl></e>
+<e n='19'> <in>\u0013</in> <cl>flag</cl></e>
+<e n='20'> <in>\u0014</in> <cl>flag</cl></e>
+<e n='21'> <in>\u0015</in> <out>Cv</out><cl>full_form</cl></e>
+<e n='22'> <in>\u0016</in> <out>Bn</out><cl>full_form</cl></e>
+<e n='23'> <in>\u0017</in> <out>mn</out><cl>full_form</cl></e>
+<e n='24'> <in>\u0018</in> <out>Dn</out><cl>full_form</cl></e>
+<e n='25'> <in>\u0019</in> <out>Tn</out><cl>full_form</cl></e>
+<e n='26'> <in>\u001A</in> <out>Gn</out><cl>full_form</cl></e>
+<e n='27'> <in>\u001B</in> <out>tn</out><cl>full_form</cl></e>
+<e n='28'> <in>\u001C</in> <out>qm</out><cl>full_form</cl></e>
+<e n='29'> <in>\u001D</in> <out>ml</out><cl>full_form</cl></e>
+<e n='30'> <in>\u001E</in> <cl>flag</cl></e>
+<e n='31'> <in>\u001F</in> <cl>flag</cl></e>
+<e n='32'> <in>\u0020</in> <out>\u0020</out><cl>whitespace</cl></e>
+<e n='33'> <in>\u0021</in> <out>w</out><cl>full_form</cl></e> 
+<e n='34'> <in>\u0022</in> <out>C</out><cl>full_form</cl></e> 
+<e n='35'> <in>\u0023</in> <out>q</out><cl>full_form</cl></e> 
+<e n='36'> <in>\u0024</in> <out>Q</out><cl>full_form</cl></e> 
+<e n='37'> <in>\u0025</in> <out>R</out><cl>full_form</cl></e> 
+<e n='38'> <in>\u0026</in> <out>T</out><cl>full_form</cl></e> 
+<e n='39'> <in>\u0027</in> <out>[']</out> <key>asis.quote1</key><cl>asis</cl></e>
+<e n='40'> <in>\u0028</in> <out>G</out><cl>full_form</cl></e> 
+<e n='41'> <in>\u0029</in> <out>G</out><cl>half_form</cl></e>
+<e n='41a'> <in>\u0029\u0061</in> <map>full_form.G</map></e> <!-- half form completed with danda-->
+<e n='42'> <in>\u002A</in> <out>T</out><cl>half_form</cl></e>
+<e n='42a'> <in>\u002A\u0061</in> <map>full_form.T</map></e> <!-- half form completed with danda-->
+<e n='43'> <in>\u002B</in> <lig>EM</lig><key>ligature.EM</key> <dependant/> <zerowidth/> </e> <!-- zero width -->
+<e n='44'> <in>\u002C</in> <out>[,]</out><cl>asis</cl></e>
+<e n='45'> <in>\u002D</in> <out>[-]</out><cl>asis</cl></e>
+<e n='46'> <in>\u002E</in> <out>[.]</out><cl>asis</cl></e>
+<e n='47'> <in>\u002F</in> <out>[/]</out><cl>asis</cl></e>
+<e n='48'> <in>\u0030</in> <out>0</out><cl>digit</cl></e>
+<e n='49'> <in>\u0031</in> <out>1</out><cl>digit</cl></e>
+<e n='50'> <in>\u0032</in> <out>2</out><cl>digit</cl></e>
+<e n='51'> <in>\u0033</in> <out>3</out><cl>digit</cl></e>
+<e n='52'> <in>\u0034</in> <out>4</out><cl>digit</cl></e>
+<e n='53'> <in>\u0035</in> <out>5</out><cl>digit</cl></e>
+<e n='54'> <in>\u0036</in> <out>6</out><cl>digit</cl></e>
+<e n='55'> <in>\u0037</in> <out>7</out><cl>digit</cl></e>
+<e n='56'> <in>\u0038</in> <out>8</out><cl>digit</cl></e>
+<e n='57'> <in>\u0039</in> <out>9</out><cl>digit</cl></e>
+<e n='58'> <in>\u003A</in> <out>H</out><cl>visarga</cl> <dependant/></e>
+<e n='59'> <in>\u003B</in> <out>[;]</out><cl>asis</cl></e>
+<e n='60'> <in>\u003C</in> <out>D</out><cl>full_form</cl></e> 
+<e n='61'> <in>\u003D</in> <out>E</out><cl>vowel_sign</cl> <dependant/> <zerowidth/></e> <!-- zero width -->
+<e n='62'> <in>\u003E</in> <out>D</out><cl>half_form</cl></e>
+<e n='62a'> <in>\u003E\u0061</in> <map>full_form.D</map></e> <!-- half form completed with danda-->
+<e n='63'> <in>\u003F</in> <out>[?]</out><cl>asis</cl></e>
+<e n='64'> <in>\u0040</in> <out>W</out><cl>full_form</cl></e> 
+<e n='65'> <in>\u0041</in> <lig>AM</lig> <key>ligature.AM</key> <dependant/></e>
+<e n='66'> <in>\u0042</in> <out>b</out><cl>half_form</cl></e>
+<e n='66a'> <in>\u0042\u0061</in> <map>full_form.b</map></e> <!-- half form completed with danda-->
+<e n='67'> <in>\u0043</in> <out>c</out><cl>half_form</cl></e>
+<e n='67a'> <in>\u0043\u0061</in> <map>full_form.c</map></e> <!-- half form completed with danda-->
+<e n='68'> <in>\u0044</in> <out>dy</out><cl>full_form</cl></e> 
+<e n='69'> <in>\u0045</in> <lig>eM</lig><key>ligature.eM</key> <dependant/></e>
+<e n='70'> <in>\u0046</in> <out>P</out><cl>half_form</cl></e>
+<e n='70a'> <in>\u0046\u0061</in> <map>full_form.P</map></e> <!-- half form completed with danda-->
+<e n='71'> <in>\u0047</in> <out>g</out><cl>half_form</cl></e>
+<e n='71a'> <in>\u0047\u0061</in> <map>full_form.g</map></e> <!-- half form completed with danda-->
+<e n='72'> <in>\u0048</in> <lig>hf</lig><key>ligature.hf</key></e>
+<e n='73'> <in>\u0049</in> <lig>iM</lig><key>ligature.iM</key></e>
+<e n='74'> <in>\u004A</in> <out>j</out><cl>half_form</cl></e>
+<e n='74a'> <in>\u004A\u0061</in> <map>full_form.j</map></e> <!-- half form completed with danda-->
+<e n='75'> <in>\u004B</in> <out>k</out><cl>half_form</cl></e>
+<e n='75a'> <in>\u004B\u0061</in> <map>full_form.k</map></e> <!-- half form completed with danda-->
+<e n='76'> <in>\u004C</in> <out>l</out><cl>half_form</cl></e>
+<e n='76a'> <in>\u004C\u0061</in> <map>full_form.l</map></e> <!-- half form completed with danda-->
+<e n='77'> <in>\u004D</in> <out>m</out><cl>half_form</cl></e>
+<e n='77a'> <in>\u004D\u0061</in> <map>full_form.m</map></e> <!-- half form completed with danda-->
+<e n='78'> <in>\u004E</in> <out>n</out><cl>half_form</cl></e>
+<e n='78a'> <in>\u004E\u0061</in> <map>full_form.n</map></e> <!-- half form completed with danda-->
+<e n='79'> <in>\u004F</in> <lig>oM</lig><key>ligature.oM</key> <dependant/></e>
+<e n='80'> <in>\u0050</in> <out>p</out><cl>half_form</cl></e>
+<e n='80a'> <in>\u0050\u0061</in> <map>full_form.p</map></e> <!-- half form completed with danda-->
+<e n='81'> <in>\u0051</in> <out>K</out><cl>half_form</cl></e>
+<e n='81a'> <in>\u0051\u0061</in> <map>full_form.K</map></e> <!-- half form completed with danda-->
+<e n='82'> <in>\u0052</in> <out>r</out> <cl>prefix</cl> <dependant/> <zerowidth/></e> <!-- hook r (zero width) -->
+<e n='83'> <in>\u0053</in> <out>s</out><cl>half_form</cl></e>
+<e n='83a'> <in>\u0053\u0061</in> <map>full_form.s</map></e> <!-- half form completed with danda-->
+<e n='84'> <in>\u0054</in> <out>t</out><cl>half_form</cl></e>
+<e n='84a'> <in>\u0054\u0061</in> <map>full_form.t</map></e> <!-- half form completed with danda-->
+<e n='85'> <in>\u0055</in> <out>U</out><cl>vowel_sign</cl> <dependant/> <zerowidth/></e> <!-- zero width -->
+<e n='86'> <in>\u0056</in> <out>v</out><cl>half_form</cl></e>
+<e n='86a'> <in>\u0056\u0061</in> <map>full_form.v</map></e> <!-- half form completed with danda-->
+<e n='87'> <in>\u0057</in> <out>B</out><cl>half_form</cl></e>
+<e n='87a'> <in>\u0057\u0061</in> <map>full_form.B</map></e> <!-- half form completed with danda-->
+<e n='88'> <in>\u0058</in> <out>S</out><cl>half_form</cl></e>
+<e n='88a'> <in>\u0058\u0061</in> <map>full_form.S</map></e> <!-- half form completed with danda-->
+<e n='89'> <in>\u0059</in> <out>y</out><cl>half_form</cl></e>
+<e n='89a'> <in>\u0059\u0061</in> <map>full_form.y</map></e> <!-- half form completed with danda-->
+<e n='90'> <in>\u005A</in> <out>z</out><cl>half_form</cl></e>
+<e n='90a'> <in>\u005A\u0061</in> <map>full_form.z</map></e> <!-- half form completed with danda-->
+<e n='91'> <in>\u005B</in> <out>J</out><cl>full_form</cl></e> 
+<e n='92'> <in>\u005C</in> <out>M</out><cl>anusvara</cl> <dependant/> <zerowidth/></e> <!-- zero width -->
+<e n='93'> <in>\u005D</in> <out>I</out><cl>vowel_sign</cl> <dependant/></e>
+<e n='94'> <in>\u005E</in> <out>R</out><cl>half_form_end</cl></e>
+<e n='94a'> <in>\u005E\u0061</in> <map>full_form.R</map></e> <!-- half form completed with danda-->
+<e n='95'> <in>\u005F</in> <out>kt</out><cl>full_form</cl></e> 
+<e n='96'> <in>\u0060</in> <out>[`]</out><cl>asis</cl></e>
+<e n='97'> <in>\u0061</in> <out>A</out><cl>vowel_sign</cl> <dependant/></e>
+<e n='98'> <in>\u0062</in> <out>b</out><cl>full_form</cl></e>
+<e n='99'> <in>\u0063</in> <out>c</out><cl>full_form</cl></e> 
+<e n='100'> <in>\u0064</in> <out>d</out><cl>full_form</cl></e> 
+<e n='101'> <in>\u0065</in> <out>e</out><cl>vowel_sign</cl> <dependant/> <zerowidth/></e> <!-- zero width -->
+<e n='102'> <in>\u0066</in> <out>P</out><cl>full_form</cl></e> 
+<e n='103'> <in>\u0067</in> <out>g</out><cl>full_form</cl></e> 
+<e n='104'> <in>\u0068</in> <out>h</out><cl>full_form</cl></e> 
+<e n='105'> <in>\u0069</in> <out>i</out><cl>vowel_sign</cl></e>
+<e n='106'> <in>\u006A</in> <out>j</out><cl>full_form</cl></e> 
+<e n='107'> <in>\u006B</in> <out>k</out><cl>full_form</cl></e> 
+<e n='108'> <in>\u006C</in> <out>l</out><cl>full_form</cl></e> 
+<e n='109'> <in>\u006D</in> <out>m</out><cl>full_form</cl></e> 
+<e n='110'> <in>\u006E</in> <out>n</out><cl>full_form</cl></e> 
+<e n='111'> <in>\u006F</in> <out>o</out><cl>vowel_sign</cl> <dependant/></e>
+<e n='112'> <in>\u0070</in> <out>p</out><cl>full_form</cl></e> 
+<e n='113'> <in>\u0071</in> <out>K</out><cl>full_form</cl></e> 
+<e n='114'> <in>\u0072</in> <out>r</out><cl>full_form</cl></e> <!-- full form r -->
+<e n='115'> <in>\u0073</in> <out>s</out><cl>full_form</cl></e> 
+<e n='116'> <in>\u0074</in> <out>t</out><cl>full_form</cl></e> 
+<e n='117'> <in>\u0075</in> <out>u</out><cl>vowel_sign</cl> <dependant/> <zerowidth/></e> <!-- zero width -->
+<e n='118'> <in>\u0076</in> <out>v</out><cl>full_form</cl></e> 
+<e n='119'> <in>\u0077</in> <out>B</out><cl>full_form</cl></e> 
+<e n='120'> <in>\u0078</in> <out>S</out><cl>full_form</cl></e> 
+<e n='121'> <in>\u0079</in> <out>y</out><cl>full_form</cl></e> 
+<e n='122'> <in>\u007A</in> <out>z</out><cl>full_form</cl></e> 
+<e n='123'> <in>\u007B</in> <out>J</out><cl>half_form</cl></e>
+<e n='123a'> <in>\u007B\u0061</in> <map>full_form.J</map></e> <!-- half form completed with danda-->
+<e n='124'> <in>\u007C</in> <out>.</out><cl>atom</cl></e>
+<e n='125'> <in>\u007D</in> <lig>IM</lig><key>ligature.IM</key> <dependant/></e>
+<e n='126'> <in>\u007E</in> <out>Y</out><cl>half_form</cl></e>
+<e n='126a'> <in>\u007E\u0061</in> <out>Y</out><cl>full_form</cl></e> <!-- half form completed with danda-->
+<e n='127'> <in>\u007F</in> <cl>flag</cl></e>
+<e n='128'> <in>\u0080</in> <out>Dr</out><cl>half_form</cl></e>
+<e n='128a'> <in>\u0080\u0061</in> <map>full_form.Dr</map></e> <!-- half form completed with danda-->
+<e n='129'> <in>\u0081</in> <lig>rAM</lig><key>ligature.rAM</key> <dependant/></e>
+<e n='130'> <in>\u0082</in> <out>Sn</out><cl>full_form</cl></e> 
+<e n='131'> <in>\u0083</in> <out>jY</out><cl>half_form</cl></e>
+<e n='131a'> <in>\u0083\u0061</in> <map>full_form.jY</map></e> <!-- half form completed with danda-->
+<e n='132'> <in>\u0084</in> <out>qg</out><cl>full_form</cl></e> 
+<e n='133'> <in>\u0085</in> <out>dgr</out><cl>full_form</cl></e> 
+<e n='134'> <in>\u0086</in> <out>[']</out> <key>asis.quote2</key> <cl>asis</cl></e>
+<e n='135'> <in>\u0087</in> <out>hv</out><cl>full_form</cl></e> 
+<e n='136'> <in>\u0088</in> <out>Pr</out><cl>full_form</cl></e> 
+<e n='137'> <in>\u0089</in> <out>WW</out><cl>full_form</cl></e> 
+<e n='138'> <in>\u008A</in> <out>hn</out><cl>full_form</cl></e> 
+<e n='139'> <in>\u008B</in> <out>[\u0950]</out><cl>atom</cl></e>  <!-- om -->
+<e n='140'> <in>\u008C</in> <lig>rA</lig><key>ligature.rA</key> <dependant/></e>
+<e n='141'> <in>\u008D</in> <out>N</out><cl>full_form</cl></e> 
+<e n='142'> <in>\u008E</in> <lig>re</lig><key>ligature.re</key> <dependant/></e>
+<e n='143'> <in>\u008F</in> <out>Gr</out><cl>half_form</cl></e>
+<e n='143a'> <in>\u008F\u0061</in> <map>full_form.Gr</map></e> <!-- half form completed with danda-->
+<e n='144'> <in>\u0090</in> <out>qQ</out><cl>full_form</cl></e> 
+<e n='145'> <in>\u0091</in> <out>wW</out><cl>full_form</cl></e> 
+<e n='146'> <in>\u0092</in> <out>ww</out><cl>full_form</cl></e> 
+<e n='147'> <in>\u0093</in> <out>dG</out><cl>full_form</cl></e> <!-- looks a lot like id=248 --> 
+<e n='148'> <in>\u0094</in> <lig>ri</lig><key>ligature.ri</key></e>
+<e n='149'> <in>\u0095</in> <out>hR</out><cl>full_form</cl></e> 
+<e n='150'> <in>\u0096</in> <out>nn</out><cl>full_form</cl></e> 
+<e n='151'> <in>\u0097</in> <out>gr</out><cl>half_form</cl></e>
+<e n='151a'> <in>\u0097\u0061</in> <map>full_form.gr</map></e> <!-- half form completed with danda-->
+<e n='152'> <in>\u0098</in> <out>dvr</out><cl>full_form</cl></e> 
+<e n='153'> <in>\u0099</in> <out>DD</out><cl>full_form</cl></e> 
+<e n='154'> <in>\u009A</in> <out>hl</out><cl>full_form</cl></e> 
+<e n='155'> <in>\u009B</in> <out>dBr</out><cl>full_form</cl></e> 
+<e n='156'> <in>\u009C</in> <out>_</out><cl>accent</cl> <dependant/></e>
+<e n='157'> <in>\u009D</in> <out>Nm</out><cl>full_form</cl></e> 
+<e n='158'> <in>\u009E</in> <out>qq</out><cl>full_form</cl></e> 
+<e n='159'> <in>\u009F</in> <out>ktv</out><cl>full_form</cl></e> 
+<e n='160'> <in>\u00A0</in> <out>tr</out><cl>full_form</cl></e> 
+<e n='161'> <in>\u00A1</in> <out>r</out><cl>half_form_end</cl> <dependant/></e>  <!-- caret r -->
+<e n='162'> <in>\u00A2</in> <out>u</out><cl>vowel_letter</cl></e>
+<e n='163'> <in>\u00A3</in> <out>I</out><cl>vowel_letter</cl></e>
+<e n='164'> <in>\u00A4</in> <out>f</out><cl>vowel_letter</cl></e>
+<e n='165'> <in>\u00A5</in> <out>e</out><cl>vowel_letter</cl></e>
+<e n='166'> <in>\u00A6</in> <out>F</out><cl>vowel_letter</cl></e>
+<e n='167'> <in>\u00A7</in> <out>sr</out><cl>full_form</cl></e> 
+<e n='168'> <in>\u00A8</in> <map>half_form_end.r</map> </e>  <!-- diagonal r that attaches to danda -->
+<e n='169'> <in>\u00A9</in> <out>gr</out><cl>full_form</cl></e> 
+<e n='170'> <in>\u00AA</in> <out>i</out><cl>vowel_letter</cl></e>
+<e n='171'> <in>\u00AB</in> <out>pt</out><cl>full_form</cl></e> 
+<e n='172'> <in>\u00AC</in> <out>pt</out><cl>half_form</cl></e>
+<e n='172a'> <in>\u00AC\u0061</in> <map>full_form.pt</map></e> <!-- half form completed with danda-->
+<e n='173'> <in>\u00AD</in> <lig>rE</lig><key>ligature.rE</key> <dependant/></e>
+<e n='174'> <in>\u00AE</in> <out>~</out><cl>anusvara</cl> <dependant/> <zerowidth/></e> <!-- zero width -->
+<e n='175'> <in>\u00AF</in> <lig>roM</lig><key>ligature.roM</key> <dependant/></e>
+<e n='176'> <in>\u00B0</in> <out>U</out><cl>vowel_letter</cl></e>
+<e n='177'> <in>\u00B1</in> <lig>rEM</lig><key>ligature.rEM</key> <dependant/></e>
+<e n='178'> <in>\u00B2</in> <out>Dr</out><cl>full_form</cl></e> 
+<e n='179'> <in>\u00B3</in> <out>Nkz</out><cl>full_form</cl></e> 
+<e n='180'> <in>\u00B4</in> <out>y</out> <cl>half_form_end</cl> </e>  <!-- y attached to end --> 
+<e n='181'> <in>\u00B5</in> <out>mr</out><cl>full_form</cl></e> 
+<e n='182'> <in>\u00B6</in> <out>dr</out><cl>full_form</cl></e> 
+<e n='183'> <in>\u00B7</in> <out>Br</out><cl>full_form</cl></e> 
+<e n='184'> <in>\u00B8</in> <out>pn</out><cl>full_form</cl></e> 
+<e n='185'> <in>\u00B9</in> <out>pr</out><cl>full_form</cl></e> 
+<e n='186'> <in>\u00BA</in> <out>br</out><cl>full_form</cl></e> 
+<e n='187'> <in>\u00BB</in> <out>Gr</out><cl>full_form</cl></e> 
+<e n='188'> <in>\u00BC</in> <out>NG</out><cl>full_form</cl></e> 
+<e n='189'> <in>\u00BD</in> <out>kz</out><cl>full_form</cl></e>
+<e n='190'> <in>\u00BE</in> <cl>flag</cl></e>
+<e n='191'> <in>\u00BF</in> <lig>ro</lig><key>ligature.ro</key> <dependant/></e>
+<e n='192'> <in>\u00C0</in> <lig>rU</lig><key>ligature.rU</key></e>	<!-- full form r with U -->
+<e n='193'> <in>\u00C1</in> <out>a</out><cl>vowel_letter</cl></e>
+<e n='194'> <in>\u00C2</in> <out>L</out><cl>full_form</cl></e> 
+<e n='195'> <in>\u00C3</in> <out>vr</out><cl>full_form</cl></e> 
+<e n='196'> <in>\u00C4</in> <out>Ng</out><cl>full_form</cl></e> 
+<e n='197'> <in>\u00C5</in> <out>Sr</out><cl>full_form</cl></e> 
+<e n='198'> <in>\u00C6</in> <out>jr</out><cl>full_form</cl></e> 
+<e n='199'> <in>\u00C7</in> <out></out> <key>virama.1</key> <cl>virama</cl> <dependant/> <zerowidth/></e>  <!-- virama (zero width)-->
+<e n='200'> <in>\u00C8</in> <out>[=]</out><cl>asis</cl></e>
+<e n='201'> <in>\u00C9</in> <out>jY</out><cl>full_form</cl></e> 
+<e n='202'> <in>\u00CA</in> <out>dDr</out><cl>full_form</cl></e>  <!-- looks a lot like id=248 -->
+<e n='203'> <in>\u00CB</in> <out>kl</out><cl>full_form</cl></e> 
+<e n='204'> <in>\u00CC</in> <lig>kx</lig><key>ligature.kx</key></e>
+<e n='205'> <in>\u00CD</in> <out>ll</out><cl>full_form</cl></e> 
+<e n='206'> <in>\u00CE</in> <out>pl</out><cl>full_form</cl></e> 
+<e n='207'> <in>\u00CF</in> <out>NK</out><cl>full_form</cl></e> 
+<e n='208'> <in>\u00D0</in> <out>[!]</out><cl>asis</cl></e>  <!-- this is an exclamation point in the key map that Deshpande sent me -->
+<e n='209'> <in>\u00D1</in> <out>kt</out><cl>half_form</cl></e>
+<e n='209a'> <in>\u00D1\u0061</in> <map>full_form.kt</map></e> <!-- half form completed with danda-->
+<e n='210'> <in>\u00D2</in> <cl>flag</cl></e>
+<e n='211'> <in>\u00D3</in> <lig>A~</lig><key>ligature.A~</key> <dependant/></e>
+<e n='212'> <in>\u00D4</in> <lig>rI</lig><key>ligature.rI</key> <dependant/></e>
+<e n='213'> <in>\u00D5</in> <lig>rIM</lig><key>ligature.rIM</key> <dependant/></e>
+<e n='214'> <in>\u00D6</in> <lig>ru</lig><key>ligature.ru</key></e>	<!-- full form r with u -->
+<e n='215'> <in>\u00D7</in> <out>dv</out><cl>full_form</cl></e> 
+<e n='216'> <in>\u00D8</in> <out>hy</out><cl>full_form</cl></e> 
+<e n='217'> <in>\u00D9</in> <out>'</out><cl>accent</cl> <dependant/></e>
+<e n='218'> <in>\u00DA</in> <map>ligature.ru</map></e>  <!-- caret r with a u beneath -->
+<e n='219'> <in>\u00DB</in> <cl>flag</cl></e>
+<e n='220'> <in>\u00DC</in> <map>prefix.r</map> </e> <zerowidth/> <!-- hook r (zero width)-->
+<e n='221'> <in>\u00DD</in> <out>f</out><cl>vowel_sign</cl> <dependant/> <zerowidth/></e> <!-- zero width -->
+<e n='222'> <in>\u00DE</in> <cl>flag</cl></e>
+<e n='223'> <in>\u00DF</in> <map>vowel_sign.f</map></e>
+<e n='224'> <in>\u00E0</in> <out>F</out><cl>vowel_sign</cl> <dependant/> <zerowidth/></e> <!-- zero width -->
+<e n='225'> <in>\u00E1</in> <out>[(]</out><cl>asis</cl></e>
+<e n='226'> <in>\u00E2</in> <out>[)]</out><cl>asis</cl></e>
+<e n='227'> <in>\u00E3</in> <out>dB</out><cl>full_form</cl></e> 
+<e n='228'> <in>\u00E4</in> <lig>reM</lig><key>ligature.reM</key> <dependant/></e>
+<e n='229'> <in>\u00E5</in> <lig>rM</lig><key>ligature.rM</key> <dependant/></e>
+<e n='230'> <in>\u00E6</in> <out>tr</out><cl>half_form</cl></e>
+<e n='230a'> <in>\u00E6\u0061</in> <map>full_form.tr</map></e> <!-- half form completed with danda-->
+<e n='231'> <in>\u00E7</in> <out>tt</out><cl>full_form</cl></e> 
+<e n='232'> <in>\u00E8</in> <out>tt</out><cl>half_form</cl></e>
+<e n='232a'> <in>\u00E8\u0061</in> <map>full_form.tt</map></e> <!-- half form completed with danda-->
+<e n='233'> <in>\u00E9</in> <lig>riM</lig><key>ligature.riM</key></e>
+<e n='234'> <in>\u00EA</in> <map>half_form.S</map></e>
+<e n='234a'> <in>\u00EA\u0061</in> <map>full_form.S</map></e> <!-- half form completed with danda-->
+<e n='235'> <in>\u00EB</in> <out>dd</out><cl>full_form</cl></e> 
+<e n='236'> <in>\u00EC</in> <out>dc</out><cl>full_form</cl></e> 
+<e n='237'> <in>\u00ED</in> <out>dg</out><cl>full_form</cl></e> 
+<e n='238'> <in>\u00EE</in> <map>vowel_sign.e</map></e>
+<e n='239'> <in>\u00EF</in> <map>vowel_sign.E</map> <zerowidth/></e> <!-- zero width -->
+<e n='240'> <in>\u00F0</in> <out>Nk</out><cl>full_form</cl></e> 
+<e n='241'> <in>\u00F1</in> <out>L</out><cl>half_form</cl></e>
+<e n='241a'> <in>\u00F1\u0061</in> <map>full_form.L</map></e> <!-- half form completed with danda-->
+<e n='242'> <in>\u00F2</in> <out>Sv</out><cl>full_form</cl></e> 
+<e n='243'> <in>\u00F3</in> <out>kz</out><cl>half_form</cl></e>
+<e n='243a'> <in>\u00F3\u0061</in> <map>full_form.kz</map></e> <!-- half form completed with danda-->
+<e n='244'> <in>\u00F4</in> <out>Sc</out><cl>full_form</cl></e> 
+<e n='245'> <in>\u00F5</in> <out>db</out><cl>full_form</cl></e> 
+<e n='246'> <in>\u00F6</in> <out>hm</out><cl>full_form</cl></e> 
+<e n='247'> <in>\u00F7</in> <out>dm</out><cl>full_form</cl></e> 
+<e n='248'> <in>\u00F8</in> <out>dD</out><cl>full_form</cl></e> 
+<e n='249'> <in>\u00F9</in> <out>x</out><cl>vowel_letter</cl></e>
+<e n='250'> <in>\u00FA</in> <out>hr</out><cl>full_form</cl></e> 
+<e n='251'> <in>\u00FB</in> <out>kr</out><cl>full_form</cl></e> 
+<e n='252'> <in>\u00FC</in> <out>jr</out><cl>half_form</cl></e>
+<e n='252a'> <in>\u00FC\u0061</in> <map>full_form.jr</map></e> <!-- half form completed with danda-->
+<e n='253'> <in>\u00FD</in> <out>kr</out><cl>half_form</cl></e>
+<e n='253a'> <in>\u00FD\u0061</in> <map>full_form.kr</map></e> <!-- half form completed with danda-->
+<e n='254'> <in>\u00FE</in> <out>Sr</out><cl>half_form</cl></e>
+<e n='254a'> <in>\u00FE\u0061</in> <map>full_form.Sr</map></e> <!-- half form completed with danda-->
+<e n='255'> <in>\u00FF</in> <cl>flag</cl></e>
+<e n='256'> <in>\u0100</in> <out>x</out><cl>vowel_sign</cl></e> <!-- phantom vowel sign x (because of kx) -->
+
+<e n='261'> <in>\u0102</in> <out>a</out> <cl>vowel_sign</cl> </e>  <!-- phantom vowel sign a -->
+
+<e n='264'> <in>%vowel_letter.a%vowel_sign.A</in> <out>A</out> <cl>vowel_letter</cl> </e>    <!-- vowel letter A (composite) -->
+<e n='265'> <in>%vowel_letter.e%vowel_sign.e</in> <out>E</out> <cl>vowel_letter</cl> </e>  <!-- vowel letter E (composite) -->
+<e n='266'> <in>%vowel_letter.a%vowel_sign.o</in> <out>o</out> <cl>vowel_letter</cl> </e>    <!-- vowel letter o (composite) -->
+<e n='267'> <in>%vowel_sign.A%vowel_sign.e</in> <map>vowel_sign.o</map> <dependant/> </e>    <!-- vowel sign o (composite) (map to font's vowel sign o)-->
+<e n='268'> <in>%vowel_sign.A%vowel_sign.E</in> <out>O</out> <cl>vowel_sign</cl> <dependant/> </e> <!-- vowel sign O (composite), this is the only one!   -->
+<e n='269'> <in>%vowel_letter.a%vowel_sign.O</in> <out>O</out> <cl>vowel_letter</cl> </e>    <!-- vowel letter O (composite) -->
+<e n='270'> <in>%vowel_letter.i%prefix.r</in> <map>vowel_letter.I</map> </e>      <!-- vowel letter I (composite) -->
+</edges>
+
+<ligatures>
+	<ligature type="EM">  				<!-- EM -->
+		<char key='vowel_sign.E'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="AM">  				<!-- AM -->
+		<char key='vowel_sign.A'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="eM">  				<!-- eM -->
+		<char key='vowel_sign.e'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="iM">  			<!-- iM (note, this is a vowel_sign_i plus anusvara-->
+		<char key='vowel_sign.i'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="IM">  				<!-- IM -->
+		<char key='vowel_sign.I'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="rAM">  		<!-- rAM -->
+		<char key='prefix.r'/>
+		<char key='vowel_sign.A'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="rA">  				<!-- rA -->
+		<char key='prefix.r'/>
+		<char key='vowel_sign.A'/>
+	</ligature>
+	<ligature type="re">  				<!-- re -->
+		<char key='prefix.r'/>
+		<char key='vowel_sign.e'/>
+	</ligature>
+	<ligature type="rE">  				<!-- rE -->
+		<char key='prefix.r'/>
+		<char key='vowel_sign.E'/>
+	</ligature>
+	<ligature type="roM">  		<!-- roM -->
+		<char key='prefix.r'/>
+		<char key='vowel_sign.o'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="rEM">  		<!-- rEM -->
+		<char key='prefix.r'/>
+		<char key='vowel_sign.E'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="ro">  				<!-- ro -->
+		<char key='prefix.r'/>
+		<char key='vowel_sign.o'/>
+	</ligature>
+	<ligature type="oM">  		  <!-- oM -->
+		<char key='vowel_sign.o'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="Atilde">  	<!-- A~ -->
+		<char key='vowel_sign.A'/>
+		<char key='anusvara.~'/>
+	</ligature>
+	<ligature type="ri">  				<!-- ri (note, this is a short i plus repha-->
+		<char key='prefix.r'/>
+		<char key='vowel_sign.i'/>
+	</ligature>
+	<ligature type="rI">  				<!-- rI -->
+		<char key='prefix.r'/>
+		<char key='vowel_sign.I'/>
+	</ligature>
+	<ligature type="rIM">  		<!-- rIM -->
+		<char key='prefix.r'/>
+		<char key='vowel_sign.I'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="reM">  		<!-- reM -->
+		<char key='prefix.r'/>
+		<char key='vowel_sign.e'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="rM">  				<!-- rM -->
+		<char key='prefix.r'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="riM">  		<!-- riM  (note, this is a short i plus repha and anusvara-->
+		<char key='prefix.r'/>
+		<char key='vowel_sign.i'/>
+		<char key='anusvara.M'/>
+	</ligature>
+	<ligature type="hf">  		<!-- hf -->
+		<char key='full_form.h'/>
+		<char key='vowel_sign.f'/>
+	</ligature>
+	<ligature type="rU">  		<!-- rU -->
+		<char key='full_form.r'/>
+		<char key='vowel_sign.U'/>
+	</ligature>
+	<ligature type="kx">  		<!-- kx -->
+		<char key='full_form.k'/>
+		<char key='vowel_sign.x'/>
+	</ligature>
+	<ligature type="lf">  	<!-- lf -->
+		<char key='full_form.l'/>
+		<char key='vowel_sign.f'/>
+	</ligature>
+	<ligature type="ru">  		<!-- ru -->
+		<char key='full_form.r'/>
+		<char key='vowel_sign.u'/>
+	</ligature>
+</ligatures>
+
+<buffers>
+	<buffer name='prefix' removeDuplicates='y'>
+		<member id='prefix'/>
+	</buffer>
+	<buffer name='atoms' action='!!'>
+		<member id='whitespace'/>
+		<member id='digit'/>
+		<member id='atom'/>
+		<member id='asis'/>
+		<member id='flag' action='x'/>
+	</buffer>
+	<buffer name='vowel_letters' action='!,|'>
+		<member id='vowel_letter'/>
+	</buffer>
+	<buffer name='consonents' merge='consonentMerge'>
+		<member id='half_form' action='?'/>
+		<member id='full_form' action='?,|,^' init='vowel_signs'/>
+		<member id='half_form_end'/>
+	</buffer>
+	<buffer name='vowel_signs' card='?' init='vowel_sign.a' merge='vowelMerge' removeDuplicates='y'>
+		<member id='vowel_sign.i' action='!'/>
+		<member id='vowel_sign'/>
+		<member id='virama' action='-'/>
+		<errorMessage type='card' message='duplicate vowel signs'/>
+		<exists>vowel_letter|full_form</exists>
+	</buffer>
+	<buffer name='anusvara' card='?' removeDuplicates='y'>
+		<member id='anusvara'/>
+		<errorMessage type='card' message='duplicate vowel signs'/>
+		<exists>vowel_letter|full_form</exists>
+	</buffer>	
+	<buffer name='accent' card='?' removeDuplicates='y'>
+		<member id='accent'/>
+		<errorMessage type='card' message='duplicate accents'/>
+		<exists>vowel_letter|full_form</exists>
+	</buffer>
+	<buffer name='visarga' card='?'>
+		<member id='visarga'/>
+		<errorMessage type='card' message='duplicate accents'/>
+		<exists>vowel_letter|full_form</exists>
+	</buffer>
+	
+</buffers>
+
+
+
+</fsm>

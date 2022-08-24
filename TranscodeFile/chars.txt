@@ -1,0 +1,96 @@
+(
+MBh06Supp.slp (1)
+
+)
+MBh06Supp.slp (1)
+
+*
+MBh01Supp.slp (44)
+MBh02Supp.slp (72)
+MBh03Supp.slp (16)
+MBh04Supp.slp (31)
+MBh06Supp.slp (5)
+MBh07Supp.slp (15)
+MBh08Supp.slp (1)
+MBh12Supp.slp (35)
+MBh13Supp.slp (1)
+MBh14Supp.slp (5)
+MBh15Supp.slp (2)
+MBh17Supp.slp (7)
+MBh18Supp.slp (15)
+
+,
+MBh01Supp.slp (4)
+MBh02Supp.slp (2)
+MBh03Supp.slp (2)
+MBh04Supp.slp (2)
+MBh05Supp.slp (2)
+MBh06Supp.slp (2)
+MBh07Supp.slp (2)
+MBh08Supp.slp (2)
+MBh09Supp.slp (2)
+MBh10Supp.slp (2)
+MBh11Supp.slp (2)
+MBh12Supp.slp (5)
+MBh13Supp.slp (3)
+MBh14Supp.slp (2)
+MBh15Supp.slp (1)
+MBh16Supp.slp (2)
+MBh17Supp.slp (1)
+MBh18Supp.slp (2)
+
+-
+MBh01Supp.slp (2)
+MBh03Supp.slp (1)
+MBh04Supp.slp (4)
+MBh06Supp.slp (1)
+MBh08Supp.slp (2)
+MBh12Supp.slp (2)
+MBh13Supp.slp (4)
+
+:
+MBh01Supp.slp (1686)
+MBh02Supp.slp (521)
+MBh03Supp.slp (1225)
+MBh04Supp.slp (790)
+MBh05Supp.slp (494)
+MBh06Supp.slp (459)
+MBh07Supp.slp (1256)
+MBh08Supp.slp (857)
+MBh09Supp.slp (349)
+MBh10Supp.slp (60)
+MBh11Supp.slp (70)
+MBh12Supp.slp (826)
+MBh13Supp.slp (636)
+MBh14Supp.slp (180)
+MBh15Supp.slp (92)
+MBh16Supp.slp (47)
+MBh17Supp.slp (11)
+MBh18Supp.slp (39)
+
+[
+MBh06Supp.slp (6)
+MBh08Supp.slp (9)
+MBh09Supp.slp (2)
+MBh10Supp.slp (3)
+MBh12Supp.slp (21)
+MBh14Supp.slp (1)
+MBh15Supp.slp (1)
+MBh16Supp.slp (1)
+
+]
+MBh06Supp.slp (6)
+MBh08Supp.slp (9)
+MBh09Supp.slp (2)
+MBh10Supp.slp (3)
+MBh12Supp.slp (21)
+MBh14Supp.slp (1)
+MBh15Supp.slp (1)
+MBh16Supp.slp (1)
+
+{
+MBh06Supp.slp (1)
+
+}
+MBh06Supp.slp (1)
+

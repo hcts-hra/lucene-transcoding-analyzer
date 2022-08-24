@@ -1,0 +1,20 @@
+\documentclass{book}
+
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{txfonts}
+\usepackage{times}
+\usepackage[tone]{tipa}
+\usepackage{diatop}
+\usepackage{pdflscape}
+\usepackage{enumerate}
+\usepackage{pst-pdf} %Needed for \ref command
+
+%begin Sanskrit
+%Authors
+\newcommand{\Yaska}{<slp>{y}Aska</slp>}
+\newcommand{\Gargya}{<slp>{g}Argya</slp>}
+\newcommand{\Apisali}{<slp>{A}piSali</slp>}
+\newcommand{\Saunaka}{<slp>{S}Onaka</slp>}
+\newcommand{\Sakalya}{<slp>{S}Akalya</slp>}

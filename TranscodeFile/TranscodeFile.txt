@@ -1,0 +1,303 @@
+Here's the idea. You are preparing a document that contains citations in Sanskrit that need a non-ASCII 
+Unicode font and you want to use SLP1 (or some other ASCII encoding scheme) to type the citations rather 
+than figuring out how to specify the native characters.
+
+For example,
+  कृष्ण is blue.
+
+could be typed using SLP1 as
+
+<slp>kfzRa</slp> is blue.
+
+The TranscodeFile program lets you use any delimiters you want to bracket non-ASCII text and lets you specify how 
+the bracketed text is transcoded using transcoding rules.
+
+For example, the transcoding rules for the above are written as
+
+<transcodingRules>
+   <transcodingRule 
+       startTag            tag that starts data to transcode, can be anything that is not used in document
+       
+       endTag              tag that ends data to transcode, can be anything that is not used in document
+       
+       
+       groupNumber         used in lieu of startTag and endTag when a regular expression is used to delimit text, e.g.,
+                           The following rules
+	                         <regexp name='SITAroman' pattern='/^([SA](?!\d\d0+ )[\dA-Za-z]+ )(?!Colophon)(.*)$/m' unknown='asis' flagged='none'>
+		                          <transcodingRule groupNumber='1' sourceEncoding='asis' targetEncoding='asis'/>
+		                          <transcodingRule groupNumber='2' sourceEncoding='slp1' targetEncoding='roman' leftFlag='&lt;' rightFlag='&gt;' unknown='asis' flagged='asis-'/>
+	                         </regexp>
+                           would use the regular expression on each line of the input file. If a line does not match the r.e., it is passed through as is.
+                           /^([SA](?!\d\d0+ )[\dA-Za-z]+ )(?!Colophon)(.*)$/m
+                           The first group would be passed through asis
+                           The second group would be converted from slp1 to roman
+       
+       sourceEncoding      see supported encodings below  
+       
+       targetEncoding      see supported encodings below
+       
+       removeTag='y/n'    if 'y' then transcoded text will not be marked with tags. 
+                          If 'n' then if newStartTag and newEndTag attributes exist they
+                          are used to delimit transcoded text, otherwise startTag and endTag
+                          are used. Default is 'y'
+       
+       newStartTag        tag that begins transcoded data (see removeTag)
+       
+       newEndTag          tag that ends transcoded data (see removeTag)
+       
+       leftFlag:          Unknown characters are flagged with leftFlag and rightFlag. Default is [ ]. Must be single character.
+       rightFlag:         If < and > then must be specified as &lt; and &gt;
+       Note: { } cannot be used as value of leftFlag and/or right flag because they are reserved to mark capital letters.
+       
+       unknown='flag/asis/ignore': what to do with an unknown character. Options are
+                   flag - delimit with the delimiters specified by leftFlag and rightFlag: (default)
+                   asis - send through as is
+                   ignore - ignore unknown character (do not send it through)
+      
+       flagged='asis+/asis-/ignore: what to do with flagged characters (those marked by the delimiters specified by -leftFlag and -rightFlag:)
+                 Options are:
+                   asis+ - send it through, including the delimiters
+                   asis- - send it through, without delimiters
+                   ignore - ignore unknown character (do not send it through)
+       >
+          <mappings>   A set of mappings to modify unknown characters before they are output, e.g., map ! to ,
+                         If a mapping applies then leftFlag and rightFlag will not be used to delimit the unknown character
+               <mapping
+                 char  flagged character (see leftFlag and rightFlag above)
+                 target  what flagged character is mapped to
+               />
+          </mappings>
+   </transcodingRule 
+</transcodingRules>
+
+The start and end tags are completely arbitrary. The only requirement is that they are not used anywhere else in the document.
+
+Due to a restriction of XML if the start or end tag has a < in it, it must be written as &lt;
+If it has a > in it, it can be left as is but usually is written as &gt;
+
+The transcoding algorithm
+1. If transcoding does not support capital letters (e.g. slp->deva, but slp->roman does since {A} is capital long a, {a} is capital short a) then
+   remove any { } from the input string. So for slp->deva, {a}rjuna  becomes arjuna, but for slp->roman it remain {a}rjuna.
+2. If the current character is the leftFlag character then
+   a. retrieve the text between the leftFlag and endFlag characters, e.g., [!!!] becomes !!!
+   b. if flagged = 'asis+' then put back leftFlag and endFlag, e.g. !!! becomes [!!!]
+   c. if flagged = 'asis-' then send through !!! without any delimiters
+   d. if flagged = 'ignore' then do not send the flagged character to the output, e.g., !!! disappears.
+3. If current character is not a legal character in the mapping then
+   a. If a mapping has been defined see if the illegal character is mapped to some other character. If it is do the mapping, e.g.,
+       if <mappings> is defined as follows:
+         	<mappings>
+  		       <mapping char='@' target='!!!'/>
+  	      </mappings>
+        then if a @ is encountered it will be converted to !!!
+   b. Otherwise
+      i. if unknown = 'flag' then surround illegal character with leftFlag and rightFlag characters
+      ii. if unknown = 'asis' then send illegal character to output without delimiting it.
+      iii. if unknown = 'ignore' then do not send the illegal character to the output.
+
+
+
+Supported encodings
+Although it will usually be the case that the source encoding is an ASCII encoding such as SLP1, it is possible to map from any encoding to any other. Supported encodings are:
+
+    slp1         SLP1    
+    hk           Kyoto-Harvard
+    wx           Hyderabad-Tirupati
+    itrans       ITrans
+    velthuis     Velthuis
+    vedatype     Vedatype (M.U.M.)
+    deva         Devanagari Unicode
+    roman        Roman Unicode IAST
+    romanstrict  Roman Unicode ISO 15919
+    bengali      Bengali Unicode
+    gujarati     Gujarati Unicode
+    gurmukhi     Gurmukhi Unicode
+    kannada      Kannada Unicode
+    oriya        Oriya Unicode
+    malayalam    Malayalam Unicode
+    tamil        Tamil Unicode
+    telugu       Telugu Unicode
+    skttex       Tex Devanagari
+    texroman     Tex Roman Transliteration
+
+There is one special value for the start tag. Use an asterisk(*) to specify how text that is not within tags should be transcoded.
+   For example
+      <transcodingRule startTag='*' endTag='' sourceEncoding='slp1' targetEncoding='deva'/>
+   specifies that text not with tags is encoded using SLP1 and should be transcoded to Devanagari Unicode.
+
+There is one special value for sourceEncoding and targetEncoding. Use 'asis' to specify that the tagged text should be passed through as is, i.e., 
+should not be transcoded. The tags will be removed. 
+   For example
+      <transcodingRule startTag='<eng>' endTag='</eng>' sourceEncoding='asis' targetEncoding='asis'/>
+   specifies that text not within <eng> and </eng> tags should be passed through as is and the
+   tags removed..
+
+There is no requirement that all tags defined in the rules file be used in the document.
+
+There are two versions of this program, a command line version and a Sanskrit Library web page.
+1. Command line version:
+   java -jar TranscodeFile.jar [-in:<document>] [-out:<transcoded document>] [-rules:<transcoding rules>] 
+             [-re: <regex name>] [-dir<transcoder directory>] 
+             
+   where
+      -in: <document> is name of file to transcode. Defaults to .\\doc.txt
+
+      -out: <transcoded document> is name of transcoded file. Default to the name of the input file preceded by an underscore(_)
+
+      -tr: <transcoding rules> is name of file that contains transcoding rules. Defaults to .\\tr.xml
+      			The <transcoding rules> file is an XML document with the following format
+            <transcodingRules>
+               <transcodingRule groupID='...' startTag='...' endTag='...' newStartTag='...' newEndTag='...' sourceEncoding='...' targetEncoding='...'/>
+               ...
+            </transcodingRules>
+         groupNumber: used with the -re: command line option (if -re: is used then startTag and endTag are not needed).
+         startTag: a string of characters used to mark the beginning of text to be transcoded
+         endTag : a string of characters used to mark the end of text to be transcoded.
+         newStartTag : a string of characters used to mark the beginning of transcoded text
+         newEndTag : a string of characters used to mark the end of transcoded text
+         sourceEncoding: specifies the encoding of text marked by the startTag and endTag
+         targetEncoding: specifies what the source encoding is mapped to.
+
+      -dir: <transcoder directory> is name of directory that contains transcoder mapping files. Defaults to .\\transcoder
+
+      -re: <regex name> is name of a regex element in the transcoding rules file. The regular expression matches one line of text 
+         and breaks it into groups. The groupNumber attribute of a transcodingRule element identifies transcoding to 
+         apply to each group of the r.e. If this option is present then no attempt will be made to find start and end tags. 
+         Only the r.e. will be used to transcode the file. Any line that does not match the r.e. will be passed through as is.
+          
+      Blanks are used to separate options so be careful how you use them. If a path has a blank in
+      it then the path needs to be put in quotes ("), e.g.
+      -in:"some directory/doc.rtf"
+
+2. Sanskrit Library version (in progress):
+   sanskritlibrary.org (Tools/Advanced Transcoding)
+   The page allows you to add and remove transcoding rules which are saved in a cookie so they do
+   not have to be typed everytime. You navigate to the file you want to transcode and upload it. 
+   Upon return, a link is provided that lets you download the transcoded file from the server.
+
+Notes:
+1. If the input file has extension .html then each source string is preprocessed to convert any
+entities to 16 bit unicode. E.G. 
+   &#x0915; is converted to \u0915
+   &#X0915; is converted to \u0915
+   &#2325;  is converted to \u0915
+
+Some examples of use. Each example consists of three parts
+   a. the rules file used
+   b. the input file
+   c. the transcoded output file
+
+1.
+<transcodingRules>
+   <transcodingRule startTag='*' endTag='' sourceEncoding='slp1' targetEncoding='deva'/>
+   <transcodingRule startTag='{{kh}}' endTag='{{/kh}}' sourceEncoding='hk' targetEncoding='roman'/>
+   <transcodingRule startTag='&lt;tel&gt;' endTag='&lt;/tel&gt;' sourceEncoding='slp1' targetEncoding='telugu'/>
+   <transcodingRule startTag='&lt;eng&gt;' endTag='&lt;/eng&gt;' sourceEncoding='asis' targetEncoding='asis'/>
+</transcodingRules>
+
+kfzRa {{kh}}kRSNa{{/kh}} uvAca <tel>kfzRa</tel> rAma <eng>leave as is</eng> {{kh}}uvAca{{/kh}}
+will be transcoded to:
+कृष्ण kṛṣṇa उवाच కృష్ణ राम leave as is uvāca
+
+2. 
+<transcodingRules>
+   <transcodingRule startTag='&lt;slp&gt;' endTag='&lt;/slp&gt;' sourceEncoding='slp1' targetEncoding='roman'/>
+</transcodingRules>
+
+\documentclass{book}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{txfonts}
+\usepackage{times}
+\usepackage[tone]{tipa}
+\usepackage{diatop}
+\usepackage{pdflscape}
+\usepackage{enumerate}
+\usepackage{pst-pdf} %Needed for \ref command
+
+%begin Sanskrit
+%Authors
+\newcommand{\Yaska}{<slp>{y}Aska</slp>}
+\newcommand{\Gargya}{<slp>{g}Argya</slp>}
+\newcommand{\Apisali}{<slp>{A}piSali</slp>}
+\newcommand{\Saunaka}{<slp>{S}Onaka</slp>}
+\newcommand{\Sakalya}{<slp>{S}Akalya</slp>}
+
+will be transcoded to:
+
+\documentclass{book}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{txfonts}
+\usepackage{times}
+\usepackage[tone]{tipa}
+\usepackage{diatop}
+\usepackage{pdflscape}
+\usepackage{enumerate}
+\usepackage{pst-pdf} %Needed for \ref command
+%begin Sanskrit
+%Authors
+\newcommand{\Yaska}{Yāska}
+\newcommand{\Gargya}{Gārgya}
+\newcommand{\Apisali}{Āpiśali}
+\newcommand{\Saunaka}{Śaunaka}
+\newcommand{\Sakalya}{Śākalya}
+
+3. 
+<transcodingRules>
+   <transcodingRule startTag='[de]' endTag='[/de]' sourceEncoding='slp1' targetEncoding='deva'/>
+   <transcodingRule startTag='[ro]' endTag='[/ro]' sourceEncoding='slp1' targetEncoding='roman'/>
+   <transcodingRule startTag='[ta]' endTag='[/ta]' sourceEncoding='slp1' targetEncoding='tamil'/>
+   <transcodingRule startTag='[te]' endTag='[/te]' sourceEncoding='slp1' targetEncoding='telugu'/>
+   <transcodingRule startTag='[xd]' endTag='[/xd]' sourceEncoding='slp1' targetEncoding='skttex'/>
+   <transcodingRule startTag='[xr]' endTag='[/xr]' sourceEncoding='slp1' targetEncoding='texroman'/>
+</transcodingRules>
+
+<html>
+   <head>
+      <title>Transcoding test</title>
+			<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+   </head>
+   <body>
+       <table>
+          <tr><td>Devanagari</td>     <td>kA</td>  <td>[de]kA[/de>]</td></tr>
+          <tr><td>Roman</td>          <td>kA</td>  <td>[ro]kA[/ro]</td></tr>
+          <tr><td>Tamil</td>          <td>kA</td>  <td>[ta]kA[/ta]</td></tr>
+          <tr><td>Telugu</td>         <td>kA</td>  <td>[te]kA[/te]</td></tr>
+          <tr><td>TeX Devanagari</td> <td>kA</td>  <td>[xd]kA[/xd]</td></tr>
+          <tr><td>TeX Roman</td>      <td>kA</td>  <td>[xr]kA[/xr]</td></tr>
+       </table>
+   </body>
+</html>
+
+
+4. A file with extension .rtfis assumed to be in RTF format. TranscodeFile only looks for tagged portions of the file, it knows nothing about 
+the structure of RTF other than how to represent Unicode characters.
+
+5. It is not recommend to attempt to transcode binary file formats such as .doc and .pdf files, but in principle 
+there is no reason why it shouldn't work provided that the tags used do not conflict with internal formatting.
+
+<html>
+   <head>
+      <title>Transcoding test</title>
+			<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+   </head>
+   <body>
+       <table>
+          <tr><td>Devanagari</td>     <td>kA</td>  <td>का</td></tr>
+          <tr><td>Roman</td>          <td>kA</td>  <td>kā</td></tr>
+          <tr><td>Bengali</td>        <td>kA</td>  <td>[be]kA[/be]</td></tr>
+          <tr><td>Gujarati</td>       <td>kA</td>  <td>[gj]kA[/gj]</td></tr>
+          <tr><td>Gurmurkhi</td>      <td>kA</td>  <td>[gr]kA[/gr]</td></tr>
+          <tr><td>Kannada</td>        <td>kA</td>  <td>[ka]kA[/ka]</td></tr>
+          <tr><td>Oriya</td>          <td>kA</td>  <td>[or]kA[/or]</td></tr>
+          <tr><td>Malayalam</td>      <td>kA</td>  <td>[ma]kA[/ma]</td></tr>
+          <tr><td>Tamil</td>          <td>kA</td>  <td>க்ா</td></tr>
+          <tr><td>Telugu</td>         <td>kA</td>  <td>కా</td></tr>
+          <tr><td>TeX Devanagari</td> <td>kA</td>  <td>kaa</td></tr>
+          <tr><td>TeX Roman</td>      <td>kA</td>  <td>k\=a</td></tr>
+       </table>
+   </body>
+</html>
